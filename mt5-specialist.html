@@ -157,9 +157,9 @@
                     Built for a clean, customizable workspace with a bottom toggle bar and tab controls that can be hidden whenever you want a full-screen chart. Switching <strong class="text-white">HUD OFF</strong> clears active chart overlays and puts the indicator into <strong class="text-cyan-400">sleep mode</strong> so it does not consume memory or slow down your terminal&mdash;complete with a bottom-right <strong class="text-white">NY Time</strong> clock, <strong class="text-white">Killzone Range vs. Avg(10)</strong> table, and top discipline banner.
                 </p>
 
-                <!-- Full-Frame Screenshot (No Crop, Click to Zoom) -->
-                <div onclick="openLightbox('images/master-hud.png', 'All-in-One Session, Killzone & Market Structure HUD')" class="bg-navy-900 rounded-lg border border-slate-700/80 p-2 sm:p-3 mb-8 cursor-pointer group relative">
-                   <img src="images/master-hud.png" alt="All-in-One Session, Killzone & Market Structure HUD" style="width: 100%; border-radius: 8px; display: block;"> class="w-full h-auto max-h-[540px] object-contain mx-auto rounded" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <!-- Full-Frame Screenshot (Fixed Tag, No Crop, Click to Zoom) -->
+                <div onclick="openCardLightbox(this, 'All-in-One Session, Killzone & Market Structure HUD')" class="bg-navy-900 rounded-lg border border-slate-700/80 p-2 sm:p-3 mb-8 cursor-pointer group relative">
+                    <img src="images/master-hud.png" alt="All-in-One Session, Killzone & Market Structure HUD" class="w-full h-auto max-h-[540px] object-contain mx-auto rounded" onerror="handleImgFallback(this, '')">
                     <div class="hidden flex-col items-center justify-center text-center py-14 px-6 text-slate-500 font-mono text-xs w-full">
                         <i class="fa-solid fa-chart-area text-3xl text-cyan-400/50 mb-2"></i>
                         <span class="text-slate-300">Place Master HUD Screenshot Here</span>
@@ -245,7 +245,7 @@
                     <span class="text-cyan-400 font-mono text-xs uppercase tracking-wider bg-cyan-400/10 px-3 py-1 rounded border border-cyan-400/30">
                         Personally Developed &middot; Risk &amp; Reward Indicator
                     </span>
-                    <span class="text-xs font-mono text-cyan-400/80"><i class="fa-solid fa-magnifying-glass-plus mr-1.5"></i>Click chart to zoom</span>
+                    <span class="text-xs font-mono text-cyan-400/80"><i class="fa-solid fa-magnifying-glass-plus mr-1.5"></i>Click any panel or chart to zoom</span>
                 </div>
 
                 <h3 class="text-2xl sm:text-3xl font-bold text-white mb-3 flex flex-wrap items-center gap-2.5">
@@ -262,7 +262,7 @@
                     <div class="bg-navy-900/80 p-5 rounded-lg border border-slate-700/60">
                         <div class="text-cyan-400 text-xl mb-3"><i class="fa-solid fa-calculator"></i></div>
                         <h4 class="text-white font-bold mb-1.5">Auto Lot &amp; Risk Math</h4>
-                        <p class="text-xs sm:text-sm text-justify">Instantly computes required lot size based on custom account sizes ($1.5k, $5k, $10k+) and risk tolerances (0.2%, 0.5%, 1%, 1.5%).</p>
+                        <p class="text-xs sm:text-sm text-justify">Instantly computes required lot size based on custom account sizes ($1.5k, $5k, $10k+) and risk tolerances (0.25%, 0.5%, 1%, 1.5%).</p>
                     </div>
 
                     <div class="bg-navy-900/80 p-5 rounded-lg border border-slate-700/60">
@@ -274,25 +274,74 @@
                     <div class="bg-navy-900/80 p-5 rounded-lg border border-slate-700/60">
                         <div class="text-cyan-400 text-xl mb-3"><i class="fa-solid fa-coins"></i></div>
                         <h4 class="text-white font-bold mb-1.5">Multi-Asset Intelligence</h4>
-                        <p class="text-xs sm:text-sm text-justify">Auto-detects symbol types (BTC, Forex, Nasdaq) to dynamically apply correct point values, pip parameters, and offset rules.</p>
+                        <p class="text-xs sm:text-sm text-justify">Auto-detects symbol types (Gold, BTC, Forex, Nasdaq) to dynamically apply correct point values, pip parameters, and offset rules.</p>
                     </div>
 
                     <div class="bg-navy-900/80 p-5 rounded-lg border border-slate-700/60">
                         <div class="text-cyan-400 text-xl mb-3"><i class="fa-solid fa-bell"></i></div>
                         <h4 class="text-white font-bold mb-1.5">Custom Alert Lines</h4>
-                        <p class="text-xs sm:text-sm text-justify">Supports dropping interactive alert lines onto the active chart for precise session boundary and liquidity level tracking.</p>
+                        <p class="text-xs sm:text-sm text-justify">Supports dropping interactive alert lines, Drop Fib, and OTE Fib directly onto the active chart for session and liquidity tracking.</p>
                     </div>
 
                     <div class="bg-navy-900/80 p-5 rounded-lg border border-slate-700/60">
                         <div class="text-cyan-400 text-xl mb-3"><i class="fa-solid fa-palette"></i></div>
                         <h4 class="text-white font-bold mb-1.5">Dark &amp; Light Themes</h4>
-                        <p class="text-xs sm:text-sm text-justify">Responsive UI themes built with sleep-mode optimizations to guarantee zero lag on high-frequency tick data streams.</p>
+                        <p class="text-xs sm:text-sm text-justify">Responsive UI themes built with sleep-mode optimizations (`RR Tool: OFF`) to guarantee zero lag on high-frequency tick data streams.</p>
                     </div>
 
                     <div class="bg-navy-900/80 p-5 rounded-lg border border-slate-700/60">
                         <div class="text-cyan-400 text-xl mb-3"><i class="fa-solid fa-shield-halved"></i></div>
                         <h4 class="text-white font-bold mb-1.5">Prop Guard Timers</h4>
                         <p class="text-xs sm:text-sm text-justify">Equipped with built-in minimum duration timers and persistent drawing modes to protect prop firm evaluation accounts.</p>
+                    </div>
+                </div>
+
+                <!-- INTERACTIVE CONTROL PANEL GALLERY (rr1, rr2, rr3) -->
+                <div class="border-t border-slate-700/80 pt-8 mb-10">
+                    <h4 class="text-xl font-bold text-white mb-2 flex items-center">
+                        <i class="fa-solid fa-sliders text-cyan-400 mr-3"></i> Interactive Control Panel &amp; Dynamic Lot Sizing
+                    </h4>
+                    <p class="text-xs sm:text-sm text-slate-400 mb-6">Live MT5 UI captures showing instant lot size, risk dollar amount, and reward recalculation across different prop account tiers ($10k, $5k, $1.5k).</p>
+
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Panel Card 1: rr1.png -->
+                        <div onclick="openCardLightbox(this, 'RR Panel — $10,000 Account · 0.25% Risk (0.05 Lots)')" class="glass-card p-4 rounded-lg cursor-pointer group flex flex-col">
+                            <div class="bg-navy-900 rounded mb-3 overflow-hidden border border-slate-800 p-2 flex items-center justify-center">
+                                <img src="images/rr1.png" alt="RR Panel $10,000 Account 0.25% Risk" class="w-full h-64 object-contain rounded group-hover:scale-[1.02] transition-transform duration-300" onerror="handleImgFallback(this, '')">
+                                <div class="hidden flex-col items-center justify-center text-center h-64 px-4 text-slate-500 font-mono text-xs w-full">
+                                    <i class="fa-solid fa-sliders text-2xl text-cyan-400/50 mb-1.5"></i>
+                                    <span class="text-cyan-400/70">images/rr1.png</span>
+                                </div>
+                            </div>
+                            <h5 class="text-white font-bold text-sm mb-1">$10,000 Account &middot; 0.25% Risk</h5>
+                            <p class="text-xs text-slate-400 text-justify">Gold (500 pts), BUY mode, 1:1 Target Box locked &mdash; auto-sizes <strong class="text-slate-200">0.05 lots</strong> for $25.00 risk.</p>
+                        </div>
+
+                        <!-- Panel Card 2: rr2.png -->
+                        <div onclick="openCardLightbox(this, 'RR Panel — $5,000 Account · 1.50% Risk (0.15 Lots)')" class="glass-card p-4 rounded-lg cursor-pointer group flex flex-col">
+                            <div class="bg-navy-900 rounded mb-3 overflow-hidden border border-slate-800 p-2 flex items-center justify-center">
+                                <img src="images/rr2.png" alt="RR Panel $5,000 Account 1.50% Risk" class="w-full h-64 object-contain rounded group-hover:scale-[1.02] transition-transform duration-300" onerror="handleImgFallback(this, '')">
+                                <div class="hidden flex-col items-center justify-center text-center h-64 px-4 text-slate-500 font-mono text-xs w-full">
+                                    <i class="fa-solid fa-sliders text-2xl text-cyan-400/50 mb-1.5"></i>
+                                    <span class="text-cyan-400/70">images/rr2.png</span>
+                                </div>
+                            </div>
+                            <h5 class="text-white font-bold text-sm mb-1">$5,000 Account &middot; 1.50% Risk</h5>
+                            <p class="text-xs text-slate-400 text-justify">Gold (400 pts), interactive Risk % dropdown &mdash; auto-sizes <strong class="text-slate-200">0.15 lots</strong> for $75.00 risk.</p>
+                        </div>
+
+                        <!-- Panel Card 3: rr3.png -->
+                        <div onclick="openCardLightbox(this, 'RR Panel — $1,500 Account · 1.00% Risk (0.03 Lots)')" class="glass-card p-4 rounded-lg cursor-pointer group flex flex-col">
+                            <div class="bg-navy-900 rounded mb-3 overflow-hidden border border-slate-800 p-2 flex items-center justify-center">
+                                <img src="images/rr3.png" alt="RR Panel $1,500 Account 1.00% Risk" class="w-full h-64 object-contain rounded group-hover:scale-[1.02] transition-transform duration-300" onerror="handleImgFallback(this, '')">
+                                <div class="hidden flex-col items-center justify-center text-center h-64 px-4 text-slate-500 font-mono text-xs w-full">
+                                    <i class="fa-solid fa-sliders text-2xl text-cyan-400/50 mb-1.5"></i>
+                                    <span class="text-cyan-400/70">images/rr3.png</span>
+                                </div>
+                            </div>
+                            <h5 class="text-white font-bold text-sm mb-1">$1,500 Account &middot; 1.00% Risk</h5>
+                            <p class="text-xs text-slate-400 text-justify">Gold (400 pts), compact micro-account scaling &mdash; auto-sizes <strong class="text-slate-200">0.03 lots</strong> for $15.00 risk.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -358,18 +407,18 @@
                 <!-- Script 1: BTC-level -->
                 <div class="glass-card p-6 rounded-xl flex flex-col">
                     <div class="flex items-center justify-between gap-2 mb-3">
-                        <h3 class="text-lg font-bold text-white font-mono">BTC-level</h3>
-                        <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-cyan-400/10 text-cyan-400 border border-cyan-400/25">500 &amp; 1,000 Levels</span>
+                        <h3 class="text-lg font-bold text-white font-mono">BTC-level (v1.05)</h3>
+                        <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-cyan-400/10 text-cyan-400 border border-cyan-400/25">1000, 500 &amp; 250/750</span>
                     </div>
                     <p class="text-xs sm:text-sm text-slate-300 text-justify mb-4">
-                        Draws key institutional <strong class="text-white">500 and 1,000 (thousands)</strong> psychological levels on BTC charts to mark major liquidity magnets and round-number reaction zones.
+                        Draws institutional <strong class="text-white">1000 (000) and 500</strong> full lines alongside toggleable <strong class="text-white">250 &amp; 750</strong> price tags with adjustable right-side candle shift on BTCUSD charts.
                     </p>
-                    <div onclick="openLightbox('images/script-btc-level.png', 'BTC-level Script (500 & 1,000 Levels)')" class="bg-navy-900 rounded-lg border border-slate-800 p-2 mt-auto cursor-pointer">
-                        <img src="images/script-btc-level.png" alt="BTC-level Script Screenshot" class="w-full h-44 object-contain mx-auto rounded" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="hidden flex-col items-center justify-center text-center h-44 px-4 text-slate-500 font-mono text-xs w-full">
+                    <div onclick="openCardLightbox(this, 'BTC-level 1.05 Script (1000, 500, 250 & 750 Levels)')" class="bg-navy-900 rounded-lg border border-slate-800 p-2 mt-auto cursor-pointer">
+                        <img src="images/btc-level.png" alt="BTC-level 1.05 Script Screenshot" class="w-full h-52 object-contain mx-auto rounded" onerror="handleImgFallback(this, 'images/script-btc-level.png')">
+                        <div class="hidden flex-col items-center justify-center text-center h-52 px-4 text-slate-500 font-mono text-xs w-full">
                             <i class="fa-solid fa-ruler-horizontal text-2xl text-cyan-400/50 mb-1.5"></i>
-                            <span class="text-slate-400">Optional Screenshot</span>
-                            <span class="text-cyan-400/70 mt-0.5">images/script-btc-level.png</span>
+                            <span class="text-slate-400">Upload Screenshot</span>
+                            <span class="text-cyan-400/70 mt-0.5">images/btc-level.png</span>
                         </div>
                     </div>
                 </div>
@@ -377,18 +426,18 @@
                 <!-- Script 2: level-gold -->
                 <div class="glass-card p-6 rounded-xl flex flex-col">
                     <div class="flex items-center justify-between gap-2 mb-3">
-                        <h3 class="text-lg font-bold text-white font-mono">level-gold</h3>
-                        <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-cyan-400/10 text-cyan-400 border border-cyan-400/25">100, 50, 20 &amp; 80</span>
+                        <h3 class="text-lg font-bold text-white font-mono">level-gold (v1.00)</h3>
+                        <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-cyan-400/10 text-cyan-400 border border-cyan-400/25">00, 50, 20 &amp; 80</span>
                     </div>
                     <p class="text-xs sm:text-sm text-slate-300 text-justify mb-4">
-                        Draws institutional levels across <strong class="text-white">100s (hundreds), 50s, and 20 &amp; 80</strong> price tiers so key intraday reaction and breakout levels stand out clearly.
+                        Draws customizable institutional grids on XAUUSD across <strong class="text-white">00, 50, 80, and 20</strong> price tiers with configurable line counts and color coding for clear intraday reaction zones.
                     </p>
-                    <div onclick="openLightbox('images/script-level-gold.png', 'level-gold Script (100, 50, 20 & 80 Levels)')" class="bg-navy-900 rounded-lg border border-slate-800 p-2 mt-auto cursor-pointer">
-                        <img src="images/script-level-gold.png" alt="level-gold Script Screenshot" class="w-full h-44 object-contain mx-auto rounded" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="hidden flex-col items-center justify-center text-center h-44 px-4 text-slate-500 font-mono text-xs w-full">
+                    <div onclick="openCardLightbox(this, 'level-gold 1.00 Script (00, 50, 20 & 80 Levels)')" class="bg-navy-900 rounded-lg border border-slate-800 p-2 mt-auto cursor-pointer">
+                        <img src="images/level-gold.png" alt="level-gold 1.00 Script Screenshot" class="w-full h-52 object-contain mx-auto rounded" onerror="handleImgFallback(this, 'images/script-level-gold.png')">
+                        <div class="hidden flex-col items-center justify-center text-center h-52 px-4 text-slate-500 font-mono text-xs w-full">
                             <i class="fa-solid fa-coins text-2xl text-cyan-400/50 mb-1.5"></i>
-                            <span class="text-slate-400">Optional Screenshot</span>
-                            <span class="text-cyan-400/70 mt-0.5">images/script-level-gold.png</span>
+                            <span class="text-slate-400">Upload Screenshot</span>
+                            <span class="text-cyan-400/70 mt-0.5">images/level-gold.png</span>
                         </div>
                     </div>
                 </div>
@@ -397,17 +446,17 @@
                 <div class="glass-card p-6 rounded-xl flex flex-col">
                     <div class="flex items-center justify-between gap-2 mb-3">
                         <h3 class="text-lg font-bold text-white font-mono">Fibb (v1.02)</h3>
-                        <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-cyan-400/10 text-cyan-400 border border-cyan-400/25">OTE &amp; Custom Highlight</span>
+                        <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-cyan-400/10 text-cyan-400 border border-cyan-400/25">7-in-1 OTE &amp; Presets</span>
                     </div>
                     <p class="text-xs sm:text-sm text-slate-300 text-justify mb-4">
-                        Customizable Fibonacci &amp; OTE script with selectable tool modes (such as <strong class="text-white">OTE Sweet Spot</strong>), <strong class="text-white">GroupID</strong> organization, and customizable colors so you can highlight any zone on demand.
+                        7-mode Fibonacci script with instant dropdown presets (<strong class="text-white">OTE Sweet Spot, OTE + TP Targets, 50% EQ, 25% Quadrants, 12.5% Octiles, Range Anchors</strong>) plus one-click removal.
                     </p>
-                    <div onclick="openLightbox('images/script-fibb.png', 'Fibb 1.02 Script Inputs & Highlight Settings')" class="bg-navy-900 rounded-lg border border-slate-800 p-2 mt-auto cursor-pointer">
-                        <img src="images/script-fibb.png" alt="Fibb 1.02 Script Screenshot" class="w-full h-44 object-contain mx-auto rounded" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="hidden flex-col items-center justify-center text-center h-44 px-4 text-slate-500 font-mono text-xs w-full">
+                    <div onclick="openCardLightbox(this, 'Fibb 1.02 Script — 7-in-1 Dropdown Presets')" class="bg-navy-900 rounded-lg border border-slate-800 p-2 mt-auto cursor-pointer">
+                        <img src="images/fibb-presets.png" alt="Fibb 1.02 Script Screenshot" class="w-full h-52 object-contain mx-auto rounded" onerror="handleImgFallback(this, 'images/script-fibb.png')">
+                        <div class="hidden flex-col items-center justify-center text-center h-52 px-4 text-slate-500 font-mono text-xs w-full">
                             <i class="fa-solid fa-sliders text-2xl text-cyan-400/50 mb-1.5"></i>
-                            <span class="text-slate-400">Optional Screenshot</span>
-                            <span class="text-cyan-400/70 mt-0.5">images/script-fibb.png</span>
+                            <span class="text-slate-400">Upload Screenshot</span>
+                            <span class="text-cyan-400/70 mt-0.5">images/fibb-presets.png</span>
                         </div>
                     </div>
                 </div>
@@ -415,18 +464,18 @@
                 <!-- Script 4: FVG-Script -->
                 <div class="glass-card p-6 rounded-xl flex flex-col">
                     <div class="flex items-center justify-between gap-2 mb-3">
-                        <h3 class="text-lg font-bold text-white font-mono">FVG-Script</h3>
+                        <h3 class="text-lg font-bold text-white font-mono">FVG-Script (v1.00)</h3>
                         <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-cyan-400/10 text-cyan-400 border border-cyan-400/25">+/- FVG &amp; AMD Boxes</span>
                     </div>
                     <p class="text-xs sm:text-sm text-slate-300 text-justify mb-4">
-                        Formats Fair Value Gap and AMD boxes (<strong class="text-white">+ FVG (Bullish), - FVG (Bearish), Accumulation, Manipulation, Distribution</strong>) with midlines and easy highlight/selection control.
+                        Formats Fair Value Gap and Power of 3 boxes (<strong class="text-white">+ FVG (Bullish), - FVG (Bearish), Accumulation, Manipulation, Distribution</strong>) with midlines and clean selection control.
                     </p>
-                    <div onclick="openLightbox('images/script-fvg.png', 'FVG-Script Box Styles & Highlight Controls')" class="bg-navy-900 rounded-lg border border-slate-800 p-2 mt-auto cursor-pointer">
-                        <img src="images/script-fvg.png" alt="FVG-Script Screenshot" class="w-full h-44 object-contain mx-auto rounded" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="hidden flex-col items-center justify-center text-center h-44 px-4 text-slate-500 font-mono text-xs w-full">
+                    <div onclick="openCardLightbox(this, 'FVG-Script 1.00 — Box Styles & AMD Controls')" class="bg-navy-900 rounded-lg border border-slate-800 p-2 mt-auto cursor-pointer">
+                        <img src="images/fvg-script.png" alt="FVG-Script 1.00 Screenshot" class="w-full h-52 object-contain mx-auto rounded" onerror="handleImgFallback(this, 'images/script-fvg.png')">
+                        <div class="hidden flex-col items-center justify-center text-center h-52 px-4 text-slate-500 font-mono text-xs w-full">
                             <i class="fa-solid fa-vector-square text-2xl text-cyan-400/50 mb-1.5"></i>
-                            <span class="text-slate-400">Optional Screenshot</span>
-                            <span class="text-cyan-400/70 mt-0.5">images/script-fvg.png</span>
+                            <span class="text-slate-400">Upload Screenshot</span>
+                            <span class="text-cyan-400/70 mt-0.5">images/fvg-script.png</span>
                         </div>
                     </div>
                 </div>
@@ -551,6 +600,22 @@
 
         function scrollToTopSmooth() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function handleImgFallback(img, fallbackSrc) {
+            if (!img.dataset.triedFallback && fallbackSrc) {
+                img.dataset.triedFallback = 'true';
+                img.src = fallbackSrc;
+            } else {
+                img.style.display = 'none';
+                if (img.nextElementSibling) img.nextElementSibling.style.display = 'flex';
+            }
+        }
+
+        function openCardLightbox(container, caption) {
+            const img = container.querySelector('img');
+            if (!img || img.style.display === 'none') return;
+            openLightbox(img.currentSrc || img.src, caption);
         }
 
         function openLightbox(src, caption) {
