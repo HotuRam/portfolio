@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotu Ram | Prop Firm Operations, MT5 Specialist &amp; AI Support Builder</title>
+    <!-- Google Fonts: Inter & Fira Code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome 6.5.2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 800: '#0a192f', 900: '#020c1b' },
+                        cyan: { 400: '#64ffda', 500: '#00e5ff' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #020c1b; color: #8892b0; font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { color: #ccd6f6; }
+        .glow-text { text-shadow: 0 0 12px rgba(100, 255, 218, 0.35); }
+        .nav-glass {
+            background: rgba(2, 12, 27, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(100, 255, 218, 0.12);
+        }
+        .glass-card {
+            background: rgba(10, 25, 47, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(100, 255, 218, 0.4);
+            box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7), 0 0 15px rgba(100, 255, 218, 0.12);
+        }
+        .timeline-dot { box-shadow: 0 0 10px rgba(100, 255, 218, 0.5); }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020c1b; }
+        ::-webkit-scrollbar-thumb { background: #495670; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #8892b0; }
+    </style>
+</head>
+<body class="antialiased selection:bg-cyan-400 selection:text-navy-900 leading-relaxed">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-glass">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
+            <a href="#hero" class="inline-flex items-center gap-2.5 font-mono text-sm sm:text-base font-semibold tracking-tight group leading-none">
+                <span class="w-8 h-8 rounded bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-cyan-400 group-hover:bg-cyan-400 group-hover:text-navy-900 transition-colors">
+                    <i class="fa-solid fa-house text-sm"></i>
+                </span>
+                <span class="text-white group-hover:text-cyan-400 transition-colors">Home</span>
+                <span class="hidden sm:inline text-slate-600 font-normal">|</span>
+                <span class="hidden sm:inline text-cyan-400 text-xs sm:text-sm uppercase tracking-wider">Portfolio</span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden lg:flex items-center space-x-5 text-xs font-mono">
+                <a href="#about" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">01.</span> About</a>
+                <a href="#opportunities" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">02.</span> Opportunities</a>
+                <a href="#ai-support" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">03.</span> AI Chatbots</a>
+                <a href="#competencies" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">04.</span> Competencies</a>
+                <a href="#experience" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">05.</span> Experience</a>
+                <a href="#profiles" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">06.</span> Profiles</a>
+                <a href="#documents" class="px-4 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400/10 transition-colors leading-none">Resume</a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" class="lg:hidden text-cyan-400 text-2xl p-1 focus:outline-none">
+                <i id="mobile-menu-icon" class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-navy-800/95 border-t border-cyan-400/10 px-6 py-4 space-y-4 font-mono text-sm">
+            <a href="#about" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">01.</span> About</a>
+            <a href="#opportunities" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">02.</span> Opportunities</a>
+            <a href="#ai-support" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">03.</span> AI Chatbots for Trader Support</a>
+            <a href="#competencies" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">04.</span> Competencies</a>
+            <a href="#experience" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">05.</span> Experience</a>
+            <a href="#profiles" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">06.</span> Profiles</a>
+            <a href="#documents" class="mobile-link inline-block px-4 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400/10 transition-colors">Resume &amp; Cover Letter</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center px-6 pt-28 pb-16">
+        <div class="max-w-6xl mx-auto w-full">
+            <p class="text-cyan-400 font-mono text-sm md:text-base mb-4 pl-0.5">Hi, my name is</p>
+            
+            <!-- NAME ROW WITH IIT BADGE -->
+            <div class="flex flex-wrap items-center gap-3 md:gap-5 mb-4">
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight uppercase text-white leading-none">HOTU RAM</h1>
+                <span class="bg-[#1e3a8a] text-white font-bold text-xs sm:text-sm md:text-lg px-3 py-1.5 md:px-4 md:py-2 rounded-sm uppercase tracking-wider shadow-md">
+                    IIT ALUMNUS
+                </span>
+            </div>
+            
+            <!-- THE BIG HEADLINE -->
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-400 mb-6 tracking-tight leading-tight">
+                I decode the prop firm ecosystem.
+            </h2>
+            
+            <!-- THE TITLES SUBLINE -->
+            <p class="max-w-2xl text-base sm:text-lg md:text-xl mb-8 leading-relaxed text-slate-300">
+                I am an independent <strong class="text-white font-semibold">Prop Firm Trader</strong>, <strong class="text-white font-semibold">MT5/MQL5 Developer</strong>, and <span class="text-cyan-400 font-semibold">Community Educator &amp; Discussion Expert</span> building AI support tools that bridge retail traders and institutional rules.
+            </p>
+
+            <!-- CLEAR CLICKABLE PROMPT FOR PORTFOLIO TRACKS -->
+            <p class="text-xs sm:text-sm font-mono text-cyan-400 mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-arrow-pointer"></i>
+                <span>Explore my work &mdash; click any track for full details:</span>
+            </p>
+
+            <!-- PORTFOLIO SUB-PAGE BUTTONS -->
+            <div class="flex flex-wrap gap-3 sm:gap-4 mb-9">
+                <a href="https://hotu_ram.godrive.my.id/ai-support-chatbots.html" class="group inline-flex items-center px-5 py-3 bg-navy-800/70 border border-slate-500 text-slate-200 font-mono text-sm sm:text-base rounded hover:bg-cyan-400/10 hover:border-cyan-400 hover:text-cyan-400 hover:shadow-[0_0_12px_rgba(100,255,218,0.25)] transition-all duration-300">
+                    <i class="fa-solid fa-robot mr-2.5 text-lg text-cyan-400"></i>
+                    <span>AI Support Chatbots</span>
+                    <i class="fa-solid fa-arrow-right ml-2.5 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
+                </a>
+                <a href="https://hotu_ram.godrive.my.id/discord-wizard.html" class="group inline-flex items-center px-5 py-3 bg-navy-800/70 border border-slate-500 text-slate-200 font-mono text-sm sm:text-base rounded hover:bg-cyan-400/10 hover:border-cyan-400 hover:text-cyan-400 hover:shadow-[0_0_12px_rgba(100,255,218,0.25)] transition-all duration-300">
+                    <i class="fa-brands fa-discord mr-2.5 text-lg text-cyan-400"></i>
+                    <span>Discord Community Educator</span>
+                    <i class="fa-solid fa-arrow-right ml-2.5 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
+                </a>
+                <a href="https://hotu_ram.godrive.my.id/mt5-specialist.html" class="group inline-flex items-center px-5 py-3 bg-navy-800/70 border border-slate-500 text-slate-200 font-mono text-sm sm:text-base rounded hover:bg-cyan-400/10 hover:border-cyan-400 hover:text-cyan-400 hover:shadow-[0_0_12px_rgba(100,255,218,0.25)] transition-all duration-300">
+                    <i class="fa-solid fa-code mr-2.5 text-lg text-cyan-400"></i>
+                    <span>MT5 Specialist</span>
+                    <i class="fa-solid fa-arrow-right ml-2.5 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
+                </a>
+                <a href="https://hotu_ram.godrive.my.id/startup-ops.html" class="group inline-flex items-center px-5 py-3 bg-navy-800/70 border border-slate-500 text-slate-200 font-mono text-sm sm:text-base rounded hover:bg-cyan-400/10 hover:border-cyan-400 hover:text-cyan-400 hover:shadow-[0_0_12px_rgba(100,255,218,0.25)] transition-all duration-300">
+                    <i class="fa-solid fa-rocket mr-2.5 text-lg text-cyan-400"></i>
+                    <span>Startup Ops</span>
+                    <i class="fa-solid fa-arrow-right ml-2.5 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
+                </a>
+            </div>
+            
+            <!-- RESUME CTA + LOCATION + QUICK SOCIALS (BOTH X PROFILES) -->
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+                <a href="#documents" class="inline-flex justify-center items-center px-7 py-3.5 bg-transparent border border-slate-700 text-slate-200 font-mono text-sm rounded hover:bg-slate-800 hover:border-cyan-400/50 transition-colors duration-300">
+                    Access My Resume
+                </a>
+                <div class="inline-flex items-center text-sm font-mono text-slate-400">
+                    <i class="fa-solid fa-location-dot text-cyan-400 mr-2"></i> Jaipur, India | Remote (Global)
+                </div>
+                <div class="flex flex-wrap items-center gap-4 text-xl text-slate-400 pt-1 sm:pt-0 sm:border-l sm:border-slate-700 sm:pl-6">
+                    <a href="https://www.linkedin.com/in/hotu-ram/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/HotuRam" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.kaggle.com/hoturam" target="_blank" rel="noopener noreferrer" title="Kaggle Discussion Expert" aria-label="Kaggle" class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-kaggle"></i></a>
+                    <a href="https://x.com/Hotu_Ram" target="_blank" rel="noopener noreferrer" title="X (Professional — @Hotu_Ram)" aria-label="X Professional" class="inline-flex items-center gap-1 hover:text-cyan-400 transition-colors">
+                        <i class="fa-brands fa-x-twitter"></i><span class="text-[10px] font-mono uppercase border border-slate-700 px-1.5 py-0.5 rounded">Pro</span>
+                    </a>
+                    <a href="https://x.com/HotuGoyal" target="_blank" rel="noopener noreferrer" title="X (Casual / Trading — @HotuGoyal)" aria-label="X Casual" class="inline-flex items-center gap-1 hover:text-cyan-400 transition-colors">
+                        <i class="fa-brands fa-x-twitter"></i><span class="text-[10px] font-mono uppercase border border-slate-700 px-1.5 py-0.5 rounded">Casual</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 01. About Section -->
+    <section id="about" class="py-20 md:py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-2xl md:text-3xl font-bold flex items-center gap-3 mb-12">
+                <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">01.</span>
+                <span class="whitespace-nowrap shrink-0">About Me</span>
+                <span class="block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
+            </h3>
+            
+            <div class="grid md:grid-cols-5 gap-12 items-start">
+                <div class="md:col-span-3 space-y-5 text-base sm:text-lg leading-relaxed text-slate-300 text-justify">
+                    <p>
+                        I am an <strong class="text-white">IIT alumnus</strong> deeply passionate about financial markets and trading technology. I live, breathe, and work within the <strong class="text-cyan-400 font-mono">MetaTrader</strong> ecosystem. 📈
+                    </p>
+                    <p>
+                        Actively involved in trading since 2020, I have built hands-on experience across <strong class="text-white">forex, futures, and the proprietary trading industry</strong>. Having personally navigated evaluations and secured funded account payouts, I understand the retail trader journey from the inside out. My background also includes <strong class="text-white">institutional operations experience as a Startup Incubation Executive at iStart Rajasthan</strong>, supporting government-backed startup programs.
+                    </p>
+                    <p class="text-base text-slate-400">
+                        Beyond trading, I combine practical market knowledge with technical expertise in <strong class="text-slate-200">MT4/MT5</strong>, custom <strong class="text-slate-200">MQL5 indicator development</strong>, and <strong class="text-slate-200">AI trader support chatbots</strong>&mdash;bridging the gap between trader needs and reliable operational execution. 🚀
+                    </p>
+                </div>
+                
+                <!-- Profile Photo -->
+                <div class="md:col-span-2 relative group w-60 h-60 sm:w-64 sm:h-64 mx-auto md:w-full md:h-auto md:aspect-square mt-2 md:mt-0">
+                    <div class="absolute inset-0 border-2 border-cyan-400 rounded translate-x-3 translate-y-3 sm:translate-x-4 sm:translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
+                    <div class="absolute inset-0 bg-navy-800 rounded z-10 overflow-hidden border border-slate-700 transition-all duration-300">
+                        <img src="https://drive.google.com/thumbnail?id=1qaFJyLnvD9SnmMtsEXAat9_lPj0b5Tjg&amp;sz=w800" alt="Hotu Ram" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                    </div>
+                </div>
+            </div>
+
+            <!-- What I Bring to the Table -->
+            <div class="mt-16">
+                <h4 class="text-white font-bold text-lg sm:text-xl mb-6 flex items-center gap-2.5 tracking-wide">
+                    <i class="fa-solid fa-layer-group text-cyan-400"></i>
+                    <span>WHAT I BRING TO THE TABLE</span>
+                </h4>
+                <div class="grid sm:grid-cols-2 gap-5">
+                    <div class="glass-card p-5 rounded-lg flex items-start gap-4">
+                        <div class="w-10 h-10 rounded bg-cyan-400/10 border border-cyan-400/25 flex items-center justify-center text-cyan-400 shrink-0 mt-0.5">
+                            <i class="fa-solid fa-chart-line text-lg"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-white font-semibold text-base mb-1">Practical Trading Knowledge</h5>
+                            <p class="text-xs sm:text-sm text-slate-300 text-justify">Live FX, Futures, and CFD execution across prop firm evaluations, drawdown mechanics, and payout cycles.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-5 rounded-lg flex items-start gap-4">
+                        <div class="w-10 h-10 rounded bg-cyan-400/10 border border-cyan-400/25 flex items-center justify-center text-cyan-400 shrink-0 mt-0.5">
+                            <i class="fa-solid fa-code text-lg"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-white font-semibold text-base mb-1">Technical Problem-Solving</h5>
+                            <p class="text-xs sm:text-sm text-slate-300 text-justify">MT4/MT5 diagnostics, execution troubleshooting, custom MQL5 tools, and AI rulebook chatbots.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-5 rounded-lg flex items-start gap-4">
+                        <div class="w-10 h-10 rounded bg-cyan-400/10 border border-cyan-400/25 flex items-center justify-center text-cyan-400 shrink-0 mt-0.5">
+                            <i class="fa-solid fa-building-columns text-lg"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-white font-semibold text-base mb-1">Institutional Operations Experience</h5>
+                            <p class="text-xs sm:text-sm text-slate-300 text-justify">Structured workflows, cross-sector stakeholder coordination, and executive reporting.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-5 rounded-lg flex items-start gap-4">
+                        <div class="w-10 h-10 rounded bg-cyan-400/10 border border-cyan-400/25 flex items-center justify-center text-cyan-400 shrink-0 mt-0.5">
+                            <i class="fa-solid fa-rocket text-lg"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-white font-semibold text-base mb-1">Startup Ecosystem Experience</h5>
+                            <p class="text-xs sm:text-sm text-slate-300 text-justify">Hands-on incubation, workshops, web portal support, and 1,000+ startup idea evaluations at iStart Rajasthan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 02. Opportunities I'm Looking For -->
+    <section id="opportunities" class="py-20 md:py-24 px-6 bg-navy-800/35 border-y border-slate-800/70">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-2xl md:text-3xl font-bold flex items-baseline sm:items-center gap-3 mb-5">
+                <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">02.</span>
+                <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">Opportunities I'm Looking For</span>
+                <span class="hidden sm:block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
+            </h3>
+
+            <!-- High-Contrast Blinking Green Status Pill -->
+            <div class="mb-10">
+                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-navy-900/90 border border-slate-600/80 text-white font-mono text-xs sm:text-sm font-semibold shadow-md">
+                    <span class="relative flex h-3.5 w-3.5 shrink-0">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-90"></span>
+                        <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.95)]"></span>
+                    </span>
+                    <span>Actively Looking <span class="text-cyan-400 mx-1">|</span> Immediate Joiner</span>
+                </div>
+            </div>
+
+            <!-- 3 Prominent Target Role Cards -->
+            <div class="space-y-5">
+                <!-- Role 1 -->
+                <div class="glass-card p-6 sm:p-7 rounded-xl border-l-4 border-l-cyan-400">
+                    <div class="flex items-start gap-4 sm:gap-5">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-cyan-400 shrink-0">
+                            <i class="fa-solid fa-headset text-xl sm:text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-lg sm:text-xl font-bold text-white tracking-tight mb-2">
+                                Trader Support &amp; Customer Success
+                            </h4>
+                            <p class="text-sm sm:text-base text-slate-300 text-justify leading-relaxed">
+                                <span class="text-cyan-400 font-bold mr-2">&#10148;</span>Helping traders navigate platform issues, evaluation rules, account management, and payout workflows with clarity and patience.
+                            </p>
+                            <a href="https://hotu_ram.godrive.my.id/discord-wizard.html" class="inline-flex items-center gap-2 mt-3.5 text-xs sm:text-sm font-mono text-cyan-400 hover:underline">
+                                <span>For more details, click here &mdash; Discord Community Educator</span>
+                                <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Role 2 -->
+                <div class="glass-card p-6 sm:p-7 rounded-xl border-l-4 border-l-cyan-400">
+                    <div class="flex items-start gap-4 sm:gap-5">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-cyan-400 shrink-0">
+                            <i class="fa-solid fa-terminal text-xl sm:text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-lg sm:text-xl font-bold text-white tracking-tight mb-2">
+                                MT4/MT5 Technical Support
+                            </h4>
+                            <p class="text-sm sm:text-base text-slate-300 text-justify leading-relaxed">
+                                <span class="text-cyan-400 font-bold mr-2">&#10148;</span>Deep MetaTrader platform expertise, execution troubleshooting, custom MQL5 indicator development, and risk-management utilities.
+                            </p>
+                            <a href="https://hotu_ram.godrive.my.id/mt5-specialist.html" class="inline-flex items-center gap-2 mt-3.5 text-xs sm:text-sm font-mono text-cyan-400 hover:underline">
+                                <span>For more details, click here &mdash; MT5 Specialist</span>
+                                <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Role 3 -->
+                <div class="glass-card p-6 sm:p-7 rounded-xl border-l-4 border-l-cyan-400">
+                    <div class="flex items-start gap-4 sm:gap-5">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-cyan-400 shrink-0">
+                            <i class="fa-solid fa-gears text-xl sm:text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-lg sm:text-xl font-bold text-white tracking-tight mb-2">
+                                Prop Firm Operations
+                            </h4>
+                            <p class="text-sm sm:text-base text-slate-300 text-justify leading-relaxed">
+                                <span class="text-cyan-400 font-bold mr-2">&#10148;</span>Applying first-hand knowledge of the retail trading journey and institutional operations to improve trader experience, workflow efficiency, and risk clarity.
+                            </p>
+                            <a href="https://hotu_ram.godrive.my.id/startup-ops.html" class="inline-flex items-center gap-2 mt-3.5 text-xs sm:text-sm font-mono text-cyan-400 hover:underline">
+                                <span>For more details, click here &mdash; Startup Ops</span>
+                                <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CORE EXPERTISE BLOCK -->
+            <div class="mt-10 bg-navy-900/75 p-6 sm:p-8 rounded-xl border border-slate-700/60">
+                <h5 class="text-white font-mono text-sm sm:text-base font-bold tracking-wide mb-4">
+                    🔑 CORE EXPERTISE
+                </h5>
+                <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                    <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
+                        <span class="font-mono font-semibold text-cyan-400 shrink-0">&bull; AI Support Automation:</span>
+                        <span>Custom Rulebook Chatbots &middot; Self-Service Support Centers &middot; Ticket Deflection</span>
+                    </li>
+                    <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
+                        <span class="font-mono font-semibold text-cyan-400 shrink-0">&bull; MT5 Specialist:</span>
+                        <span>Custom MQL5 Development &middot; Risk-Management Tools</span>
+                    </li>
+                    <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
+                        <span class="font-mono font-semibold text-cyan-400 shrink-0">&bull; Prop Firm Ecosystem:</span>
+                        <span>Funding &amp; Evaluation Rules &middot; Drawdown &amp; Consistency Mechanics &middot; Payout Workflows</span>
+                    </li>
+                    <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
+                        <span class="font-mono font-semibold text-cyan-400 shrink-0">&bull; Independent Prop Trader (5+ Yrs):</span>
+                        <span>Forex, Futures &amp; CFDs &middot; Risk Management &middot; Platform Troubleshooting</span>
+                    </li>
+                    <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
+                        <span class="font-mono font-semibold text-cyan-400 shrink-0">&bull; Community Educator &amp; Discussion Expert:</span>
+                        <span>Discord Trader Guidance &middot; Onboarding &middot; Kaggle Discussions Legacy Expert (390+ Posts)</span>
+                    </li>
+                    <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
+                        <span class="font-mono font-semibold text-cyan-400 shrink-0">&bull; Startup Ecosystem:</span>
+                        <span>Startup Incubation &amp; Evaluation &middot; Pitch Deck Analysis &middot; Startup Growth</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03. AI Chatbots for Trader Support (Live Proof-of-Work) -->
+    <section id="ai-support" class="py-20 md:py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-2xl md:text-3xl font-bold flex items-baseline sm:items-center gap-3 mb-4">
+                <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">03.</span>
+                <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">AI Chatbots for Trader Support</span>
+                <span class="hidden sm:block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
+            </h3>
+            <p class="text-sm sm:text-base text-slate-400 max-w-3xl mb-10">
+                Live proof-of-work prototypes built to deflect repetitive support tickets, clarify prop firm rulebooks 24/7, and streamline trader onboarding.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1: Live AI Chatbot -->
+                <div class="glass-card p-6 rounded-xl flex flex-col border-t-2 border-t-cyan-400">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-lg bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-cyan-400">
+                            <i class="fa-solid fa-robot text-2xl"></i>
+                        </div>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-emerald-400/10 text-emerald-400 border border-emerald-400/30">Live Demo</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">AI Trader Support Chatbot</h4>
+                    <p class="text-sm text-slate-300 text-justify mb-6">
+                        Interactive rulebook-trained AI assistant (Jet Funded case study) that answers drawdown, consistency, 3-Lives, and payout questions in seconds.
+                    </p>
+                    <a href="https://hotu-jet-support-chat-bot.netlify.app/" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-cyan-400/10 border border-cyan-400 text-cyan-400 font-mono text-xs sm:text-sm rounded hover:bg-cyan-400 hover:text-navy-900 transition-colors">
+                        <span>Launch Live Chatbot</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2: Standalone Rulebook Support Center -->
+                <div class="glass-card p-6 rounded-xl flex flex-col border-t-2 border-t-cyan-400">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-lg bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-cyan-400">
+                            <i class="fa-solid fa-book-open text-2xl"></i>
+                        </div>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-emerald-400/10 text-emerald-400 border border-emerald-400/30">Live Demo</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Rulebook Support Center</h4>
+                    <p class="text-sm text-slate-300 text-justify mb-6">
+                        Clean, searchable self-service help hub structured so traders can verify evaluation rules, risk caps, and payout criteria before opening a ticket.
+                    </p>
+                    <a href="https://hotu-jet-support.netlify.app/" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-cyan-400/10 border border-cyan-400 text-cyan-400 font-mono text-xs sm:text-sm rounded hover:bg-cyan-400 hover:text-navy-900 transition-colors">
+                        <span>Open Support Center</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Card 3: Research Report & Build Playbook PDF -->
+                <div class="glass-card p-6 rounded-xl flex flex-col border-t-2 border-t-cyan-400">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-lg bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-cyan-400">
+                            <i class="fa-solid fa-file-pdf text-2xl"></i>
+                        </div>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-cyan-400/10 text-cyan-400 border border-cyan-400/30">Case Study PDF</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Prop Firm Research &amp; Build Playbook</h4>
+                    <p class="text-sm text-slate-300 text-justify mb-6">
+                        Complete Jet Funded operational audit, knowledge-base structuring workflow, and 48-hour replication blueprint for deploying AI support at any prop firm.
+                    </p>
+                    <a href="PASTE_JET_FUNDED_PDF_DRIVE_LINK_HERE" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-transparent border border-slate-500 text-slate-200 font-mono text-xs sm:text-sm rounded hover:border-cyan-400 hover:text-cyan-400 transition-colors">
+                        <span>Read Research Report (PDF)</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 04. Core Competencies -->
+    <section id="competencies" class="py-20 md:py-24 px-6 bg-navy-900/40">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-2xl md:text-3xl font-bold flex items-center gap-3 mb-12">
+                <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">04.</span>
+                <span class="whitespace-nowrap shrink-0">Core Competencies</span>
+                <span class="block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
+            </h3>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-6 rounded-lg flex flex-col">
+                    <div class="text-cyan-400 text-3xl mb-4"><i class="fa-solid fa-code"></i></div>
+                    <h4 class="text-xl font-bold text-slate-200 mb-2">MT5/MQL5 Tech Support</h4>
+                    <p class="text-sm text-justify">MT4/MT5 diagnostics, order execution mechanics, and custom MQL5 tools including Minimum Trade Duration Timers, Session/Killzone HUDs, and Dynamic Risk Calculators.</p>
+                    <a href="https://hotu_ram.godrive.my.id/mt5-specialist.html" class="inline-flex items-center gap-1.5 mt-auto pt-4 text-xs font-mono text-cyan-400 hover:underline">
+                        <span>More details &mdash; MT5 Specialist</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+                
+                <div class="glass-card p-6 rounded-lg flex flex-col">
+                    <div class="text-cyan-400 text-3xl mb-4"><i class="fa-solid fa-chart-line"></i></div>
+                    <h4 class="text-xl font-bold text-slate-200 mb-2">Prop Firm Ecosystem &amp; Rules</h4>
+                    <p class="text-sm text-justify">Deep familiarity with evaluation frameworks, trailing/daily drawdown and consistency mechanics, and live FX, Gold (XAUUSD), Indices, and 24/7 market dynamics.</p>
+                </div>
+                
+                <div class="glass-card p-6 rounded-lg flex flex-col">
+                    <div class="text-cyan-400 text-3xl mb-4"><i class="fa-brands fa-discord"></i></div>
+                    <h4 class="text-xl font-bold text-slate-200 mb-2">Discord Community Educator</h4>
+                    <p class="text-sm text-justify">Peer trader education in the Shark Funded Discord (~1 year) plus Kaggle Discussions Legacy Expert (390+ posts)&mdash;clarifying account tiers, KYC checks, and crypto payout workflows.</p>
+                    <a href="https://hotu_ram.godrive.my.id/discord-wizard.html" class="inline-flex items-center gap-1.5 mt-auto pt-4 text-xs font-mono text-cyan-400 hover:underline">
+                        <span>More details &mdash; Discord Community Educator</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+                
+                <div class="glass-card p-6 rounded-lg flex flex-col">
+                    <div class="text-cyan-400 text-3xl mb-4"><i class="fa-solid fa-rocket"></i></div>
+                    <h4 class="text-xl font-bold text-slate-200 mb-2">Startup &amp; Stakeholder Ops</h4>
+                    <p class="text-sm text-justify">Incubation workflows, workshops and ecosystem events, 1,000+ startup idea evaluations, and cross-sector stakeholder communication from iStart Rajasthan.</p>
+                    <a href="https://hotu_ram.godrive.my.id/startup-ops.html" class="inline-flex items-center gap-1.5 mt-auto pt-4 text-xs font-mono text-cyan-400 hover:underline">
+                        <span>More details &mdash; Startup Ops</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 05. Experience -->
+    <section id="experience" class="py-20 md:py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-2xl md:text-3xl font-bold flex items-center gap-3 mb-12">
+                <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">05.</span>
+                <span class="whitespace-nowrap shrink-0">Experience</span>
+                <span class="block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
+            </h3>
+            
+            <div class="space-y-12">
+                <!-- Job 1 -->
+                <div class="relative pl-4 md:pl-0">
+                    <div class="md:grid md:grid-cols-12 md:gap-8 items-start">
+                        <div class="hidden md:block md:col-span-3 text-right font-mono text-xs lg:text-sm text-cyan-400 pt-1 whitespace-nowrap">
+                            Jan 2021 &mdash; Present
+                        </div>
+                        <div class="md:col-span-9 relative border-l border-slate-700 pl-6 sm:pl-8 pb-8">
+                            <div class="absolute w-3 h-3 bg-navy-900 border-2 border-cyan-400 rounded-full -left-[6.5px] top-2 timeline-dot"></div>
+                            <h4 class="text-lg sm:text-xl font-bold text-slate-200">MT5 Specialist</h4>
+                            <p class="text-slate-400 mb-2 md:mb-4 font-mono text-xs sm:text-sm">Platform Execution, CFD/Forex Mechanics &amp; MQL5 Scripting</p>
+                            <p class="text-cyan-400 font-mono text-xs mb-4 md:hidden">Jan 2021 &mdash; Present</p>
+                            <ul class="list-none space-y-2.5 text-sm text-justify">
+                                <li><span class="text-cyan-400 mr-2">&#10148;</span><strong class="text-slate-300">Complete Platform Mastery:</strong> 5+ years across MetaTrader (transitioning from MT4 in 2021 to MT5), covering UI workflows, order execution mechanics, charting, and live technical troubleshooting.</li>
+                                <li><span class="text-cyan-400 mr-2">&#10148;</span><strong class="text-slate-300">CFD/Forex Execution Diagnostics:</strong> Practical command of major FX pairs, Gold (XAUUSD), and Indices&mdash;including rollover bid/ask spreads, high-impact news slippage, margin/leverage requirements, and order rejection troubleshooting.</li>
+                                <li><span class="text-cyan-400 mr-2">&#10148;</span><strong class="text-slate-300">Custom MQL5 Tools:</strong> Personally designed and coded Minimum Trade Duration Timers, Session &amp; Killzone HUDs, and Dynamic Risk Calculators to improve execution accuracy and enforce risk compliance.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="relative pl-4 md:pl-0">
+                    <div class="md:grid md:grid-cols-12 md:gap-8 items-start">
+                        <div class="hidden md:block md:col-span-3 text-right font-mono text-xs lg:text-sm text-cyan-400 pt-1 whitespace-nowrap">
+                            Jan 2020 &mdash; Present
+                        </div>
+                        <div class="md:col-span-9 relative border-l border-slate-700 pl-6 sm:pl-8 pb-8">
+                            <div class="absolute w-3 h-3 bg-navy-900 border-2 border-cyan-400 rounded-full -left-[6.5px] top-2 timeline-dot"></div>
+                            <h4 class="text-lg sm:text-xl font-bold text-slate-200">Independent Prop Trader &amp; Community Educator</h4>
+                            <p class="text-slate-400 mb-2 md:mb-4 font-mono text-xs sm:text-sm">Forex, Futures &amp; CFDs | FundedNext, Apex, Maven, Shark Funded, The5ers</p>
+                            <p class="text-cyan-400 font-mono text-xs mb-4 md:hidden">Jan 2020 &mdash; Present</p>
+                            <ul class="list-none space-y-2.5 text-sm text-justify">
+                                <li><span class="text-cyan-400 mr-2">&#10148;</span><strong class="text-slate-300">Live Market Experience:</strong> Actively trading FX, Futures, and CFDs since 2020 with strict drawdown and consistency discipline across MT5, MT4, and Tradovate.</li>
+                                <li><span class="text-cyan-400 mr-2">&#10148;</span><strong class="text-slate-300">Full Prop Firm Lifecycle (Shark Funded):</strong> Firsthand experience across all account types, covering evaluation compliance, KYC verification, and a verified Trust Wallet crypto payout.</li>
+                                <li><span class="text-cyan-400 mr-2">&#10148;</span><strong class="text-slate-300">Discord Community Engagement (~1 Year):</strong> Active peer educator in the Shark Funded Discord, guiding traders on chart observations, account rules, purchasing steps, KYC checks, and payout procedures.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="relative pl-4 md:pl-0">
+                    <div class="md:grid md:grid-cols-12 md:gap-8 items-start">
+                        <div class="hidden md:block md:col-span-3 text-right font-mono text-xs lg:text-sm text-cyan-400 pt-1 whitespace-nowrap">
+                            Jun 2022 &mdash; May 2024
+                        </div>
+                        <div class="md:col-span-9 relative border-l border-slate-700 pl-6 sm:pl-8">
+                            <div class="absolute w-3 h-3 bg-navy-900 border-2 border-cyan-400 rounded-full -left-[6.5px] top-2 timeline-dot"></div>
+                            <h4 class="text-lg sm:text-xl font-bold text-slate-200">Startup Incubation Executive</h4>
+                            <p class="text-slate-400 mb-2 md:mb-4 font-mono text-xs sm:text-sm">iStart Rajasthan (DoIT&amp;C, Govt. of Rajasthan) &mdash; Bhamashah Techno Hub, Jaipur</p>
+                            <p class="text-cyan-400 font-mono text-xs mb-4 md:hidden">Jun 2022 &mdash; May 2024</p>
+                            <ul class="list-none space-y-2.5 text-sm text-justify">
+                                <li><span class="text-cyan-400 mr-2">&#10148;</span><strong class="text-slate-300">Startup Idea Evaluation:</strong> Reviewed and evaluated 1,000+ startup ideas and pitch decks, monitoring founder progress and providing structured feedback.</li>
+                                <li><span class="text-cyan-400 mr-2">&#10148;</span><strong class="text-slate-300">Cross-Sector &amp; Inter-Departmental Communication:</strong> Bridged communication across public-sector government officials, inter-departmental teams, private-sector partners, investors, mentors, and founders.</li>
+                                <li><span class="text-cyan-400 mr-2">&#10148;</span><strong class="text-slate-300">Workshops, Events &amp; Portal Support:</strong> Assisted in managing incubation programs, workshops, and ecosystem events while resolving founder queries across the web portal and program channels.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 06. Verified Technical Profiles (GitHub & Kaggle Discussion Expert) -->
+    <section id="profiles" class="py-20 md:py-24 px-6 bg-navy-800/50">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-2xl md:text-3xl font-bold flex items-center gap-3 mb-12">
+                <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">06.</span>
+                <span class="whitespace-nowrap shrink-0">Technical Footprint</span>
+                <span class="block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
+            </h3>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- GitHub Card -->
+                <a href="https://github.com/HotuRam" target="_blank" rel="noopener noreferrer" class="glass-card p-6 rounded-lg block group">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-brands fa-github text-3xl text-cyan-400"></i>
+                            <div>
+                                <h4 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">GitHub</h4>
+                                <p class="text-xs font-mono text-slate-400">@HotuRam</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-slate-500 group-hover:text-cyan-400 transition-colors"></i>
+                    </div>
+                    <p class="text-sm text-slate-300 mb-4">
+                        Public code portfolio covering MQL5/MT5 trading utilities, Python analytics, and machine learning projects.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono">
+                        <span class="px-2.5 py-1 rounded bg-navy-900 text-cyan-400 border border-cyan-400/20">49 Repositories</span>
+                        <span class="px-2.5 py-1 rounded bg-navy-900 text-slate-300 border border-slate-700">25 Stars</span>
+                    </div>
+                </a>
+
+                <!-- Kaggle Discussion Expert Card -->
+                <a href="https://www.kaggle.com/hoturam" target="_blank" rel="noopener noreferrer" class="glass-card p-6 rounded-lg block group">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-brands fa-kaggle text-3xl text-cyan-400"></i>
+                            <div>
+                                <h4 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Kaggle Discussion Expert</h4>
+                                <p class="text-xs font-mono text-slate-400">@hoturam</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-slate-500 group-hover:text-cyan-400 transition-colors"></i>
+                    </div>
+                    <p class="text-sm text-slate-300 mb-4">
+                        <strong class="text-white">Notebooks Expert</strong> (Peak Rank #648 globally) &amp; <strong class="text-white">Discussions Legacy Expert</strong> with 390+ community posts.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono">
+                        <span class="px-2.5 py-1 rounded bg-navy-900 text-cyan-400 border border-cyan-400/20">3 Silver &middot; 5 Bronze</span>
+                        <span class="px-2.5 py-1 rounded bg-navy-900 text-slate-300 border border-slate-700">Peak Rank #648</span>
+                        <span class="px-2.5 py-1 rounded bg-navy-900 text-slate-300 border border-slate-700">390+ Posts</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section id="documents" class="py-20 md:py-24 px-6 bg-navy-800/20">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Application Assets</h2>
+            <p class="text-base sm:text-lg mb-10 max-w-2xl mx-auto text-slate-300">
+                Ready to add hands-on MT5, trader support, and operations strength to your team? Download my Master Resume and tailored Cover Letter below.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-5">
+                <a href="https://drive.google.com/file/d/1WdPTf8YudEfb_yRHjWWZ5P5w0kI2aUyf/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-4 bg-cyan-400/10 border border-cyan-400 text-cyan-400 font-mono rounded hover:bg-cyan-400 hover:text-navy-900 transition-all duration-300 shadow-[0_0_15px_rgba(100,255,218,0.2)] hover:shadow-[0_0_20px_rgba(100,255,218,0.6)]">
+                    <i class="fa-solid fa-file-pdf mr-3 text-xl"></i> Resume (PDF)
+                </a>
+                
+                <a href="https://drive.google.com/file/d/1GAUxVFrQKDZJbOMigA1ySXKqS3Ge2ty6/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-4 bg-transparent border border-slate-500 text-slate-300 font-mono rounded hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300">
+                    <i class="fa-solid fa-envelope-open-text mr-3 text-xl"></i> Cover Letter (PDF)
+                </a>
+            </div>
+            
+            <div class="mt-8 text-xs sm:text-sm font-mono text-slate-500">
+                <i class="fa-solid fa-lock text-cyan-400/70 mr-1.5"></i> Links open securely via Google Drive.
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Back to Top Button Above Social Icons -->
+    <footer class="py-10 text-center border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-6 flex flex-col items-center">
+            <button onclick="scrollToTopSmooth()" type="button" aria-label="Go to top" class="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-navy-800 border border-cyan-400/50 text-cyan-400 font-mono text-xs sm:text-sm hover:bg-cyan-400 hover:text-navy-900 transition-colors cursor-pointer">
+                <i class="fa-solid fa-arrow-up"></i>
+                <span>Back to Top</span>
+            </button>
+
+            <div class="flex flex-wrap justify-center items-center gap-6 mb-5">
+                <a href="https://www.linkedin.com/in/hotu-ram/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/HotuRam" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.kaggle.com/hoturam" target="_blank" rel="noopener noreferrer" title="Kaggle Discussion Expert" aria-label="Kaggle" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
+                    <i class="fa-brands fa-kaggle"></i>
+                </a>
+                <a href="https://x.com/Hotu_Ram" target="_blank" rel="noopener noreferrer" title="X (Professional — @Hotu_Ram)" aria-label="X Professional" class="inline-flex items-center gap-1 text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
+                    <i class="fa-brands fa-x-twitter"></i><span class="text-[10px] font-mono uppercase border border-slate-700 px-1.5 py-0.5 rounded">Pro</span>
+                </a>
+                <a href="https://x.com/HotuGoyal" target="_blank" rel="noopener noreferrer" title="X (Casual / Trading — @HotuGoyal)" aria-label="X Casual" class="inline-flex items-center gap-1 text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
+                    <i class="fa-brands fa-x-twitter"></i><span class="text-[10px] font-mono uppercase border border-slate-700 px-1.5 py-0.5 rounded">Casual</span>
+                </a>
+                <a href="mailto:theiitianict@gmail.com" title="Email" aria-label="Email" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+            <p class="font-mono text-xs sm:text-sm text-slate-500">
+                Independent Prop Trader &amp; MT5/MQL5 Developer<br>
+                &copy; 2026 Hotu Ram &middot; IIT Patna Alumnus
+            </p>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts (Mobile Menu & Go to Top) -->
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('mobile-menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('fa-bars');
+            menuIcon.classList.toggle('fa-xmark');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.add('fa-bars');
+                menuIcon.classList.remove('fa-xmark');
+            });
+        });
+
+        function scrollToTopSmooth() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>

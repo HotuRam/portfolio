@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Incubation and Ecosystem Operations | Hotu Ram</title>
+    <!-- Google Fonts: Inter & Fira Code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome 6.5.2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 800: '#0a192f', 900: '#020c1b' },
+                        cyan: { 400: '#64ffda', 500: '#00e5ff' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #020c1b; color: #8892b0; font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { color: #ccd6f6; }
+        .nav-glass {
+            background: rgba(2, 12, 27, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(100, 255, 218, 0.12);
+        }
+        .glass-card {
+            background: rgba(10, 25, 47, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(100, 255, 218, 0.4);
+            box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7), 0 0 15px rgba(100, 255, 218, 0.12);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020c1b; }
+        ::-webkit-scrollbar-thumb { background: #495670; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #8892b0; }
+    </style>
+</head>
+<body class="antialiased selection:bg-cyan-400 selection:text-navy-900 leading-relaxed">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-glass">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
+            <!-- Back to Main Portfolio -->
+            <a href="index.html" class="inline-flex items-center gap-2.5 font-mono text-sm sm:text-base font-semibold tracking-tight group leading-none">
+                <span class="w-8 h-8 rounded bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-cyan-400 group-hover:bg-cyan-400 group-hover:text-navy-900 transition-colors">
+                    <i class="fa-solid fa-arrow-left text-sm"></i>
+                </span>
+                <span class="text-white group-hover:text-cyan-400 transition-colors">Main Portfolio</span>
+            </a>
+
+            <!-- Desktop Section Links -->
+            <div class="hidden md:flex items-center space-x-6 text-xs lg:text-sm font-mono">
+                <a href="#timeline" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">01.</span> Journey</a>
+                <a href="#events" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">02.</span> Events</a>
+                <a href="#media" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">03.</span> Snapshots</a>
+                <a href="#project" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">04.</span> Project</a>
+                <a href="index.html#documents" class="px-4 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400/10 transition-colors leading-none">Resume</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" class="md:hidden text-cyan-400 text-2xl p-1 focus:outline-none">
+                <i id="mobile-menu-icon" class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-800/95 border-t border-cyan-400/10 px-6 py-4 space-y-4 font-mono text-sm">
+            <a href="#timeline" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">01.</span> Journey</a>
+            <a href="#events" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">02.</span> Events</a>
+            <a href="#media" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">03.</span> Snapshots</a>
+            <a href="#project" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">04.</span> Project</a>
+            <a href="index.html#documents" class="mobile-link inline-block px-4 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400/10 transition-colors">Resume</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="max-w-6xl mx-auto px-6 pt-32 pb-14">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 font-mono text-xs sm:text-sm">
+                <i class="fa-solid fa-rocket"></i>
+                <span>Two Years of Experience &middot; Jun 2022 &mdash; May 2024</span>
+            </div>
+            <a href="https://istart.rajasthan.gov.in/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-800 border border-slate-700 text-slate-200 font-mono text-xs hover:border-cyan-400 hover:text-cyan-400 transition-colors">
+                <span>Official iStart Rajasthan Portal</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+            </a>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
+            Startup Incubation &amp; Ecosystem Operations
+        </h1>
+
+        <!-- Structured Posting & Department Lines -->
+        <div class="space-y-1.5 mb-7 font-mono text-sm sm:text-base">
+            <p class="text-cyan-400 font-semibold">
+                Startup Incubation Executive &mdash; Full-Time, In-Office at Bhamashah Techno Hub Incubation Center, Jaipur
+            </p>
+            <p class="text-slate-300 text-xs sm:text-sm">
+                iStart Rajasthan Program &middot; DoIT&amp;C, Government of Rajasthan &middot; Incubation, Research &amp; Operations
+            </p>
+        </div>
+
+        <div class="space-y-4 text-base sm:text-lg text-slate-300 max-w-4xl leading-relaxed text-justify mb-10">
+            <p>
+                Posted full-time at the <strong class="text-white">Bhamashah Techno Hub</strong> incubation center in Jaipur, I worked for two years as a <strong class="text-white">Startup Incubation Executive</strong> in the <strong class="text-white">iStart Rajasthan</strong> program under <strong class="text-white">DoIT&amp;C, Government of Rajasthan</strong>&mdash;driving incubation support, research analysis, stakeholder coordination, and ecosystem events.
+            </p>
+            <p class="text-sm sm:text-base text-slate-400">
+                <strong class="text-slate-200">About iStart Rajasthan:</strong> iStart Rajasthan is the flagship startup and innovation initiative of the Government of Rajasthan (DoIT&amp;C), built to foster entrepreneurship, innovation, and investment through single-window startup onboarding, incubation infrastructure at centers like Bhamashah Techno Hub, mentorship, funding and grant facilitation, ecosystem events, and market/talent enablement.
+            </p>
+        </div>
+
+        <!-- 4 Summary Cards -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="glass-card p-5 rounded-lg text-center">
+                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">2 Years</div>
+                <div class="text-xs font-mono text-cyan-400 mt-1">Full-Time In-Office</div>
+                <div class="text-[11px] text-slate-400 mt-1">Jun 2022 &ndash; May 2024</div>
+            </div>
+            <div class="glass-card p-5 rounded-lg text-center">
+                <div class="text-xl sm:text-2xl font-extrabold text-white font-mono">DoIT&amp;C</div>
+                <div class="text-xs font-mono text-cyan-400 mt-1">Govt. of Rajasthan</div>
+                <div class="text-[11px] text-slate-400 mt-1">iStart Rajasthan Initiative</div>
+            </div>
+            <div class="glass-card p-5 rounded-lg text-center">
+                <div class="text-xl sm:text-2xl font-extrabold text-white font-mono">Techno Hub</div>
+                <div class="text-xs font-mono text-cyan-400 mt-1">Incubation Center</div>
+                <div class="text-[11px] text-slate-400 mt-1">Bhamashah Techno Hub, Jaipur</div>
+            </div>
+            <div class="glass-card p-5 rounded-lg text-center">
+                <div class="text-xl sm:text-2xl font-extrabold text-white font-mono">1,000+</div>
+                <div class="text-xs font-mono text-cyan-400 mt-1">Ideas &amp; Pitch Decks</div>
+                <div class="text-[11px] text-slate-400 mt-1">Evaluation &amp; Ecosystem Ops</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 01. Four-Phase Operational & Event Timeline -->
+    <section id="timeline" class="py-16 px-6 border-t border-slate-800/70">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold flex items-baseline sm:items-center gap-3 mb-4">
+                <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">01.</span>
+                <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">Incubation, Research &amp;<br class="sm:hidden"> Operations Journey</span>
+                <span class="hidden sm:block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
+            </h2>
+            <p class="text-sm sm:text-base text-slate-300 mb-10 max-w-3xl text-justify">
+                Phase-by-phase breakdown of incubation management, research and reporting, mentor/startup coordination, and program execution across the two-year tenure.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Phase 1: Jun 2022 - Dec 2022 -->
+                <div class="glass-card p-6 rounded-xl flex flex-col">
+                    <div class="flex items-center justify-between gap-2 mb-3">
+                        <span class="text-xs font-mono text-cyan-400 bg-cyan-400/10 border border-cyan-400/30 px-3 py-1 rounded">Jun 2022 &ndash; Dec 2022</span>
+                        <span class="text-xs font-mono text-slate-400">Phase 01</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Early Incubation, Expos &amp; Workshops</h3>
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-300 text-justify leading-relaxed mb-5">
+                        <li><span class="text-cyan-400 mr-2">&#10148;</span>Coordinated with iStart mentors and teams for Evaluation Committee (EC) meetings, draft Minutes of Meetings (MoMs), and Techno Hub visits for college students and government officials.</li>
+                        <li><span class="text-cyan-400 mr-2">&#10148;</span>Prepared the <strong>Rajasthan Drone Expo</strong> event report, managed the <strong>AI/ML Workshop</strong> registration desk, collected startup feedback for <strong>Open Mic Pitch</strong> and <strong>Bootcamp</strong>, and assisted with <strong>Expo &amp; e-Bazaar</strong> reporting.</li>
+                        <li><span class="text-cyan-400 mr-2">&#10148;</span>Supported on-ground coordination and startup outreach across <strong>DigiFest Jodhpur 2022</strong> (badges, Agri/AgriTech/FoodTech startups), <strong>Startup Meet</strong>, <strong>Rajasthan State Conclave</strong>, and the <strong>Startup Ranking Framework</strong> workshop.</li>
+                    </ul>
+                    <div class="mt-auto pt-4 border-t border-slate-800">
+                        <div class="text-[11px] font-mono text-slate-400 mb-2 flex items-center gap-1.5">
+                            <i class="fa-solid fa-wand-magic-sparkles text-cyan-400"></i>
+                            <span class="uppercase tracking-wider font-semibold text-slate-300">Key Skills</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 text-[11px] font-mono">
+                            <span class="px-2 py-0.5 rounded bg-navy-900 text-cyan-400 border border-cyan-400/20">Event Coordination</span>
+                            <span class="px-2 py-0.5 rounded bg-navy-900 text-slate-300 border border-slate-700">Startup Outreach</span>
+                            <span class="px-2 py-0.5 rounded bg-navy-900 text-slate-300 border border-slate-700">Registration &amp; Badges</span>
+                            <span class="px-2 py-0.5 rounded bg-navy-900 text-slate-300 border border-slate-700">MoM &amp; Report Drafting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 2: Jan 2023 - Jul/Aug 2023 -->
+                <div class="glass-card p-6 rounded-xl flex flex-col">
+                    <div class="flex items-center justify-between gap-2 mb-3">
+                        <span class="text-xs font-mono text-cyan-400 bg-cyan-400/10 border border-cyan-400/30 px-3 py-1 rounded">Jan 2023 &ndash; Jul/Aug 2023</span>
+                        <span class="text-xs font-mono text-slate-400">Phase 02</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Hub Operations, Event Reporting &amp; Research</h3>
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-300 text-justify leading-relaxed mb-5">
+                        <li><span class="text-cyan-400 mr-2">&#10148;</span>Managed day-to-day coordination between iStart mentors, teams, and incubated startups at Bhamashah Techno Hub&mdash;tracking founder progress and delivering structured feedback.</li>
+                        <li><span class="text-cyan-400 mr-2">&#10148;</span>Supported major state initiatives including <strong>Rajasthan IT Day</strong> and compiled structured post-event reports covering iStart workshops and ecosystem programs (including April&ndash;May 2023 event reporting).</li>
+                        <li><span class="text-cyan-400 mr-2">&#10148;</span>Prepared research synopses, presentations, and analytical summaries to support incubation evaluation and internal/external stakeholder updates.</li>
+                    </ul>
+                    <div class="mt-auto pt-4 border-t border-slate-800">
+                        <div class="text-[11px] font-mono text-slate-400 mb-2 flex items-center gap-1.5">
+                            <i class="fa-solid fa-wand-magic-sparkles text-cyan-400"></i>
+                            <span class="uppercase tracking-wider font-semibold text-slate-300">Key Skills</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 text-[11px] font-mono">
+                            <span class="px-2 py-0.5 rounded bg-navy-900 text-cyan-400 border border-cyan-400/20">Incubation Operations</span>
+                            <span class="px-2 py-0.5 rounded bg-navy-900 text-slate-300 border border-slate-700">Startup Support</span>
+                            <span class="px-2 py-0.5 rounded bg-navy-900 text-slate-300 border border-slate-700">Event Reporting</span>
+                            <span class="px-2 py-0.5 rounded bg-navy-900 text-slate-300 border border-slate-700">Research &amp; Synopsis Prep</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 3: Aug 2023 - Dec 2023 -->
+                <div class="glass-card p-6 rounded-xl flex flex-col">
+                    <div class="flex items-center justify-between gap-2 mb-3">
+                        <span class="text-xs font-mono text-cyan-400 bg-cyan-400/10 border border-cyan-400/30 px-3 py-1 rounded">Aug 2023 &ndash; Dec 2023</span>
+                        <span class="text-xs font-mono text-slate-400">Phase 03</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Conclaves, Ranking &amp; Preliminary Research</h3>
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-300 text-justify leading-relaxed mb-5">
+                        <li><span class="text-cyan-400 mr-2">&#10148;</span>Handled registrations and startup coordination for <strong>Rajasthan Startup Confluence</strong>, supported the two-day <strong>Regional Conference on Good Governance</strong> at RIC, and assisted with <strong>Letsventure Mixer Workshop</strong> and <strong>States&rsquo; Startup Ranking Framework (SRF)-2023</strong> activities.</li>
+                        <li><span class="text-cyan-400 mr-2">&#10148;</span>Coordinated with the iStart team and startups for the <strong>Credit Guarantee Scheme</strong> session organized by DoIT&amp;C and Yes Bank at Bhamashah Techno Hub.</li>
+                        <li><span class="text-cyan-400 mr-2">&#10148;</span>Prepared synopses, presentations, and event reports (collecting photos and press releases) for preliminary research submission to the <strong>Directorate of Economics and Statistics (DES)</strong>.</li>
+                    </ul>
+                    <div class="mt-auto pt-4 border-t border-slate-800">
+                        <div class="text-[11px] font-mono text-slate-400 mb-2 flex items-center gap-1.5">
+                            <i class="fa-solid fa-wand-magic-sparkles text-cyan-400"></i>
+                            <span class="uppercase tracking-wider font-semibold text-slate-300">Key Skills</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 text-[11px] font-mono">
+                            <span class="px-2 py-0.5 rounded bg-navy-900 text-cyan-400 border border-cyan-400/20">Conclave &amp; Workshop Ops</span>
+                            <span class="px-2 py-0.5 rounded bg-navy-900 text-slate-300 border border-slate-700">Stakeholder Alignment</span>
+                            <span class="px-2 py-0.5 rounded bg-navy-900 text-slate-300 border border-slate-700">DES Research &amp; PPTs</span>
+                            <span class="px-2 py-0.5 rounded bg-navy-900 text-slate-300 border border-slate-700">Press &amp; Media Compilation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 4: Dec 2023 - May 2024 (2022-24 Cycle) -->
+                <div class="glass-card p-6 rounded-xl flex flex-col">
+                    <div class="flex items-center justify-between gap-2 mb-3">
+                        <span class="text-xs font-mono text-cyan-400 bg-cyan-400/10 border border-cyan-400/30 px-3 py-1 rounded">Dec 2023 &ndash; May 2024 (2022&ndash;24)</span>
+                        <span class="text-xs font-mono text-slate-400">Phase 04</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Stonemart Fest, Funding Data &amp; Tenure Wrap</h3>
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-300 text-justify leading-relaxed mb-5">
+                        <li><span class="text-cyan-400 mr-2">&#10148;</span>Coordinated with iStart mentors and startups for <strong>iStart Stonemart Fest 2024 Jaipur</strong>&mdash;conducting startup feedback calls, preparing response sheets, guiding showcase product and brochure readiness, and confirming participation.</li>
+                        <li><span class="text-cyan-400 mr-2">&#10148;</span>Built PowerPoint presentations and Excel data plots on iStart funding-related sample data for preliminary research reporting.</li>
+                        <li><span class="text-cyan-400 mr-2">&#10148;</span>Supported panel discussions, registration workflows, and Evaluation Committee (EC) meeting remarks through the completion of the two-year tenure in May 2024.</li>
+                    </ul>
+                    <div class="mt-auto pt-4 border-t border-slate-800">
+                        <div class="text-[11px] font-mono text-slate-400 mb-2 flex items-center gap-1.5">
+                            <i class="fa-solid fa-wand-magic-sparkles text-cyan-400"></i>
+                            <span class="uppercase tracking-wider font-semibold text-slate-300">Key Skills</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 text-[11px] font-mono">
+                            <span class="px-2 py-0.5 rounded bg-navy-900 text-cyan-400 border border-cyan-400/20">Fest &amp; Event Outreach</span>
+                            <span class="px-2 py-0.5 rounded bg-navy-900 text-slate-300 border border-slate-700">Excel Data &amp; Plots</span>
+                            <span class="px-2 py-0.5 rounded bg-navy-900 text-slate-300 border border-slate-700">Executive Presentations</span>
+                            <span class="px-2 py-0.5 rounded bg-navy-900 text-slate-300 border border-slate-700">EC &amp; Mentor Coordination</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 02. Categorized Events & Workshops Directory -->
+    <section id="events" class="py-16 px-6 bg-navy-800/35 border-y border-slate-800/70">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold flex items-baseline sm:items-center gap-3 mb-4">
+                <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">02.</span>
+                <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">Events &amp; Workshops<br class="sm:hidden"> Directory</span>
+                <span class="hidden sm:block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
+            </h2>
+            <p class="text-sm sm:text-base text-slate-300 mb-10 max-w-3xl text-justify">
+                Complete list of ecosystem events, fests, investor mixers, and startup workshops supported across Jaipur and Jodhpur during the two-year tenure&mdash;categorized by format and operational scope.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Category 1: Flagship Expos, Fests & Conclaves -->
+                <div class="glass-card p-6 rounded-xl flex flex-col">
+                    <div class="text-cyan-400 text-2xl mb-3"><i class="fa-solid fa-landmark"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-3">Flagship Expos, Fests &amp; Conclaves</h3>
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-300 leading-relaxed mb-5">
+                        <li><span class="text-cyan-400 mr-2">&bull;</span><strong>Rajasthan IT Day</strong> (Exhibitor &amp; Organiser Coordination, Jaipur)</li>
+                        <li><span class="text-cyan-400 mr-2">&bull;</span><strong>DigiFest Jodhpur 2022</strong> (Badges, Agri/AgriTech/FoodTech Startups, Expo &amp; e-Bazaar)</li>
+                        <li><span class="text-cyan-400 mr-2">&bull;</span><strong>iStart Stonemart Fest 2024</strong> (Startup Outreach, Showcase &amp; Participation, Jaipur)</li>
+                        <li><span class="text-cyan-400 mr-2">&bull;</span><strong>Rajasthan State Conclave</strong> (<em>Building The Next Unicorn</em>, Jaipur)</li>
+                        <li><span class="text-cyan-400 mr-2">&bull;</span><strong>Rajasthan Startup Confluence</strong> (Registrations &amp; Coordination, Techno Hub)</li>
+                    </ul>
+                    <div class="mt-auto pt-3 border-t border-slate-800">
+                        <div class="text-[11px] font-mono text-slate-400 mb-2 flex items-center gap-1.5">
+                            <i class="fa-solid fa-wand-magic-sparkles text-cyan-400"></i>
+                            <span class="uppercase tracking-wider font-semibold text-slate-300">Key Skills</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 text-[11px] font-mono">
+                            <span class="px-2 py-0.5 rounded bg-navy-900 text-cyan-400 border border-cyan-400/20">Large-Scale Event Ops</span>
+                            <span class="px-2 py-0.5 rounded bg-navy-900 text-slate-300 border border-slate-700">Exhibitor &amp; Startup Support</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Workshops, Policy & Investor Mixers -->
+                <div class="glass-card p-6 rounded-xl flex flex-col">
+                    <div class="text-cyan-400 text-2xl mb-3"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-3">Workshops, Policy &amp; Investor Mixers</h3>
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-300 leading-relaxed mb-5">
+                        <li><span class="text-cyan-400 mr-2">&bull;</span><strong>Workshop on AI/ML</strong> (Registration Desk &amp; Participant Support, Techno Hub)</li>
+                        <li><span class="text-cyan-400 mr-2">&bull;</span><strong>Letsventure Mixer Workshop</strong> (Attendance &amp; Startup Coordination)</li>
+                        <li><span class="text-cyan-400 mr-2">&bull;</span><strong>Credit Guarantee Scheme Session</strong> (DoIT&amp;C &amp; Yes Bank at Techno Hub)</li>
+                        <li><span class="text-cyan-400 mr-2">&bull;</span><strong>Regional Conference on Good Governance</strong> (Rajasthan International Centre)</li>
+                        <li><span class="text-cyan-400 mr-2">&bull;</span><strong>States&rsquo; Startup Ranking Framework (SRF)</strong> (2022 &amp; 2023 Knowledge-Sharing Workshops)</li>
+                    </ul>
+                    <div class="mt-auto pt-3 border-t border-slate-800">
+                        <div class="text-[11px] font-mono text-slate-400 mb-2 flex items-center gap-1.5">
+                            <i class="fa-solid fa-wand-magic-sparkles text-cyan-400"></i>
+                            <span class="uppercase tracking-wider font-semibold text-slate-300">Key Skills</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 text-[11px] font-mono">
+                            <span class="px-2 py-0.5 rounded bg-navy-900 text-cyan-400 border border-cyan-400/20">Investor &amp; Policy Sessions</span>
+                            <span class="px-2 py-0.5 rounded bg-navy-900 text-slate-300 border border-slate-700">Cross-Departmental Liaison</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Pitches, Sector Meets & Community Gatherings -->
+                <div class="glass-card p-6 rounded-xl flex flex-col">
+                    <div class="text-cyan-400 text-2xl mb-3"><i class="fa-solid fa-people-group"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-3">Pitches, Sector Meets &amp; Community</h3>
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-300 leading-relaxed mb-5">
+                        <li><span class="text-cyan-400 mr-2">&bull;</span><strong>Rajasthan Drone Expo</strong> &amp; <strong>Invest Rajasthan Startup Meet</strong></li>
+                        <li><span class="text-cyan-400 mr-2">&bull;</span><strong>Open Mic Pitch &ndash; 2022</strong>, <strong>Startup Bootcamp</strong> &amp; <strong>Beacons of Hope</strong></li>
+                        <li><span class="text-cyan-400 mr-2">&bull;</span><strong>Tete-a-Tete with Ms. Namita Thapar</strong> &amp; <strong><em>Take Charge of Your Business Goals</em></strong></li>
+                        <li><span class="text-cyan-400 mr-2">&bull;</span><strong>Panel on Plastic Waste-Free Jaipur</strong> (ASPIRE) &amp; <strong>Comedy with Atul Khatri</strong></li>
+                        <li><span class="text-cyan-400 mr-2">&bull;</span><strong>Startup Connect</strong>, <strong>Early-Stage Startup Workshops</strong> &amp; <strong>Techno Hub Visits</strong></li>
+                    </ul>
+                    <div class="mt-auto pt-3 border-t border-slate-800">
+                        <div class="text-[11px] font-mono text-slate-400 mb-2 flex items-center gap-1.5">
+                            <i class="fa-solid fa-wand-magic-sparkles text-cyan-400"></i>
+                            <span class="uppercase tracking-wider font-semibold text-slate-300">Key Skills</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 text-[11px] font-mono">
+                            <span class="px-2 py-0.5 rounded bg-navy-900 text-cyan-400 border border-cyan-400/20">Founder Engagement</span>
+                            <span class="px-2 py-0.5 rounded bg-navy-900 text-slate-300 border border-slate-700">Communication &amp; Feedback</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03. Program Snapshots, Lanyards & Banners -->
+    <section id="media" class="py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                <h2 class="text-2xl md:text-3xl font-bold flex items-baseline sm:items-center gap-3">
+                    <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">03.</span>
+                    <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">Snapshots, Lanyards &amp;<br class="sm:hidden"> Banners</span>
+                    <span class="hidden sm:block h-px bg-slate-700 w-24 ml-3"></span>
+                </h2>
+                <span class="text-xs font-mono text-cyan-400/80"><i class="fa-solid fa-magnifying-glass-plus mr-1.5"></i>Click image to zoom</span>
+            </div>
+
+            <p class="text-sm sm:text-base text-slate-300 mb-8 max-w-3xl text-justify">
+                Event lanyards, badges, program snapshots, and kits from iStart Rajasthan workshops, expos, and conclaves. <em class="text-slate-400">Official experience certificates and monthly progress reports (MPRs) are public-sector records and can be shared on demand.</em>
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Lanyards & Badges Slot -->
+                <div onclick="openLightbox('images/istart-badges.jpg', 'iStart Rajasthan Event Lanyards & Badges')" class="glass-card p-5 rounded-xl cursor-pointer group flex flex-col">
+                    <div class="bg-navy-900 rounded-lg border border-slate-800 p-2 mb-4 flex items-center justify-center">
+                        <img src="images/istart-badges.jpg" alt="iStart Rajasthan Lanyards and Badges" class="w-full h-56 object-contain rounded group-hover:scale-[1.02] transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="hidden flex-col items-center justify-center text-center h-56 px-4 text-slate-500 font-mono text-xs w-full">
+                            <i class="fa-solid fa-id-badge text-3xl text-cyan-400/50 mb-2"></i>
+                            <span class="text-slate-300">Place Lanyards &amp; Badges Photo Here</span>
+                            <span class="text-cyan-400/70 mt-1">images/istart-badges.jpg</span>
+                        </div>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-1">Event Lanyards &amp; Organiser Badges</h3>
+                    <p class="text-xs text-slate-400 text-justify">Organiser and exhibitor badges from Rajasthan IT Day, State Conclave, Drone Expo, AI/ML Workshop, and Startup Meet.</p>
+                </div>
+
+                <!-- DigiFest Speaker Kit Slot -->
+                <div onclick="openLightbox('images/digifest-speaker.jpg', 'Rajasthan DigiFest Jodhpur (11-12 Nov 2022) — Speaker All-Access Kit')" class="glass-card p-5 rounded-xl cursor-pointer group flex flex-col">
+                    <div class="bg-navy-900 rounded-lg border border-slate-800 p-2 mb-4 flex items-center justify-center">
+                        <img src="images/digifest-speaker.jpg" alt="Rajasthan DigiFest Jodhpur Speaker All-Access Badge and Kit" class="w-full h-56 object-contain rounded group-hover:scale-[1.02] transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="hidden flex-col items-center justify-center text-center h-56 px-4 text-slate-500 font-mono text-xs w-full">
+                            <i class="fa-regular fa-image text-3xl text-cyan-400/50 mb-2"></i>
+                            <span class="text-slate-300">Place DigiFest Speaker Kit Photo Here</span>
+                            <span class="text-cyan-400/70 mt-1">images/digifest-speaker.jpg</span>
+                        </div>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-1">Rajasthan DigiFest Jodhpur &mdash; All-Access Kit</h3>
+                    <p class="text-xs text-slate-400 text-justify">Official Rajasthan DigiFest Jodhpur (11&ndash;12 Nov 2022) Speaker (All Access) badge and conference kit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 04. Single Project Highlight -->
+    <section id="project" class="py-16 md:py-20 px-6 bg-navy-800/35 border-t border-slate-800/70">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold flex items-baseline sm:items-center gap-3 mb-8">
+                <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">04.</span>
+                <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">Featured Incubation<br class="sm:hidden"> Project</span>
+                <span class="hidden sm:block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
+            </h2>
+
+            <div class="glass-card p-6 sm:p-8 rounded-xl border border-cyan-400/25 bg-navy-800/65">
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                    <span class="text-xs font-mono text-cyan-400 bg-cyan-400/10 border border-cyan-400/30 px-3 py-1 rounded">
+                        <i class="fa-brands fa-python mr-1.5"></i>Incubation Center Project &middot; Jun 2022 &ndash; Dec 2022
+                    </span>
+                    <span class="text-xs font-mono text-slate-400">Associated with iStart Rajasthan</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">
+                    Seat Allotment System at Incubation Center for Startups
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-300 text-justify leading-relaxed mb-5">
+                    Built a seat-allotment system for startups at Bhamashah Techno Hub&mdash;automating Excel sheets with <strong class="text-white">pandas</strong> to color-code <strong class="text-white">Tech, Non-tech, and Vacant</strong> seats and mapping the <strong class="text-white">coordinate position</strong> of each seat across floor layouts using <strong class="text-white">Computer Vision</strong> in Python, Pandas, OpenCV, Jupyter Notebook, and PyCharm.
+                </p>
+                <div class="pt-3 border-t border-slate-800/80">
+                    <div class="text-[11px] font-mono text-slate-400 mb-2 flex items-center gap-1.5">
+                        <i class="fa-solid fa-wand-magic-sparkles text-cyan-400"></i>
+                        <span class="uppercase tracking-wider font-semibold text-slate-300">Key Skills</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono">
+                        <span class="px-2.5 py-1 rounded bg-navy-900 text-cyan-400 border border-cyan-400/20">Python &amp; Pandas</span>
+                        <span class="px-2.5 py-1 rounded bg-navy-900 text-cyan-400 border border-cyan-400/20">Computer Vision (OpenCV)</span>
+                        <span class="px-2.5 py-1 rounded bg-navy-900 text-slate-300 border border-slate-700">Jupyter Notebook &amp; PyCharm</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Working Go-to-Top Button Above Social Icons -->
+    <footer class="py-10 text-center border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-6 flex flex-col items-center">
+            <button onclick="scrollToTopSmooth()" type="button" aria-label="Go to top" class="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-navy-800 border border-cyan-400/50 text-cyan-400 font-mono text-xs sm:text-sm hover:bg-cyan-400 hover:text-navy-900 transition-colors cursor-pointer">
+                <i class="fa-solid fa-arrow-up"></i>
+                <span>Back to Top</span>
+            </button>
+
+            <div class="flex space-x-6 mb-5">
+                <a href="https://www.linkedin.com/in/hotu-ram/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/HotuRam" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.kaggle.com/hoturam" target="_blank" rel="noopener noreferrer" title="Kaggle" aria-label="Kaggle" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
+                    <i class="fa-brands fa-kaggle"></i>
+                </a>
+                <a href="https://x.com/HotuGoyal" target="_blank" rel="noopener noreferrer" title="X (Twitter)" aria-label="X" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="mailto:theiitianict@gmail.com" title="Email" aria-label="Email" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+            <p class="font-mono text-xs sm:text-sm text-slate-500">
+                Independent Prop Trader &amp; MT5/MQL5 Developer<br>
+                &copy; 2026 Hotu Ram &middot; IIT Patna Alumnus
+            </p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" onclick="closeLightbox()" class="hidden fixed inset-0 z-50 bg-navy-900/95 backdrop-blur-md flex items-center justify-center p-4 sm:p-8">
+        <div onclick="event.stopPropagation()" class="relative max-w-6xl w-full bg-navy-800 border border-cyan-400/40 rounded-xl overflow-hidden shadow-2xl">
+            <div class="flex items-center justify-between px-5 py-3 border-b border-slate-700 bg-navy-900">
+                <span id="lightbox-caption" class="font-mono text-xs sm:text-sm text-cyan-400 font-semibold"></span>
+                <button onclick="closeLightbox()" type="button" aria-label="Close zoom view" class="text-slate-400 hover:text-white text-xl px-2">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="p-3 bg-navy-900 flex items-center justify-center max-h-[84vh] overflow-auto">
+                <img id="lightbox-img" src="" alt="Expanded Evidence View" class="max-w-full max-h-[78vh] object-contain rounded">
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Scripts -->
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('mobile-menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('fa-bars');
+            menuIcon.classList.toggle('fa-xmark');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.add('fa-bars');
+                menuIcon.classList.remove('fa-xmark');
+            });
+        });
+
+        function scrollToTopSmooth() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function openLightbox(src, caption) {
+            if (!src || src.endsWith(window.location.pathname) || src === window.location.href) return;
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').innerText = caption;
+            document.getElementById('lightbox-modal').classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').classList.add('hidden');
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+
+</body>
+</html>

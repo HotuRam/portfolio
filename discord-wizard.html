@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Community Engagement &amp; Kaggle Legacy Expert | Hotu Ram</title>
+    <!-- Google Fonts: Inter & Fira Code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome 6.5.2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 800: '#0a192f', 900: '#020c1b' },
+                        cyan: { 400: '#64ffda', 500: '#00e5ff' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #020c1b; color: #8892b0; font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { color: #ccd6f6; }
+        .nav-glass {
+            background: rgba(2, 12, 27, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(100, 255, 218, 0.12);
+        }
+        .glass-card {
+            background: rgba(10, 25, 47, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(100, 255, 218, 0.4);
+            box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7), 0 0 15px rgba(100, 255, 218, 0.12);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020c1b; }
+        ::-webkit-scrollbar-thumb { background: #495670; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #8892b0; }
+    </style>
+</head>
+<body class="antialiased selection:bg-cyan-400 selection:text-navy-900 leading-relaxed">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-glass">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
+            <!-- Back to Main Portfolio -->
+            <a href="index.html" class="inline-flex items-center gap-2.5 font-mono text-sm sm:text-base font-semibold tracking-tight group leading-none">
+                <span class="w-8 h-8 rounded bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-cyan-400 group-hover:bg-cyan-400 group-hover:text-navy-900 transition-colors">
+                    <i class="fa-solid fa-arrow-left text-sm"></i>
+                </span>
+                <span class="text-white group-hover:text-cyan-400 transition-colors">Main Portfolio</span>
+            </a>
+
+            <!-- Desktop Section Links -->
+            <div class="hidden md:flex items-center space-x-7 text-xs lg:text-sm font-mono">
+                <a href="#discord" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">01.</span> Discord Q&amp;A</a>
+                <a href="#kaggle" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">02.</span> Kaggle</a>
+                <a href="index.html#documents" class="px-4 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400/10 transition-colors leading-none">Resume</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" class="md:hidden text-cyan-400 text-2xl p-1 focus:outline-none">
+                <i id="mobile-menu-icon" class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-800/95 border-t border-cyan-400/10 px-6 py-4 space-y-4 font-mono text-sm">
+            <a href="#discord" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">01.</span> Discord Q&amp;A</a>
+            <a href="#kaggle" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">02.</span> Kaggle</a>
+            <a href="index.html#documents" class="mobile-link inline-block px-4 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400/10 transition-colors">Resume</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="max-w-5xl mx-auto px-6 pt-32 pb-14">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
+            Discord Community Engagement &amp; Kaggle Legacy Expert
+        </h1>
+        <p class="text-lg sm:text-xl font-semibold text-cyan-400 font-mono mb-5">
+            Community Educator &amp; Active Contributor &mdash; Online Trader Support
+        </p>
+        <p class="text-base sm:text-lg text-slate-300 max-w-3xl leading-relaxed text-justify">
+            Helping retail traders navigate proprietary trading rules, account workflows, KYC verification checks, and crypto payouts in Discord communities&mdash;backed by firsthand funded trading experience and five years of verified technical community contributions on Kaggle.
+        </p>
+    </header>
+
+    <!-- 01. Discord Community Q&A & Rule Clarification -->
+    <section id="discord" class="py-16 px-6 border-t border-slate-800/70">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold flex items-center gap-3 mb-4">
+                <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">01.</span>
+                <span class="whitespace-nowrap shrink-0">Discord Community Q&amp;A</span>
+                <span class="block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
+            </h2>
+            <p class="text-sm sm:text-base text-slate-300 mb-8 max-w-3xl text-justify">
+                Active peer educator and contributor in the <strong class="text-white">Shark Funded Discord (~1 Year)</strong>. Grounded in personal trading across all Shark Funded account tiers and a verified Trust Wallet crypto payout, I regularly assist fellow traders in resolving real-time doubts clearly and patiently.
+            </p>
+
+            <!-- What I Help Traders With (3 Highlight Cards) -->
+            <div class="grid md:grid-cols-3 gap-5 mb-12">
+                <div class="glass-card p-5 rounded-lg">
+                    <div class="text-cyan-400 text-2xl mb-3"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <h3 class="text-base font-bold text-white mb-2">Rule &amp; Account Tier Clarity</h3>
+                    <p class="text-xs sm:text-sm text-slate-300 text-justify">Breaking down evaluation parameters, trailing/daily drawdown limits, consistency criteria, and differences across account types.</p>
+                </div>
+                <div class="glass-card p-5 rounded-lg">
+                    <div class="text-cyan-400 text-2xl mb-3"><i class="fa-solid fa-compass"></i></div>
+                    <h3 class="text-base font-bold text-white mb-2">Onboarding &amp; Purchasing</h3>
+                    <p class="text-xs sm:text-sm text-slate-300 text-justify">Guiding new and active traders through account selection, purchasing steps, MT5 setup, and chart observations.</p>
+                </div>
+                <div class="glass-card p-5 rounded-lg">
+                    <div class="text-cyan-400 text-2xl mb-3"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 class="text-base font-bold text-white mb-2">KYC &amp; Crypto Payouts</h3>
+                    <p class="text-xs sm:text-sm text-slate-300 text-justify">Clarifying common KYC verification delays and walking traders through Trust Wallet crypto payout procedures.</p>
+                </div>
+            </div>
+
+            <!-- Discord Chat Screenshots (3 Slots) -->
+            <h3 class="text-white font-mono text-sm sm:text-base font-semibold tracking-wide mb-5 flex items-center gap-2">
+                <i class="fa-solid fa-comments text-cyan-400"></i>
+                <span>DISCORD DISCUSSION SNAPSHOTS</span>
+            </h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Screenshot Slot 1 -->
+                <div class="glass-card rounded-lg overflow-hidden flex flex-col">
+                    <div class="relative bg-navy-900 aspect-[4/3] flex items-center justify-center border-b border-slate-800 overflow-hidden">
+                        <img src="images/discord-qa-1.png" alt="Discord Evaluation & Drawdown Rules Screenshot" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="hidden flex-col items-center justify-center text-center p-6 text-slate-500 font-mono text-xs w-full h-full">
+                            <i class="fa-regular fa-image text-3xl text-cyan-400/50 mb-2"></i>
+                            <span class="text-slate-400">Place Screenshot Here</span>
+                            <span class="text-cyan-400/70 mt-1">images/discord-qa-1.png</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-sm font-bold text-white mb-1">Evaluation &amp; Drawdown Rules</h4>
+                        <p class="text-xs text-slate-400 text-justify">Clarifying account rules and risk parameters for traders in public community channels.</p>
+                    </div>
+                </div>
+
+                <!-- Screenshot Slot 2 -->
+                <div class="glass-card rounded-lg overflow-hidden flex flex-col">
+                    <div class="relative bg-navy-900 aspect-[4/3] flex items-center justify-center border-b border-slate-800 overflow-hidden">
+                        <img src="images/discord-qa-2.png" alt="Discord Onboarding & Account Types Screenshot" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="hidden flex-col items-center justify-center text-center p-6 text-slate-500 font-mono text-xs w-full h-full">
+                            <i class="fa-regular fa-image text-3xl text-cyan-400/50 mb-2"></i>
+                            <span class="text-slate-400">Place Screenshot Here</span>
+                            <span class="text-cyan-400/70 mt-1">images/discord-qa-2.png</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-sm font-bold text-white mb-1">Account Tiers &amp; Purchasing</h4>
+                        <p class="text-xs text-slate-400 text-justify">Helping community members compare account types and navigate purchasing steps.</p>
+                    </div>
+                </div>
+
+                <!-- Screenshot Slot 3 -->
+                <div class="glass-card rounded-lg overflow-hidden flex flex-col">
+                    <div class="relative bg-navy-900 aspect-[4/3] flex items-center justify-center border-b border-slate-800 overflow-hidden">
+                        <img src="images/discord-qa-3.png" alt="Discord KYC & Trust Wallet Payouts Screenshot" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="hidden flex-col items-center justify-center text-center p-6 text-slate-500 font-mono text-xs w-full h-full">
+                            <i class="fa-regular fa-image text-3xl text-cyan-400/50 mb-2"></i>
+                            <span class="text-slate-400">Place Screenshot Here</span>
+                            <span class="text-cyan-400/70 mt-1">images/discord-qa-3.png</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-sm font-bold text-white mb-1">KYC &amp; Trust Wallet Payouts</h4>
+                        <p class="text-xs text-slate-400 text-justify">Resolving trader questions around KYC approval checks and crypto payout workflows.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 02. Kaggle Technical Community & Expert Recognition -->
+    <section id="kaggle" class="py-16 md:py-20 px-6 bg-navy-800/35 border-t border-slate-800/70">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+                <h2 class="text-2xl md:text-3xl font-bold flex items-center gap-3">
+                    <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">02.</span>
+                    <span class="whitespace-nowrap shrink-0">Kaggle Community Recognition</span>
+                    <span class="hidden sm:block h-px bg-slate-700 w-24 ml-3"></span>
+                </h2>
+                <a href="https://www.kaggle.com/hoturam" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-cyan-400/10 border border-cyan-400/50 text-cyan-400 font-mono text-xs sm:text-sm rounded hover:bg-cyan-400 hover:text-navy-900 transition-colors self-start sm:self-auto">
+                    <i class="fa-brands fa-kaggle"></i>
+                    <span>View Profile (@hoturam)</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+                </a>
+            </div>
+
+            <p class="text-sm sm:text-base text-slate-300 mb-8 max-w-3xl text-justify">
+                Beyond trading Discord servers, I have maintained a 5-year track record of technical discussion, peer mentoring, and public code sharing on <strong class="text-white">Kaggle</strong>&mdash;earning both the <strong class="text-cyan-400">Discussions Legacy Expert</strong> award and <strong class="text-cyan-400">Notebooks Expert</strong> tier.
+            </p>
+
+            <!-- Verified Kaggle Metrics Grid -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+                <div class="glass-card p-5 rounded-lg text-center">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">393</div>
+                    <div class="text-xs font-mono text-cyan-400 mt-1">Discussion Posts</div>
+                    <div class="text-[11px] text-slate-400 mt-1">23 Topics &middot; 370 Comments</div>
+                </div>
+                <div class="glass-card p-5 rounded-lg text-center">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">310</div>
+                    <div class="text-xs font-mono text-cyan-400 mt-1">Net Community Votes</div>
+                    <div class="text-[11px] text-slate-400 mt-1">5 Years Active</div>
+                </div>
+                <div class="glass-card p-5 rounded-lg text-center">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">#648</div>
+                    <div class="text-xs font-mono text-cyan-400 mt-1">Notebooks Peak Rank</div>
+                    <div class="text-[11px] text-slate-400 mt-1">Global Leaderboard</div>
+                </div>
+                <div class="glass-card p-5 rounded-lg text-center">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">8</div>
+                    <div class="text-xs font-mono text-cyan-400 mt-1">Public Notebooks</div>
+                    <div class="text-[11px] text-slate-400 mt-1">3 Silver &middot; 5 Bronze Medals</div>
+                </div>
+            </div>
+
+            <!-- Award & Profile Activity (2 Slots) -->
+            <h3 class="text-white font-mono text-sm sm:text-base font-semibold tracking-wide mb-5 flex items-center gap-2">
+                <i class="fa-solid fa-award text-cyan-400"></i>
+                <span>EXPERT AWARD &amp; ACTIVITY OVERVIEW</span>
+            </h3>
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+                <!-- Kaggle Award Screenshot -->
+                <div class="glass-card rounded-lg overflow-hidden flex flex-col">
+                    <div class="relative bg-navy-900 aspect-[16/10] flex items-center justify-center border-b border-slate-800 overflow-hidden">
+                        <img src="images/kaggle-award.png" alt="Kaggle Discussions Legacy Expert Award" class="w-full h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="hidden flex-col items-center justify-center text-center p-6 text-slate-500 font-mono text-xs w-full h-full">
+                            <i class="fa-brands fa-kaggle text-3xl text-cyan-400/50 mb-2"></i>
+                            <span class="text-slate-400">Place Award Screenshot Here</span>
+                            <span class="text-cyan-400/70 mt-1">images/kaggle-award.png</span>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-base font-bold text-white mb-1">Discussions Legacy Expert Award</h4>
+                        <p class="text-xs sm:text-sm text-slate-400 text-justify">Awarded for sustained technical discussions, answering community queries, and peer support across Kaggle forums.</p>
+                    </div>
+                </div>
+
+                <!-- Kaggle Activity Stats Screenshot -->
+                <div class="glass-card rounded-lg overflow-hidden flex flex-col">
+                    <div class="relative bg-navy-900 aspect-[16/10] flex items-center justify-center border-b border-slate-800 overflow-hidden">
+                        <img src="images/kaggle-activity.png" alt="Kaggle Profile Activity Statistics" class="w-full h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="hidden flex-col items-center justify-center text-center p-6 text-slate-500 font-mono text-xs w-full h-full">
+                            <i class="fa-solid fa-chart-simple text-3xl text-cyan-400/50 mb-2"></i>
+                            <span class="text-slate-400">Place Activity Screenshot Here</span>
+                            <span class="text-cyan-400/70 mt-1">images/kaggle-activity.png</span>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-base font-bold text-white mb-1">Verified Discussion &amp; Notebook Activity</h4>
+                        <p class="text-xs sm:text-sm text-slate-400 text-justify">393 total posts, 370 comments, 310 net votes, and 8 public code notebooks spanning 5 years on the platform.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kaggle Discussion Snapshots (4 Slots) -->
+            <h3 class="text-white font-mono text-sm sm:text-base font-semibold tracking-wide mb-5 flex items-center gap-2">
+                <i class="fa-solid fa-message text-cyan-400"></i>
+                <span>KAGGLE DISCUSSION SNAPSHOTS</span>
+            </h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Kaggle Discussion 1 -->
+                <div class="glass-card rounded-lg overflow-hidden flex flex-col">
+                    <div class="relative bg-navy-900 aspect-[16/10] flex items-center justify-center border-b border-slate-800 overflow-hidden">
+                        <img src="images/kaggle-discussion-1.png" alt="Kaggle Discussion Snapshot 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="hidden flex-col items-center justify-center text-center p-6 text-slate-500 font-mono text-xs w-full h-full">
+                            <i class="fa-regular fa-image text-3xl text-cyan-400/50 mb-2"></i>
+                            <span class="text-slate-400">Place Discussion Screenshot 1</span>
+                            <span class="text-cyan-400/70 mt-1">images/kaggle-discussion-1.png</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-sm font-bold text-white mb-1">Technical Q&amp;A &amp; Debugging</h4>
+                        <p class="text-xs text-slate-400 text-justify">Helping fellow Kaggle members troubleshoot code, datasets, and workflow questions.</p>
+                    </div>
+                </div>
+
+                <!-- Kaggle Discussion 2 -->
+                <div class="glass-card rounded-lg overflow-hidden flex flex-col">
+                    <div class="relative bg-navy-900 aspect-[16/10] flex items-center justify-center border-b border-slate-800 overflow-hidden">
+                        <img src="images/kaggle-discussion-2.png" alt="Kaggle Discussion Snapshot 2" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="hidden flex-col items-center justify-center text-center p-6 text-slate-500 font-mono text-xs w-full h-full">
+                            <i class="fa-regular fa-image text-3xl text-cyan-400/50 mb-2"></i>
+                            <span class="text-slate-400">Place Discussion Screenshot 2</span>
+                            <span class="text-cyan-400/70 mt-1">images/kaggle-discussion-2.png</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-sm font-bold text-white mb-1">Community Topic Contributions</h4>
+                        <p class="text-xs text-slate-400 text-justify">Sharing structured explanations and actionable feedback across active discussion threads.</p>
+                    </div>
+                </div>
+
+                <!-- Kaggle Discussion 3 -->
+                <div class="glass-card rounded-lg overflow-hidden flex flex-col">
+                    <div class="relative bg-navy-900 aspect-[16/10] flex items-center justify-center border-b border-slate-800 overflow-hidden">
+                        <img src="images/kaggle-discussion-3.png" alt="Kaggle Discussion Snapshot 3" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="hidden flex-col items-center justify-center text-center p-6 text-slate-500 font-mono text-xs w-full h-full">
+                            <i class="fa-regular fa-image text-3xl text-cyan-400/50 mb-2"></i>
+                            <span class="text-slate-400">Place Discussion Screenshot 3</span>
+                            <span class="text-cyan-400/70 mt-1">images/kaggle-discussion-3.png</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-sm font-bold text-white mb-1">Notebook Peer Reviews</h4>
+                        <p class="text-xs text-slate-400 text-justify">Reviewing public notebooks and collaborating with practitioners on analytical approaches.</p>
+                    </div>
+                </div>
+
+                <!-- Kaggle Discussion 4 -->
+                <div class="glass-card rounded-lg overflow-hidden flex flex-col">
+                    <div class="relative bg-navy-900 aspect-[16/10] flex items-center justify-center border-b border-slate-800 overflow-hidden">
+                        <img src="images/kaggle-discussion-4.png" alt="Kaggle Discussion Snapshot 4" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="hidden flex-col items-center justify-center text-center p-6 text-slate-500 font-mono text-xs w-full h-full">
+                            <i class="fa-regular fa-image text-3xl text-cyan-400/50 mb-2"></i>
+                            <span class="text-slate-400">Place Discussion Screenshot 4</span>
+                            <span class="text-cyan-400/70 mt-1">images/kaggle-discussion-4.png</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-sm font-bold text-white mb-1">Sustained Community Engagement</h4>
+                        <p class="text-xs text-slate-400 text-justify">Consistent, helpful participation recognized with upvotes and expert status.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-6 flex flex-col items-center">
+            <div class="flex space-x-6 mb-5">
+                <a href="https://www.linkedin.com/in/hotu-ram/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/HotuRam" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.kaggle.com/hoturam" target="_blank" rel="noopener noreferrer" title="Kaggle" aria-label="Kaggle" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
+                    <i class="fa-brands fa-kaggle"></i>
+                </a>
+                <a href="https://x.com/HotuGoyal" target="_blank" rel="noopener noreferrer" title="X (Twitter)" aria-label="X" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="mailto:theiitianict@gmail.com" title="Email" aria-label="Email" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+            <p class="font-mono text-xs sm:text-sm text-slate-500">
+                Independent Prop Trader &amp; MT5/MQL5 Developer<br>
+                &copy; 2026 Hotu Ram &middot; IIT Patna Alumnus
+            </p>
+        </div>
+    </footer>
+
+    <!-- Floating Go to Top Button -->
+    <button id="back-to-top" type="button" aria-label="Go to top" class="fixed bottom-6 right-6 z-40 inline-flex items-center gap-2 px-4 py-2.5 bg-navy-800/95 border border-cyan-400/60 text-cyan-400 font-mono text-xs sm:text-sm rounded-full shadow-[0_0_15px_rgba(100,255,218,0.25)] hover:bg-cyan-400 hover:text-navy-900 transition-all duration-300 opacity-0 pointer-events-none translate-y-3">
+        <i class="fa-solid fa-arrow-up"></i>
+        <span>Top</span>
+    </button>
+
+    <!-- Interactive Scripts -->
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('mobile-menu-icon');
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('fa-bars');
+            menuIcon.classList.toggle('fa-xmark');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.add('fa-bars');
+                menuIcon.classList.remove('fa-xmark');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-3');
+                backToTopBtn.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-3');
+                backToTopBtn.classList.remove('opacity-100', 'translate-y-0');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+</html>
