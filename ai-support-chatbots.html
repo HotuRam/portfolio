@@ -64,23 +64,24 @@
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 nav-glass">
         <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
+            <!-- Back to Main Portfolio -->
             <a href="index.html" class="inline-flex items-center gap-2.5 font-mono text-sm sm:text-base font-semibold tracking-tight group leading-none">
                 <span class="w-8 h-8 rounded bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-cyan-400 group-hover:bg-cyan-400 group-hover:text-navy-900 transition-colors">
                     <i class="fa-solid fa-arrow-left text-sm"></i>
                 </span>
-                <span class="text-white group-hover:text-cyan-400 transition-colors">Home</span>
-                <span class="hidden sm:inline text-slate-600 font-normal">|</span>
-                <span class="hidden sm:inline text-cyan-400 text-xs sm:text-sm uppercase tracking-wider">AI Support Chatbots</span>
+                <span class="text-white group-hover:text-cyan-400 transition-colors">Main Portfolio</span>
             </a>
 
+            <!-- Desktop Section Links -->
             <div class="hidden md:flex items-center space-x-5 text-xs lg:text-sm font-mono">
-                <a href="#moneta-funded" class="text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">01.</span> Moneta Funded</a>
-                <a href="#jet-funded" class="text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">02.</span> Jet Funded</a>
-                <a href="#workflow" class="text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">03.</span> Workflow</a>
-                <a href="#upcoming" class="text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">04.</span> Next</a>
-                <a href="index.html#documents" class="px-4 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400/10 transition-colors">Resume</a>
+                <a href="#moneta-funded" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">01.</span> Moneta Funded</a>
+                <a href="#jet-funded" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">02.</span> Jet Funded</a>
+                <a href="#workflow" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">03.</span> Workflow</a>
+                <a href="#upcoming" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">04.</span> Next</a>
+                <a href="index.html#documents" class="px-4 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400/10 transition-colors leading-none">Resume</a>
             </div>
 
+            <!-- Mobile Menu Toggle -->
             <button id="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" class="md:hidden text-cyan-400 text-2xl p-1 focus:outline-none">
                 <i id="mobile-menu-icon" class="fa-solid fa-bars"></i>
             </button>
@@ -88,12 +89,11 @@
 
         <!-- Mobile Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-navy-800/95 border-t border-cyan-400/10 px-6 py-4 space-y-4 font-mono text-sm">
-            <a href="index.html" class="mobile-link block text-slate-300 hover:text-cyan-400"><i class="fa-solid fa-house mr-2 text-cyan-400"></i>Back to Main Portfolio</a>
-            <a href="#moneta-funded" class="mobile-link block text-slate-300 hover:text-cyan-400"><span class="text-cyan-400">01.</span> Moneta Funded Case Study</a>
-            <a href="#jet-funded" class="mobile-link block text-slate-300 hover:text-cyan-400"><span class="text-cyan-400">02.</span> Jet Funded Case Study</a>
-            <a href="#workflow" class="mobile-link block text-slate-300 hover:text-cyan-400"><span class="text-cyan-400">03.</span> How I Build</a>
-            <a href="#upcoming" class="mobile-link block text-slate-300 hover:text-cyan-400"><span class="text-cyan-400">04.</span> Next Prop Firms</a>
-            <a href="index.html#documents" class="mobile-link inline-block px-4 py-2 border border-cyan-400 text-cyan-400 rounded">Resume &amp; Cover Letter</a>
+            <a href="#moneta-funded" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">01.</span> Moneta Funded Case Study</a>
+            <a href="#jet-funded" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">02.</span> Jet Funded Case Study</a>
+            <a href="#workflow" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">03.</span> How I Build</a>
+            <a href="#upcoming" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">04.</span> Next Prop Firms</a>
+            <a href="index.html#documents" class="mobile-link inline-block px-4 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400/10 transition-colors">Resume &amp; Cover Letter</a>
         </div>
     </nav>
 
@@ -109,27 +109,31 @@
                 AI Chatbots for <span class="text-cyan-400">Trader Support</span>
             </h1>
 
-            <p class="max-w-3xl text-base sm:text-lg text-slate-300 leading-relaxed mb-8">
+            <p class="max-w-4xl text-base sm:text-lg text-slate-300 leading-relaxed text-justify mb-10">
                 Repetitive rulebook tickets slow down prop firm support teams and frustrate traders. I audit each firm&rsquo;s exact evaluation rules, drawdown logic, and payout workflows&mdash;then build <strong class="text-white">24/7 AI support chatbots</strong>, <strong class="text-white">self-service rulebook hubs</strong>, and <strong class="text-white">technical research reports</strong> that cut ticket volume and prevent breach disputes.
             </p>
 
-            <!-- Quick Stats Bar -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl">
-                <div class="bg-navy-800/70 border border-slate-700/70 rounded-lg p-4">
-                    <p class="text-cyan-400 font-mono text-lg sm:text-xl font-bold">24/7</p>
-                    <p class="text-xs text-slate-400">Instant Rule Clarity</p>
+            <!-- Quick Stats Bar (Upgraded to Full-Width Glass Cards) -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="glass-card p-5 rounded-lg text-center">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">24/7</div>
+                    <div class="text-xs font-mono text-cyan-400 mt-1">Instant Rule Clarity</div>
+                    <div class="text-[11px] text-slate-400 mt-1">Zero Queue Wait Time</div>
                 </div>
-                <div class="bg-navy-800/70 border border-slate-700/70 rounded-lg p-4">
-                    <p class="text-cyan-400 font-mono text-lg sm:text-xl font-bold">48 Hrs</p>
-                    <p class="text-xs text-slate-400">Audit to Live Prototype</p>
+                <div class="glass-card p-5 rounded-lg text-center">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">48 Hrs</div>
+                    <div class="text-xs font-mono text-cyan-400 mt-1">Audit to Live Prototype</div>
+                    <div class="text-[11px] text-slate-400 mt-1">Rapid Deployment</div>
                 </div>
-                <div class="bg-navy-800/70 border border-slate-700/70 rounded-lg p-4">
-                    <p class="text-cyan-400 font-mono text-lg sm:text-xl font-bold">Rule-First</p>
-                    <p class="text-xs text-slate-400">Verified Knowledge Base</p>
+                <div class="glass-card p-5 rounded-lg text-center">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">Rule-First</div>
+                    <div class="text-xs font-mono text-cyan-400 mt-1">Verified Knowledge Base</div>
+                    <div class="text-[11px] text-slate-400 mt-1">Policy-Grounded Answers</div>
                 </div>
-                <div class="bg-navy-800/70 border border-slate-700/70 rounded-lg p-4">
-                    <p class="text-cyan-400 font-mono text-lg sm:text-xl font-bold">2 Firms</p>
-                    <p class="text-xs text-slate-400">Live Prototypes &amp; Audits</p>
+                <div class="glass-card p-5 rounded-lg text-center">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">2 Firms</div>
+                    <div class="text-xs font-mono text-cyan-400 mt-1">Live Prototypes &amp; Audits</div>
+                    <div class="text-[11px] text-slate-400 mt-1">Moneta &amp; Jet Funded</div>
                 </div>
             </div>
         </div>
@@ -214,7 +218,7 @@
                             </div>
                         </div>
 
-                        <p class="text-xs text-slate-400 pt-1">
+                        <p class="text-xs text-slate-400 text-justify pt-1">
                             Gemini AI assistant delivering Short (TL;DR) + Detailed policy breakdowns with a 22:00 UTC risk calculator modal.
                         </p>
 
@@ -255,7 +259,7 @@
                             </div>
                         </div>
 
-                        <p class="text-xs text-slate-400 pt-1">
+                        <p class="text-xs text-slate-400 text-justify pt-1">
                             Self-service Support Center with 22:00 UTC Drawdown Calculator, searchable FAQs, and program rule matrices.
                         </p>
 
@@ -289,7 +293,7 @@
                         </div>
 
                         <!-- Key Audit Contents -->
-                        <ul class="space-y-2 text-xs text-slate-300 mb-5">
+                        <ul class="space-y-2 text-xs text-slate-300 text-justify mb-5">
                             <li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">&#10003;</span><span>Complete breakdown of all 7 programs (1-Step Daily, 2-Step, Instant Pro, Phoenix $2M, Sprint)</span></li>
                             <li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">&#10003;</span><span>Exact 22:00 UTC floating-profit daily drawdown math &amp; trailing lock mechanics</span></li>
                             <li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">&#10003;</span><span>5-min news rule carve-outs, prohibited strategies, MT5/MatchTrader country restrictions</span></li>
@@ -393,7 +397,7 @@
                             </div>
                         </div>
 
-                        <p class="text-xs text-slate-400 pt-1">
+                        <p class="text-xs text-slate-400 text-justify pt-1">
                             Instant Q&amp;A for 3 Lives Pass resets, 3% daily loss, 2% funded risk-per-idea, and USDT payouts with quick-prompt chips.
                         </p>
 
@@ -434,7 +438,7 @@
                             </div>
                         </div>
 
-                        <p class="text-xs text-slate-400 pt-1">
+                        <p class="text-xs text-slate-400 text-justify pt-1">
                             Categorized Support Portal with interactive Drawdown &amp; 2% Risk Calculator, Allowed vs. Prohibited tabs, and FAQs.
                         </p>
 
@@ -468,7 +472,7 @@
                         </div>
 
                         <!-- Key Audit Contents -->
-                        <ul class="space-y-2 text-xs text-slate-300 mb-5">
+                        <ul class="space-y-2 text-xs text-slate-300 text-justify mb-5">
                             <li class="flex items-start gap-2"><span class="text-cyan-400 mt-0.5">&#10003;</span><span>Full 1-Step Challenge &amp; 3 Lives Pass reset workflow and edge-case mapping</span></li>
                             <li class="flex items-start gap-2"><span class="text-cyan-400 mt-0.5">&#10003;</span><span>Server-midnight 3% daily loss vs. 6% static floor &amp; 2% funded risk-per-idea logic</span></li>
                             <li class="flex items-start gap-2"><span class="text-cyan-400 mt-0.5">&#10003;</span><span>Sumsub KYC, USDT payout terms, refund/chargeback policy &amp; Track360 affiliate specs</span></li>
@@ -496,9 +500,9 @@
     <!-- 03. Repeatable Build Workflow -->
     <section id="workflow" class="py-20 px-6 bg-navy-800/35 border-b border-slate-800/70">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-2xl sm:text-3xl font-bold flex items-center gap-3 mb-10">
+            <h2 class="text-2xl sm:text-3xl font-bold flex items-baseline sm:items-center gap-3 mb-10">
                 <span class="text-cyan-400 font-mono text-lg sm:text-xl shrink-0">03.</span>
-                <span class="whitespace-nowrap shrink-0">48-Hour Replication Workflow</span>
+                <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">48-Hour Replication<br class="sm:hidden"> Workflow</span>
                 <span class="hidden sm:block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
             </h2>
 
@@ -506,22 +510,22 @@
                 <div class="glass-card p-5 rounded-lg">
                     <p class="font-mono text-cyan-400 text-xs mb-2">STEP 01</p>
                     <h3 class="text-base font-bold text-white mb-2">Deep Rulebook Audit</h3>
-                    <p class="text-xs sm:text-sm text-slate-300">Map every account model, drawdown calculation, consistency cap, prohibited practice, and payout rule.</p>
+                    <p class="text-xs sm:text-sm text-slate-300 text-justify">Map every account model, drawdown calculation, consistency cap, prohibited practice, and payout rule.</p>
                 </div>
                 <div class="glass-card p-5 rounded-lg">
                     <p class="font-mono text-cyan-400 text-xs mb-2">STEP 02</p>
                     <h3 class="text-base font-bold text-white mb-2">Knowledge Base Architecture</h3>
-                    <p class="text-xs sm:text-sm text-slate-300">Structure edge cases and high-ticket friction points into clean, zero-ambiguity Q&amp;A documentation.</p>
+                    <p class="text-xs sm:text-sm text-slate-300 text-justify">Structure edge cases and high-ticket friction points into clean, zero-ambiguity Q&amp;A documentation.</p>
                 </div>
                 <div class="glass-card p-5 rounded-lg">
                     <p class="font-mono text-cyan-400 text-xs mb-2">STEP 03</p>
                     <h3 class="text-base font-bold text-white mb-2">Chatbot &amp; Hub Deployment</h3>
-                    <p class="text-xs sm:text-sm text-slate-300">Build responsive desktop/mobile AI chat UI alongside a standalone searchable rulebook center.</p>
+                    <p class="text-xs sm:text-sm text-slate-300 text-justify">Build responsive desktop/mobile AI chat UI alongside a standalone searchable rulebook center.</p>
                 </div>
                 <div class="glass-card p-5 rounded-lg">
                     <p class="font-mono text-cyan-400 text-xs mb-2">STEP 04</p>
                     <h3 class="text-base font-bold text-white mb-2">Stress Testing &amp; QA</h3>
-                    <p class="text-xs sm:text-sm text-slate-300">Test against tricky trader scenarios (breaches, tilted queries, payout rejections) before launch.</p>
+                    <p class="text-xs sm:text-sm text-slate-300 text-justify">Test against tricky trader scenarios (breaches, tilted queries, payout rejections) before launch.</p>
                 </div>
             </div>
         </div>
@@ -530,12 +534,12 @@
     <!-- 04. Next Prop Firm Builds (Scalable Pipeline Section) -->
     <section id="upcoming" class="py-20 px-6">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-2xl sm:text-3xl font-bold flex items-center gap-3 mb-4">
+            <h2 class="text-2xl sm:text-3xl font-bold flex items-baseline sm:items-center gap-3 mb-4">
                 <span class="text-cyan-400 font-mono text-lg sm:text-xl shrink-0">04.</span>
-                <span class="whitespace-nowrap shrink-0">Next Prop Firm Builds</span>
+                <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">Next Prop Firm<br class="sm:hidden"> Builds</span>
                 <span class="hidden sm:block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
             </h2>
-            <p class="text-sm sm:text-base text-slate-400 max-w-3xl mb-10">
+            <p class="text-sm sm:text-base text-slate-400 max-w-3xl text-justify mb-10">
                 This gallery grows with every new prop firm audit and custom support build. Future case studies will be added right here.
             </p>
 
@@ -545,7 +549,7 @@
                     <div>
                         <span class="inline-block text-[11px] font-mono px-2.5 py-1 rounded bg-slate-800 text-cyan-400 border border-slate-700 mb-3">Case Study #03 &mdash; Coming Soon</span>
                         <h3 class="text-xl font-bold text-white mb-2">Next Prop Firm AI Support Build</h3>
-                        <p class="text-sm text-slate-400">
+                        <p class="text-sm text-slate-400 text-justify">
                             Currently auditing upcoming prop firm launches and relaunches to deploy the next live AI support chatbot, rulebook hub, and operational audit report.
                         </p>
                     </div>
@@ -556,7 +560,7 @@
                     <div>
                         <span class="inline-block text-[11px] font-mono px-2.5 py-1 rounded bg-cyan-400/10 text-cyan-400 border border-cyan-400/30 mb-3">For Prop Firm Founders &amp; Ops Leads</span>
                         <h3 class="text-xl font-bold text-white mb-2">Want a Custom Support Prototype for Your Firm?</h3>
-                        <p class="text-sm text-slate-300 mb-6">
+                        <p class="text-sm text-slate-300 text-justify mb-6">
                             I can audit your rulebook and build a tailored AI trader support chatbot + self-service FAQ hub for your team in 48 hours.
                         </p>
                     </div>
@@ -573,7 +577,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer with Standardized Global Tagline & Dual Emails -->
     <footer class="py-10 text-center border-t border-slate-800">
         <div class="max-w-4xl mx-auto px-6 flex flex-col items-center">
             <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" type="button" aria-label="Go to top" class="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-navy-800 border border-cyan-400/50 text-cyan-400 font-mono text-xs sm:text-sm hover:bg-cyan-400 hover:text-navy-900 transition-colors cursor-pointer">
@@ -581,21 +585,30 @@
                 <span>Back to Top</span>
             </button>
 
-            <div class="flex flex-wrap justify-center items-center gap-6 mb-5">
-                <a href="https://www.linkedin.com/in/hotu-ram/" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/HotuRam" target="_blank" rel="noopener noreferrer" title="GitHub" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.kaggle.com/hoturam" target="_blank" rel="noopener noreferrer" title="Kaggle Discussion Expert" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors"><i class="fa-brands fa-kaggle"></i></a>
-                <a href="https://x.com/Hotu_Ram" target="_blank" rel="noopener noreferrer" title="X (Professional — @Hotu_Ram)" class="inline-flex items-center gap-1 text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
+            <div class="flex flex-wrap justify-center items-center gap-6 mb-4">
+                <a href="https://www.linkedin.com/in/hotu-ram/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/HotuRam" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.kaggle.com/hoturam" target="_blank" rel="noopener noreferrer" title="Kaggle Discussion Expert" aria-label="Kaggle" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors"><i class="fa-brands fa-kaggle"></i></a>
+                <a href="https://x.com/Hotu_Ram" target="_blank" rel="noopener noreferrer" title="X (Professional — @Hotu_Ram)" aria-label="X Professional" class="inline-flex items-center gap-1 text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
                     <i class="fa-brands fa-x-twitter"></i><span class="text-[10px] font-mono uppercase border border-slate-700 px-1.5 py-0.5 rounded">Pro</span>
                 </a>
-                <a href="https://x.com/HotuGoyal" target="_blank" rel="noopener noreferrer" title="X (Casual — @HotuGoyal)" class="inline-flex items-center gap-1 text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
+                <a href="https://x.com/HotuGoyal" target="_blank" rel="noopener noreferrer" title="X (Casual — @HotuGoyal)" aria-label="X Casual" class="inline-flex items-center gap-1 text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
                     <i class="fa-brands fa-x-twitter"></i><span class="text-[10px] font-mono uppercase border border-slate-700 px-1.5 py-0.5 rounded">Casual</span>
                 </a>
-                <a href="mailto:theiitianict@gmail.com" title="Email" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors"><i class="fa-solid fa-envelope"></i></a>
+                <a href="mailto:hotu_1912ph06@iitp.ac.in" title="IITP Email" aria-label="IITP Email" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors"><i class="fa-solid fa-envelope"></i></a>
             </div>
-            <p class="font-mono text-xs sm:text-sm text-slate-500">
-                Independent Prop Trader &amp; MT5/MQL5 Developer<br>
+
+            <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 mb-5 font-mono text-[11px] sm:text-xs text-slate-400">
+                <a href="mailto:hotu_1912ph06@iitp.ac.in" class="hover:text-cyan-400 transition-colors">hotu_1912ph06@iitp.ac.in</a>
+                <span class="text-slate-600">&middot;</span>
+                <a href="mailto:theiitianict@gmail.com" class="hover:text-cyan-400 transition-colors">theiitianict@gmail.com</a>
+            </div>
+
+            <p class="font-mono text-xs sm:text-sm text-slate-200 font-semibold">
                 &copy; 2026 Hotu Ram &middot; IIT Patna Alumnus
+            </p>
+            <p class="font-mono text-xs sm:text-sm text-cyan-400 mt-1.5">
+                MT5/MQL5 Specialist &middot; Trader Support &amp; Community Management &middot; AI Chatbots &amp; Automation
             </p>
         </div>
     </footer>
