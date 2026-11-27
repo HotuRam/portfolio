@@ -19,7 +19,7 @@
 
 ## About Me
 
-I am **Hotu Ram**, an **IIT Patna Alumnus** (`M.Sc. Physics`), independent prop firm trader, **MT5/MQL5 Developer**, **Community Educator**, and **AI Support Automation Builder** based in Jaipur, India (available for **Remote — Global**, immediate joining).
+I am **Hotu Ram**, an **IIT Alumnus**, independent prop firm trader, **MT5/MQL5 Developer**, **Community Educator**, and **AI Support Automation Builder** based in Jaipur, India (available for **Remote — Global**, immediate joining).
 
 I build **AI Support Hubs & Automation** alongside hands-on MetaTrader 5 troubleshooting, Discord/Telegram community support, and structured operations—bridging the gap between retail traders and prop firm rules.
 
