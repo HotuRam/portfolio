@@ -94,6 +94,16 @@
             background: linear-gradient(125deg, transparent 25%, rgba(100, 255, 218, 0.07) 48%, rgba(255, 255, 255, 0.08) 52%, transparent 72%);
         }
 
+        /* 3D Glass Prism Float */
+        @keyframes prismFloat {
+            0%, 100% { transform: translateY(0px) rotate(26deg); }
+            50% { transform: translateY(-8px) rotate(28deg); }
+        }
+        .prism-3d-float {
+            animation: prismFloat 7s ease-in-out infinite;
+            will-change: transform;
+        }
+
         /* Diagonal Scrolling Ticker */
         @keyframes tickerScroll {
             0% { transform: translate3d(0, 0, 0); }
@@ -163,14 +173,14 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="relative min-h-screen flex items-center px-6 pt-28 pb-16 overflow-x-clip">
-        <div class="max-w-6xl mx-auto w-full grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+    <section id="hero" class="relative px-6 lg:px-10 pt-20 pb-8 lg:pt-16 lg:pb-6 lg:min-h-[calc(100vh-5.25rem)] flex items-center overflow-x-clip">
+        <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-10 lg:gap-8 items-start">
             <!-- Left Column: Original Hero Content -->
-            <div class="lg:col-span-8">
-                <p class="text-cyan-400 font-mono text-sm md:text-base mb-4 pl-0.5">Hi, my name is</p>
+            <div class="lg:col-span-8 lg:pt-10">
+                <p class="text-cyan-400 font-mono text-sm md:text-base mb-3 pl-0.5">Hi, my name is</p>
                 
                 <!-- NAME ROW WITH IIT BADGE -->
-                <div class="flex flex-wrap items-center gap-3 md:gap-5 mb-4">
+                <div class="flex flex-wrap items-center gap-3 md:gap-5 mb-3">
                     <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight uppercase text-white leading-none">HOTU RAM</h1>
                     <span class="bg-[#1e3a8a] text-white font-bold text-xs sm:text-sm md:text-lg px-3 py-1.5 md:px-4 md:py-2 rounded-sm uppercase tracking-wider shadow-md">
                         IIT ALUMNUS
@@ -178,12 +188,12 @@
                 </div>
                 
                 <!-- THE BIG HEADLINE -->
-                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-400 mb-6 tracking-tight leading-tight">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-400 mb-5 tracking-tight leading-tight">
                     I decode the prop firm ecosystem.
                 </h2>
                 
                 <!-- THE TITLES SUBLINE -->
-                <p class="max-w-3xl text-base sm:text-lg md:text-xl mb-8 leading-relaxed text-slate-300 text-justify">
+                <p class="max-w-3xl text-base sm:text-lg md:text-xl mb-7 leading-relaxed text-slate-300 text-justify">
                     I am an independent <strong class="text-white font-semibold">Prop Firm Trader</strong>, <strong class="text-white font-semibold">MT5/MQL5 Developer</strong>, and <strong class="text-white font-semibold">Community Educator &amp; Discussion Expert</strong> building <span class="text-cyan-400 font-semibold">AI Chatbots &amp; Automation</span> that bridge the gap between retail traders and prop firm rules.
                 </p>
 
@@ -194,7 +204,7 @@
                 </p>
 
                 <!-- PORTFOLIO SUB-PAGE BUTTONS -->
-                <div class="flex flex-wrap gap-3 sm:gap-4 mb-9">
+                <div class="flex flex-wrap gap-3 sm:gap-4 mb-7">
                     <a href="ai-support-chatbots.html" class="group inline-flex items-center px-5 py-3 bg-navy-800/70 border border-slate-500 text-slate-200 font-mono text-sm sm:text-base rounded hover:bg-cyan-400/10 hover:border-cyan-400 hover:text-cyan-400 hover:shadow-[0_0_12px_rgba(100,255,218,0.25)] transition-all duration-300">
                         <i class="fa-solid fa-robot mr-2.5 text-lg text-cyan-400"></i>
                         <span>AI Support Chatbots</span>
@@ -217,15 +227,18 @@
                     </a>
                 </div>
                 
-                <!-- RESUME CTA + LOCATION + QUICK SOCIALS (BOTH X PROFILES) -->
-                <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
-                    <a href="#documents" class="inline-flex justify-center items-center px-7 py-3.5 bg-transparent border border-slate-700 text-slate-200 font-mono text-sm rounded hover:bg-slate-800 hover:border-cyan-400/50 transition-colors duration-300">
-                        Access My Resume
-                    </a>
-                    <div class="inline-flex items-center text-sm font-mono text-slate-400">
-                        <i class="fa-solid fa-location-dot text-cyan-400 mr-2"></i> Jaipur, India | Remote (Global)
+                <!-- RESUME CTA + LOCATION (Row 1) & QUICK SOCIALS (Row 2) -->
+                <div class="space-y-4">
+                    <div class="flex flex-wrap items-center gap-4 sm:gap-6">
+                        <a href="#documents" class="inline-flex justify-center items-center whitespace-nowrap px-7 py-3 bg-transparent border border-slate-700 text-slate-200 font-mono text-sm rounded hover:bg-slate-800 hover:border-cyan-400/50 transition-colors duration-300">
+                            Access My Resume
+                        </a>
+                        <div class="inline-flex items-center whitespace-nowrap text-sm font-mono text-slate-400">
+                            <i class="fa-solid fa-location-dot text-cyan-400 mr-2"></i> Jaipur, India | Remote (Global)
+                        </div>
                     </div>
-                    <div class="flex flex-wrap items-center gap-4 text-xl text-slate-400 pt-1 sm:pt-0 sm:border-l sm:border-slate-700 sm:pl-6">
+
+                    <div class="flex flex-wrap items-center gap-5 text-xl text-slate-400">
                         <a href="https://www.linkedin.com/in/hotu-ram/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://github.com/HotuRam" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-github"></i></a>
                         <a href="https://www.kaggle.com/hoturam" target="_blank" rel="noopener noreferrer" title="Kaggle Discussion Expert" aria-label="Kaggle" class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-kaggle"></i></a>
@@ -239,42 +252,66 @@
                 </div>
             </div>
 
-            <!-- Right Column: Swinging Lanyard Identity Card -->
-            <div class="lg:col-span-4 relative flex justify-center items-start lg:-mt-28">
+            <!-- Right Column: Swinging Lanyard Identity Card (Flush with Header) -->
+            <div class="lg:col-span-4 relative flex justify-center items-start">
                 <!-- Subtle Ambient Glow -->
-                <div class="pointer-events-none absolute top-24 left-1/2 -translate-x-1/2 w-72 h-72 rounded-full bg-cyan-400/10 blur-3xl"></div>
-                <div class="pointer-events-none absolute top-36 left-1/2 -translate-x-1/2 w-60 h-60 rounded-full bg-[#1e3a8a]/25 blur-3xl"></div>
+                <div class="pointer-events-none absolute top-28 left-1/2 -translate-x-1/2 w-72 h-72 rounded-full bg-cyan-400/12 blur-3xl"></div>
+                <div class="pointer-events-none absolute top-40 left-1/2 -translate-x-1/2 w-64 h-64 rounded-full bg-[#1e3a8a]/30 blur-3xl"></div>
+
+                <!-- 3D Glassmorphic Prism Accent Behind Card (FundedNext-Inspired Depth) -->
+                <svg class="prism-3d-float pointer-events-none absolute top-36 -right-4 sm:right-2 lg:-right-6 w-36 h-64 opacity-85 z-0" viewBox="0 0 140 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="glassRodBody" x1="20" y1="10" x2="115" y2="245" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#64ffda" stop-opacity="0.55"/>
+                            <stop offset="35%" stop-color="#38bdf8" stop-opacity="0.22"/>
+                            <stop offset="70%" stop-color="#6366f1" stop-opacity="0.35"/>
+                            <stop offset="100%" stop-color="#020c1b" stop-opacity="0.05"/>
+                        </linearGradient>
+                        <linearGradient id="glassRodEdge" x1="35" y1="0" x2="95" y2="250" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+                            <stop offset="45%" stop-color="#64ffda" stop-opacity="0.65"/>
+                            <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.1"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- 3D Glass Capsule / Candlestick -->
+                    <rect x="48" y="18" width="38" height="190" rx="19" fill="url(#glassRodBody)" stroke="url(#glassRodEdge)" stroke-width="1.5"/>
+                    <!-- Inner Specular Highlight -->
+                    <rect x="56" y="30" width="8" height="150" rx="4" fill="white" fill-opacity="0.22"/>
+                    <!-- Cross Ring Accent -->
+                    <ellipse cx="67" cy="148" rx="46" ry="12" stroke="#64ffda" stroke-opacity="0.45" stroke-width="1.2"/>
+                    <ellipse cx="67" cy="152" rx="34" ry="8" stroke="#818cf8" stroke-opacity="0.35" stroke-width="1"/>
+                </svg>
 
                 <!-- Pendulum Assembly -->
                 <div class="lanyard-swing flex flex-col items-center relative z-10">
-                    <!-- Lanyard Strap (Drops from top on desktop, compact on mobile) -->
-                    <div class="lanyard-strap w-10 h-20 lg:h-40 flex items-center justify-center overflow-hidden rounded-b-sm">
-                        <span class="lanyard-strap-text font-mono text-[9px] font-semibold uppercase text-cyan-400/75 whitespace-nowrap select-none">
-                            HOTU RAM &bull; IIT ALUMNUS &bull; TRADER SUPPORT
+                    <!-- Lanyard Strap (Starts directly from Header) -->
+                    <div class="lanyard-strap w-10 h-16 lg:h-24 flex items-center justify-center overflow-hidden rounded-b-sm">
+                        <span class="lanyard-strap-text font-mono text-[8px] font-semibold uppercase text-cyan-400/75 whitespace-nowrap select-none">
+                            HOTU RAM &bull; IIT ALUMNUS
                         </span>
                     </div>
 
                     <!-- Metal Clasp & Ring -->
-                    <div class="w-8 h-3.5 bg-gradient-to-b from-slate-500 to-slate-800 border border-slate-400/40 rounded-b-md shadow-md -mt-0.5 z-20"></div>
-                    <div class="w-4 h-3 border-2 border-slate-400/70 rounded-full -mt-1 z-10"></div>
+                    <div class="w-8 h-3 bg-gradient-to-b from-slate-500 to-slate-800 border border-slate-400/40 rounded-b-md shadow-md -mt-0.5 z-20"></div>
+                    <div class="w-4 h-2.5 border-2 border-slate-400/70 rounded-full -mt-1 z-10"></div>
 
                     <!-- Identity Card Body -->
-                    <div class="id-badge-card relative w-[285px] sm:w-[300px] rounded-2xl overflow-hidden -mt-1.5 pt-3.5 px-5 pb-0">
+                    <div class="id-badge-card relative w-[290px] sm:w-[305px] rounded-2xl overflow-hidden -mt-1.5 pt-3.5 px-5 pb-5">
                         <!-- Glossy Diagonal Sheen -->
                         <div class="id-badge-sheen pointer-events-none absolute inset-0"></div>
 
                         <!-- Punch-Hole Slot -->
-                        <div class="w-12 h-2 rounded-full bg-navy-900 border border-slate-600/60 mx-auto mb-4 shadow-inner"></div>
+                        <div class="w-12 h-2 rounded-full bg-navy-900 border border-slate-600/60 mx-auto mb-3.5 shadow-inner"></div>
 
-                        <!-- Card Top Row: IIT Alumnus + Status -->
-                        <div class="relative z-10 flex items-center justify-between gap-2 mb-4">
+                        <!-- Card Top Row: IIT Alumnus + High-Contrast Status Pill -->
+                        <div class="relative z-10 flex items-center justify-between gap-2 mb-3.5">
                             <span class="bg-[#1e3a8a] text-white font-mono font-bold text-[10px] px-2.5 py-1 rounded-sm uppercase tracking-wider shadow">
                                 IIT ALUMNUS
                             </span>
-                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-400/10 border border-emerald-400/35 text-emerald-300 font-mono text-[10px] font-semibold uppercase tracking-wide">
-                                <span class="relative flex h-2 w-2">
-                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-85"></span>
-                                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#020c1b] border border-slate-500/80 text-white font-mono text-[10px] font-semibold uppercase tracking-wide shadow">
+                                <span class="relative flex h-2.5 w-2.5">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-90"></span>
+                                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.95)]"></span>
                                 </span>
                                 Open to Roles
                             </span>
@@ -284,20 +321,17 @@
                         <div class="relative z-10 text-left mb-4">
                             <h3 class="text-2xl font-extrabold tracking-tight uppercase text-white leading-tight">HOTU RAM</h3>
                             <p class="font-mono text-[11px] text-cyan-400 mt-1 leading-snug">
-                                AI Support Hubs &bull; MT5/MQL5 &bull; Discord Trader Support
+                                AI Support Hubs &bull; MT5 Specialist &bull; Discord Support
                             </p>
                             <p class="font-mono text-[10px] text-slate-400 mt-1.5">
                                 <i class="fa-solid fa-globe text-cyan-400/80 mr-1"></i>Remote (Global) &middot; Immediate Joiner
                             </p>
                         </div>
 
-                        <!-- Card Bottom Half: Portrait Photo -->
-                        <div class="relative z-10 -mx-5 mt-2 h-56 overflow-hidden border-t border-cyan-400/20 bg-navy-900/80">
-                            <img src="https://drive.google.com/thumbnail?id=1qaFJyLnvD9SnmMtsEXAat9_lPj0b5Tjg&amp;sz=w800" alt="Hotu Ram" class="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105">
-                            <div class="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#020c1b] via-[#020c1b]/50 to-transparent"></div>
-                            <div class="pointer-events-none absolute bottom-2.5 left-4 right-4 flex items-center justify-between font-mono text-[10px] text-slate-300">
-                                <span class="text-cyan-400 font-semibold">PROP FIRM OPS</span>
-                                <span class="text-slate-400">6+ YRS FX/CFD</span>
+                        <!-- Card Bottom Half: Full Circular Portrait (Hides White Source Corners) -->
+                        <div class="relative z-10 flex justify-center items-center pt-1">
+                            <div class="relative w-44 h-44 rounded-full overflow-hidden border-2 border-cyan-400/45 bg-navy-900 shadow-[0_0_25px_rgba(100,255,218,0.18)]">
+                                <img src="https://drive.google.com/thumbnail?id=1qaFJyLnvD9SnmMtsEXAat9_lPj0b5Tjg&amp;sz=w800" alt="Hotu Ram" class="w-full h-full object-cover object-center scale-105 transition-transform duration-500 hover:scale-110">
                             </div>
                         </div>
                     </div>
@@ -306,9 +340,9 @@
         </div>
     </section>
 
-    <!-- Diagonal Scrolling Availability & Specialties Ticker -->
-    <div class="relative w-full overflow-hidden py-7 -mt-6 mb-2 select-none" aria-label="Key specialties and availability">
-        <div class="diagonal-ticker-band py-3">
+    <!-- Diagonal Scrolling Availability & Specialties Ticker (Visible Above the Fold) -->
+    <div class="relative w-full overflow-hidden py-3 -mt-2 mb-4 select-none" aria-label="Key specialties and availability">
+        <div class="diagonal-ticker-band py-2.5">
             <div class="ticker-track font-mono text-xs sm:text-sm font-semibold tracking-wider uppercase text-slate-100">
                 <!-- Sequence 1 -->
                 <div class="flex items-center shrink-0">
