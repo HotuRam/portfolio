@@ -56,6 +56,30 @@
         ::-webkit-scrollbar-thumb { background: #495670; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #8892b0; }
 
+        /* Subtle Inline Bio Badges */
+        .bio-badge-teal {
+            display: inline;
+            background: rgba(100, 255, 218, 0.08);
+            border: 1px solid rgba(100, 255, 218, 0.18);
+            color: #64ffda;
+            font-weight: 600;
+            padding: 0.12rem 0.5rem;
+            border-radius: 0.3rem;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+        }
+        .bio-badge {
+            display: inline;
+            background: rgba(15, 33, 62, 0.75);
+            border: 1px solid rgba(148, 163, 184, 0.15);
+            color: #ffffff;
+            font-weight: 600;
+            padding: 0.12rem 0.5rem;
+            border-radius: 0.3rem;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+        }
+
         /* Swinging Lanyard ID Card */
         @keyframes lanyardSway {
             0%, 100% { transform: rotate(-2.2deg); }
@@ -133,15 +157,17 @@
                 <span class="hidden sm:inline text-cyan-400 text-xs sm:text-sm uppercase tracking-wider">Portfolio</span>
             </a>
 
-            <!-- Desktop Navigation Links -->
-            <div class="hidden lg:flex items-center space-x-5 text-xs font-mono">
-                <a href="#about" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">01.</span> About</a>
-                <a href="#opportunities" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">02.</span> Opportunities</a>
-                <a href="#ai-support" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">03.</span> AI Chatbots</a>
-                <a href="#competencies" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">04.</span> Competencies</a>
-                <a href="#experience" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">05.</span> Experience</a>
-                <a href="#profiles" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">06.</span> Profiles</a>
-                <a href="#documents" class="px-4 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400/10 transition-colors leading-none">Resume</a>
+            <!-- Desktop Navigation Links (Option A: Floating Glass Pill Bar) -->
+            <div class="hidden lg:flex items-center gap-4">
+                <div class="flex items-center gap-0.5 px-1.5 py-1 rounded-full bg-navy-800/80 border border-slate-700/70 shadow-inner">
+                    <a href="#about" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all leading-none">About</a>
+                    <a href="#opportunities" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all leading-none">Opportunities</a>
+                    <a href="#ai-support" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all leading-none">AI Chatbots</a>
+                    <a href="#competencies" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all leading-none">Competencies</a>
+                    <a href="#experience" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all leading-none">Experience</a>
+                    <a href="#profiles" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all leading-none">Profiles</a>
+                </div>
+                <a href="#documents" class="px-4 py-2 border border-cyan-400 text-cyan-400 font-mono text-xs rounded hover:bg-cyan-400/10 transition-colors leading-none">Resume</a>
             </div>
 
             <!-- Mobile Menu Toggle Button -->
@@ -163,9 +189,9 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="relative px-6 lg:px-10 pt-20 pb-8 lg:pt-16 lg:pb-10 flex items-start overflow-x-clip">
-        <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-10 lg:gap-8 items-start">
-            <!-- Left Column: Original Hero Content -->
+    <section id="hero" class="relative pt-20 pb-8 lg:pt-16 lg:pb-10 flex items-start overflow-x-clip">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 w-full grid lg:grid-cols-12 gap-10 lg:gap-8 items-start">
+            <!-- Left Column: Hero Content -->
             <div class="lg:col-span-8 lg:pt-14">
                 <p class="text-cyan-400 font-mono text-sm md:text-base mb-3 pl-0.5">Hi, my name is</p>
                 
@@ -182,9 +208,9 @@
                     I decode the prop firm ecosystem.
                 </h2>
                 
-                <!-- THE TITLES SUBLINE -->
-                <p class="max-w-3xl text-base sm:text-lg md:text-xl mb-7 leading-relaxed text-slate-300 text-justify">
-                    I am an independent <strong class="text-white font-semibold">Prop Firm Trader</strong>, <strong class="text-white font-semibold">MT5/MQL5 Developer</strong>, and <strong class="text-white font-semibold">Community Educator &amp; Discussion Expert</strong> building <span class="text-cyan-400 font-semibold">AI Chatbots &amp; Automation</span> that bridge the gap between retail traders and prop firm rules.
+                <!-- THE TITLES SUBLINE (Reordered with Subtle Inline Badges) -->
+                <p class="max-w-3xl text-base sm:text-lg md:text-xl mb-7 leading-[2.1] text-slate-300">
+                    I build <span class="bio-badge-teal">AI Support Hubs &amp; Automation</span> alongside my work as an <span class="bio-badge">MT5/MQL5 Developer</span>, <span class="bio-badge">Community Educator</span>, and <span class="bio-badge">Online Discord Chat &amp; Trader Support</span> specialist&mdash;bridging the gap between retail traders and prop firm rules.
                 </p>
 
                 <!-- CLEAR CLICKABLE PROMPT FOR PORTFOLIO TRACKS -->
@@ -217,7 +243,7 @@
                     </a>
                 </div>
                 
-                <!-- RESUME CTA + LOCATION (Row 1) & QUICK SOCIALS (Row 2) -->
+                <!-- RESUME CTA + LOCATION (Row 1) & QUICK SOCIALS WITH EMAIL FIRST (Row 2) -->
                 <div class="space-y-4">
                     <div class="flex flex-wrap items-center gap-4 sm:gap-6">
                         <a href="#documents" class="inline-flex justify-center items-center whitespace-nowrap px-7 py-3 bg-transparent border border-slate-700 text-slate-200 font-mono text-sm rounded hover:bg-slate-800 hover:border-cyan-400/50 transition-colors duration-300">
@@ -229,6 +255,7 @@
                     </div>
 
                     <div class="flex flex-wrap items-center gap-5 text-xl text-slate-400">
+                        <a href="mailto:hotu_1912ph06@iitp.ac.in" title="Email — hotu_1912ph06@iitp.ac.in" aria-label="Email" class="hover:text-cyan-400 transition-colors"><i class="fa-solid fa-envelope"></i></a>
                         <a href="https://www.linkedin.com/in/hotu-ram/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://github.com/HotuRam" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-github"></i></a>
                         <a href="https://www.kaggle.com/hoturam" target="_blank" rel="noopener noreferrer" title="Kaggle Discussion Expert" aria-label="Kaggle" class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-kaggle"></i></a>
@@ -283,7 +310,7 @@
                             </span>
                         </div>
 
-                        <!-- Card Identity Text (3 Balanced Lines) -->
+                        <!-- Card Identity Text (3 Balanced Lines + Brighter Sub-line) -->
                         <div class="relative z-10 text-left mb-3.5">
                             <h3 class="text-2xl font-extrabold tracking-tight uppercase text-white leading-tight">HOTU RAM</h3>
                             <p class="font-mono text-[10.5px] text-cyan-400 mt-1 leading-snug">
@@ -295,8 +322,8 @@
                             <p class="font-mono text-[10.5px] text-white mt-0.5 leading-snug">
                                 Online Discord Chat &amp; Trader Support
                             </p>
-                            <p class="font-mono text-[10px] text-slate-400 mt-1.5">
-                                <i class="fa-solid fa-globe text-cyan-400/80 mr-1"></i>Remote (Global) &middot; Immediate Joiner
+                            <p class="font-mono text-[10px] text-slate-200 mt-1.5">
+                                <i class="fa-solid fa-globe text-cyan-400 mr-1"></i>Remote (Global) &middot; Immediate Joiner
                             </p>
                         </div>
 
