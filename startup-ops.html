@@ -59,7 +59,7 @@
 
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 nav-glass">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex justify-between items-center">
             <!-- Back to Main Portfolio -->
             <a href="index.html" class="inline-flex items-center gap-2.5 font-mono text-sm sm:text-base font-semibold tracking-tight group leading-none">
                 <span class="w-8 h-8 rounded bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-cyan-400 group-hover:bg-cyan-400 group-hover:text-navy-900 transition-colors">
@@ -68,13 +68,15 @@
                 <span class="text-white group-hover:text-cyan-400 transition-colors">Main Portfolio</span>
             </a>
 
-            <!-- Desktop Section Links -->
-            <div class="hidden md:flex items-center space-x-6 text-xs lg:text-sm font-mono">
-                <a href="#timeline" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">01.</span> Journey</a>
-                <a href="#events" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">02.</span> Events</a>
-                <a href="#media" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">03.</span> Credentials &amp; Media</a>
-                <a href="#project" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">04.</span> Research &amp; Project</a>
-                <a href="index.html#documents" class="px-4 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400/10 transition-colors leading-none">Resume</a>
+            <!-- Desktop Navigation Links (Floating Glass Pill Bar) -->
+            <div class="hidden md:flex items-center gap-4">
+                <div class="flex items-center gap-0.5 px-1.5 py-1 rounded-full bg-navy-800/80 border border-slate-700/70 shadow-inner">
+                    <a href="#timeline" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all leading-none">Journey</a>
+                    <a href="#events" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all leading-none">Events</a>
+                    <a href="#media" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all leading-none">Credentials &amp; Media</a>
+                    <a href="#project" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all leading-none">Research &amp; Project</a>
+                </div>
+                <a href="index.html#documents" class="px-4 py-2 border border-cyan-400 text-cyan-400 font-mono text-xs rounded hover:bg-cyan-400/10 transition-colors leading-none">Resume</a>
             </div>
 
             <!-- Mobile Menu Toggle -->
@@ -83,105 +85,113 @@
             </button>
         </div>
 
-        <!-- Mobile Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-navy-800/95 border-t border-cyan-400/10 px-6 py-4 space-y-4 font-mono text-sm">
-            <a href="#timeline" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">01.</span> Journey</a>
-            <a href="#events" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">02.</span> Events</a>
-            <a href="#media" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">03.</span> Credentials &amp; Media</a>
-            <a href="#project" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">04.</span> Research &amp; Project</a>
-            <a href="index.html#documents" class="mobile-link inline-block px-4 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400/10 transition-colors">Resume</a>
+        <!-- Mobile Dropdown (Clean, Number-Free) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-800/95 border-t border-cyan-400/10 px-6 py-4 space-y-2 text-sm">
+            <a href="#timeline" class="mobile-link block px-3.5 py-2 rounded-lg text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">Journey</a>
+            <a href="#events" class="mobile-link block px-3.5 py-2 rounded-lg text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">Events</a>
+            <a href="#media" class="mobile-link block px-3.5 py-2 rounded-lg text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">Credentials &amp; Media</a>
+            <a href="#project" class="mobile-link block px-3.5 py-2 rounded-lg text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">Research &amp; Project</a>
+            <div class="pt-2">
+                <a href="index.html#documents" class="mobile-link inline-block px-4 py-2 border border-cyan-400 text-cyan-400 font-mono text-xs rounded hover:bg-cyan-400/10 transition-colors">Resume</a>
+            </div>
         </div>
     </nav>
 
     <!-- Page Header -->
-    <header class="max-w-6xl mx-auto px-6 pt-32 pb-14">
-        <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 font-mono text-xs sm:text-sm">
-                <i class="fa-solid fa-rocket"></i>
-                <span>Two Years of Experience &middot; Jun 2022 &mdash; May 2024</span>
+    <header class="pt-32 pb-14">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 font-mono text-xs sm:text-sm">
+                    <i class="fa-solid fa-rocket"></i>
+                    <span>Two Years of Experience &middot; Jun 2022 &mdash; May 2024</span>
+                </div>
+                <a href="https://istart.rajasthan.gov.in/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-800 border border-slate-700 text-slate-200 font-mono text-xs hover:border-cyan-400 hover:text-cyan-400 transition-colors">
+                    <span>Official iStart Rajasthan Portal</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+                </a>
             </div>
-            <a href="https://istart.rajasthan.gov.in/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-800 border border-slate-700 text-slate-200 font-mono text-xs hover:border-cyan-400 hover:text-cyan-400 transition-colors">
-                <span>Official iStart Rajasthan Portal</span>
-                <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
-            </a>
-        </div>
 
-        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
-            Startup Incubation &amp; Ecosystem Operations
-        </h1>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
+                Startup Incubation &amp; Ecosystem Operations
+            </h1>
 
-        <!-- Structured Posting & Department Lines -->
-        <div class="space-y-1.5 mb-7 font-mono text-sm sm:text-base">
-            <p class="text-cyan-400 font-semibold">
-                Startup Incubation Executive (Research Analyst) &mdash; Full-Time, In-Office at Bhamashah Techno Hub, Jaipur
-            </p>
-            <p class="text-slate-300 text-xs sm:text-sm">
-                iStart Rajasthan Program &middot; DoIT&amp;C, Government of Rajasthan &middot; Incubation, Research &amp; Operations
-            </p>
-        </div>
+            <!-- Structured Posting & Department Lines -->
+            <div class="space-y-1.5 mb-7 font-mono text-sm sm:text-base">
+                <p class="text-cyan-400 font-semibold">
+                    Startup Incubation Executive (Research Analyst) &mdash; Full-Time, In-Office at Bhamashah Techno Hub, Jaipur
+                </p>
+                <p class="text-slate-300 text-xs sm:text-sm">
+                    iStart Rajasthan Program &middot; DoIT&amp;C, Government of Rajasthan &middot; Incubation, Research &amp; Operations
+                </p>
+            </div>
 
-        <div class="space-y-4 text-base sm:text-lg text-slate-300 max-w-4xl leading-relaxed text-justify mb-10">
-            <p>
-                Posted full-time at the <strong class="text-white">Bhamashah Techno Hub</strong> incubation center in Jaipur, I worked for two years as a <strong class="text-white">Startup Incubation Executive (Research Analyst)</strong> in the <strong class="text-white">iStart Rajasthan</strong> program under <strong class="text-white">DoIT&amp;C, Government of Rajasthan</strong>&mdash;driving incubation support, portal query resolution, founder Q&amp;As, structured feedback reporting, research analysis, stakeholder coordination, and ecosystem events.
-            </p>
-            <p class="text-sm sm:text-base text-slate-400">
-                <strong class="text-slate-200">About iStart Rajasthan:</strong> iStart Rajasthan is the flagship startup and innovation initiative of the Government of Rajasthan (DoIT&amp;C), built to foster entrepreneurship, innovation, and investment through single-window startup onboarding, incubation infrastructure at centers like Bhamashah Techno Hub, mentorship, funding and grant facilitation, ecosystem events, and market/talent enablement.
-            </p>
-        </div>
+            <div class="space-y-4 text-base sm:text-lg text-slate-300 max-w-4xl leading-relaxed text-justify mb-10">
+                <p>
+                    Posted full-time at the <strong class="text-white">Bhamashah Techno Hub</strong> incubation center in Jaipur, I worked for two years as a <strong class="text-white">Startup Incubation Executive (Research Analyst)</strong> in the <strong class="text-white">iStart Rajasthan</strong> program under <strong class="text-white">DoIT&amp;C, Government of Rajasthan</strong>&mdash;driving incubation support, portal query resolution, founder Q&amp;As, structured feedback reporting, research analysis, stakeholder coordination, and ecosystem events.
+                </p>
+                <p class="text-sm sm:text-base text-slate-400">
+                    <strong class="text-slate-200">About iStart Rajasthan:</strong> iStart Rajasthan is the flagship startup and innovation initiative of the Government of Rajasthan (DoIT&amp;C), built to foster entrepreneurship, innovation, and investment through single-window startup onboarding, incubation infrastructure at centers like Bhamashah Techno Hub, mentorship, funding and grant facilitation, ecosystem events, and market/talent enablement.
+                </p>
+            </div>
 
-        <!-- 8 Summary Cards (2x4 Grid) -->
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="glass-card p-5 rounded-lg text-center">
-                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">2 Years</div>
-                <div class="text-xs font-mono text-cyan-400 mt-1">Full-Time In-Office</div>
-                <div class="text-[11px] text-slate-400 mt-1">Jun 2022 &ndash; May 2024</div>
-            </div>
-            <div class="glass-card p-5 rounded-lg text-center">
-                <div class="text-xl sm:text-2xl font-extrabold text-white font-mono">DoIT&amp;C</div>
-                <div class="text-xs font-mono text-cyan-400 mt-1">Govt. of Rajasthan</div>
-                <div class="text-[11px] text-slate-400 mt-1">iStart Rajasthan Initiative</div>
-            </div>
-            <div class="glass-card p-5 rounded-lg text-center">
-                <div class="text-xl sm:text-2xl font-extrabold text-white font-mono">Techno Hub</div>
-                <div class="text-xs font-mono text-cyan-400 mt-1">Incubation Center</div>
-                <div class="text-[11px] text-slate-400 mt-1">Bhamashah Techno Hub, Jaipur</div>
-            </div>
-            <div class="glass-card p-5 rounded-lg text-center">
-                <div class="text-xl sm:text-2xl font-extrabold text-white font-mono">1,000+</div>
-                <div class="text-xs font-mono text-cyan-400 mt-1">Ideas &amp; Pitch Decks</div>
-                <div class="text-[11px] text-slate-400 mt-1">Evaluation &amp; Ecosystem Ops</div>
-            </div>
-            <div class="glass-card p-5 rounded-lg text-center">
-                <div class="text-xl sm:text-2xl font-extrabold text-white font-mono">15+ Events</div>
-                <div class="text-xs font-mono text-cyan-400 mt-1">Expos, Fests &amp; Mixers</div>
-                <div class="text-[11px] text-slate-400 mt-1">Jaipur &amp; Jodhpur Operations</div>
-            </div>
-            <div class="glass-card p-5 rounded-lg text-center">
-                <div class="text-xl sm:text-2xl font-extrabold text-white font-mono">Research</div>
-                <div class="text-xs font-mono text-cyan-400 mt-1">Official Policy Report</div>
-                <div class="text-[11px] text-slate-400 mt-1">iStart&ndash;Vibrant Ecosystem</div>
-            </div>
-            <div class="glass-card p-5 rounded-lg text-center">
-                <div class="text-xl sm:text-2xl font-extrabold text-white font-mono">Python &amp; CV</div>
-                <div class="text-xs font-mono text-cyan-400 mt-1">Seat Allotment System</div>
-                <div class="text-[11px] text-slate-400 mt-1">Pandas &amp; OpenCV Automation</div>
-            </div>
-            <div class="glass-card p-5 rounded-lg text-center">
-                <div class="text-xl sm:text-2xl font-extrabold text-white font-mono">Stakeholders</div>
-                <div class="text-xs font-mono text-cyan-400 mt-1">Cross-Functional Ops</div>
-                <div class="text-[11px] text-slate-400 mt-1">Mentors, Investors &amp; Govt.</div>
+            <!-- 8 Summary Cards (2x4 Grid) -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="glass-card p-5 rounded-lg text-center">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">2 Years</div>
+                    <div class="text-xs font-mono text-cyan-400 mt-1">Full-Time In-Office</div>
+                    <div class="text-[11px] text-slate-400 mt-1">Jun 2022 &ndash; May 2024</div>
+                </div>
+                <div class="glass-card p-5 rounded-lg text-center">
+                    <div class="text-xl sm:text-2xl font-extrabold text-white font-mono">DoIT&amp;C</div>
+                    <div class="text-xs font-mono text-cyan-400 mt-1">Govt. of Rajasthan</div>
+                    <div class="text-[11px] text-slate-400 mt-1">iStart Rajasthan Initiative</div>
+                </div>
+                <div class="glass-card p-5 rounded-lg text-center">
+                    <div class="text-xl sm:text-2xl font-extrabold text-white font-mono">Techno Hub</div>
+                    <div class="text-xs font-mono text-cyan-400 mt-1">Incubation Center</div>
+                    <div class="text-[11px] text-slate-400 mt-1">Bhamashah Techno Hub, Jaipur</div>
+                </div>
+                <div class="glass-card p-5 rounded-lg text-center">
+                    <div class="text-xl sm:text-2xl font-extrabold text-white font-mono">1,000+</div>
+                    <div class="text-xs font-mono text-cyan-400 mt-1">Ideas &amp; Pitch Decks</div>
+                    <div class="text-[11px] text-slate-400 mt-1">Evaluation &amp; Ecosystem Ops</div>
+                </div>
+                <div class="glass-card p-5 rounded-lg text-center">
+                    <div class="text-xl sm:text-2xl font-extrabold text-white font-mono">15+ Events</div>
+                    <div class="text-xs font-mono text-cyan-400 mt-1">Expos, Fests &amp; Mixers</div>
+                    <div class="text-[11px] text-slate-400 mt-1">Jaipur &amp; Jodhpur Operations</div>
+                </div>
+                <div class="glass-card p-5 rounded-lg text-center">
+                    <div class="text-xl sm:text-2xl font-extrabold text-white font-mono">Research</div>
+                    <div class="text-xs font-mono text-cyan-400 mt-1">Official Policy Report</div>
+                    <div class="text-[11px] text-slate-400 mt-1">iStart&ndash;Vibrant Ecosystem</div>
+                </div>
+                <div class="glass-card p-5 rounded-lg text-center">
+                    <div class="text-xl sm:text-2xl font-extrabold text-white font-mono">Python &amp; CV</div>
+                    <div class="text-xs font-mono text-cyan-400 mt-1">Seat Allotment System</div>
+                    <div class="text-[11px] text-slate-400 mt-1">Pandas &amp; OpenCV Automation</div>
+                </div>
+                <div class="glass-card p-5 rounded-lg text-center">
+                    <div class="text-xl sm:text-2xl font-extrabold text-white font-mono">Stakeholders</div>
+                    <div class="text-xs font-mono text-cyan-400 mt-1">Cross-Functional Ops</div>
+                    <div class="text-[11px] text-slate-400 mt-1">Mentors, Investors &amp; Govt.</div>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- 01. Four-Phase Operational & Event Timeline -->
-    <section id="timeline" class="py-16 px-6 border-t border-slate-800/70">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold flex items-baseline sm:items-center gap-3 mb-4">
-                <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">01.</span>
-                <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">Incubation, Research &amp;<br class="sm:hidden"> Operations Journey</span>
-                <span class="hidden sm:block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
-            </h2>
+    <!-- Four-Phase Operational & Event Timeline -->
+    <section id="timeline" class="py-16 border-t border-slate-800/70">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="mb-4">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy-800/90 border border-cyan-400/25 text-cyan-400 font-mono text-[11px] uppercase tracking-widest mb-2.5">
+                    <i class="fa-solid fa-timeline text-[10px]"></i> Tenure
+                </span>
+                <div class="flex items-center gap-4">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight shrink-0">Incubation, Research &amp;<br class="sm:hidden"> Operations Journey</h2>
+                    <span class="hidden sm:block h-px bg-gradient-to-r from-cyan-400/35 to-transparent flex-1 max-w-sm"></span>
+                </div>
+            </div>
             <p class="text-sm sm:text-base text-slate-300 mb-10 max-w-3xl text-justify">
                 Phase-by-phase breakdown of incubation management, research and reporting, mentor/startup coordination, and program execution across the two-year tenure.
             </p>
@@ -294,14 +304,18 @@
         </div>
     </section>
 
-    <!-- 02. Categorized Events & Workshops Directory -->
-    <section id="events" class="py-16 px-6 bg-navy-800/35 border-y border-slate-800/70">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold flex items-baseline sm:items-center gap-3 mb-4">
-                <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">02.</span>
-                <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">Events &amp; Workshops<br class="sm:hidden"> Directory</span>
-                <span class="hidden sm:block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
-            </h2>
+    <!-- Categorized Events & Workshops Directory -->
+    <section id="events" class="py-16 bg-navy-800/35 border-y border-slate-800/70">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="mb-4">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy-900/90 border border-cyan-400/25 text-cyan-400 font-mono text-[11px] uppercase tracking-widest mb-2.5">
+                    <i class="fa-solid fa-calendar-check text-[10px]"></i> Ecosystem
+                </span>
+                <div class="flex items-center gap-4">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight shrink-0">Events &amp; Workshops<br class="sm:hidden"> Directory</h2>
+                    <span class="hidden sm:block h-px bg-gradient-to-r from-cyan-400/35 to-transparent flex-1 max-w-sm"></span>
+                </div>
+            </div>
             <p class="text-sm sm:text-base text-slate-300 mb-10 max-w-3xl text-justify">
                 Complete list of ecosystem events, fests, investor mixers, and startup workshops supported across Jaipur and Jodhpur during the two-year tenure&mdash;categorized by format and operational scope.
             </p>
@@ -379,16 +393,20 @@
         </div>
     </section>
 
-    <!-- 03. Official Credentials, Program Snapshots, Lanyards & Banners -->
-    <section id="media" class="py-16 px-6">
-        <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
-                <h2 class="text-2xl md:text-3xl font-bold flex items-baseline sm:items-center gap-3">
-                    <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">03.</span>
-                    <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">Official Credentials &amp;<br class="sm:hidden"> Program Media</span>
-                    <span class="hidden sm:block h-px bg-slate-700 w-24 ml-3"></span>
-                </h2>
-                <span class="text-xs font-mono text-cyan-400/80"><i class="fa-solid fa-shield-halved mr-1.5"></i>Redacted Previews &middot; Click to Zoom</span>
+    <!-- Official Credentials, Program Snapshots, Lanyards & Banners -->
+    <section id="media" class="py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-4">
+                <div class="flex-1">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy-800/90 border border-cyan-400/25 text-cyan-400 font-mono text-[11px] uppercase tracking-widest mb-2.5">
+                        <i class="fa-solid fa-certificate text-[10px]"></i> Documentation
+                    </span>
+                    <div class="flex items-center gap-4">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight shrink-0">Official Credentials &amp;<br class="sm:hidden"> Program Media</h2>
+                        <span class="hidden sm:block h-px bg-gradient-to-r from-cyan-400/35 to-transparent flex-1 max-w-sm"></span>
+                    </div>
+                </div>
+                <span class="text-xs font-mono text-cyan-400/80 shrink-0"><i class="fa-solid fa-shield-halved mr-1.5"></i>Redacted Previews &middot; Click to Zoom</span>
             </div>
 
             <p class="text-sm sm:text-base text-slate-300 mb-8 max-w-3xl text-justify">
@@ -552,14 +570,18 @@
         </div>
     </section>
 
-    <!-- 04. Featured Research & Incubation Project -->
-    <section id="project" class="py-16 md:py-20 px-6 bg-navy-800/35 border-t border-slate-800/70">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold flex items-baseline sm:items-center gap-3 mb-8">
-                <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">04.</span>
-                <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">Featured Research &amp;<br class="sm:hidden"> Incubation Project</span>
-                <span class="hidden sm:block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
-            </h2>
+    <!-- Featured Research & Incubation Project -->
+    <section id="project" class="py-16 md:py-20 bg-navy-800/35 border-t border-slate-800/70">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="mb-8">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy-900/90 border border-cyan-400/25 text-cyan-400 font-mono text-[11px] uppercase tracking-widest mb-2.5">
+                    <i class="fa-solid fa-file-code text-[10px]"></i> Deliverables
+                </span>
+                <div class="flex items-center gap-4">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight shrink-0">Featured Research &amp;<br class="sm:hidden"> Incubation Project</h2>
+                    <span class="hidden sm:block h-px bg-gradient-to-r from-cyan-400/35 to-transparent flex-1 max-w-sm"></span>
+                </div>
+            </div>
 
             <div class="grid md:grid-cols-2 gap-6">
                 <!-- Featured Technical Project -->
@@ -617,37 +639,56 @@
         </div>
     </section>
 
-    <!-- Footer with Standardized Global Tagline -->
-    <footer class="py-10 text-center border-t border-slate-800">
-        <div class="max-w-4xl mx-auto px-6 flex flex-col items-center">
-            <button onclick="scrollToTopSmooth()" type="button" aria-label="Go to top" class="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-navy-800 border border-cyan-400/50 text-cyan-400 font-mono text-xs sm:text-sm hover:bg-cyan-400 hover:text-navy-900 transition-colors cursor-pointer">
+    <!-- Pill-Style Footer with Email First -->
+    <footer class="py-12 text-center border-t border-slate-800/80 bg-[#020c1b]">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col items-center">
+            <button onclick="scrollToTopSmooth()" type="button" aria-label="Go to top" class="mb-7 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-navy-800 border border-cyan-400/40 text-cyan-400 font-mono text-xs hover:bg-cyan-400 hover:text-navy-900 transition-colors cursor-pointer">
                 <i class="fa-solid fa-arrow-up"></i>
                 <span>Back to Top</span>
             </button>
 
-            <div class="flex space-x-6 mb-5">
-                <a href="https://www.linkedin.com/in/hotu-ram/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
-                    <i class="fa-brands fa-linkedin"></i>
+            <!-- Social Links Floating Pill Bar (Email First) -->
+            <div class="inline-flex flex-wrap justify-center items-center gap-1.5 sm:gap-2 px-3 py-2 rounded-full bg-navy-800/80 border border-slate-700/70 shadow-inner mb-6">
+                <a href="mailto:hotu_1912ph06@iitp.ac.in" title="IITP Email" aria-label="IITP Email" class="w-9 h-9 rounded-full flex items-center justify-center text-cyan-400 bg-cyan-400/10 hover:bg-cyan-400 hover:text-navy-900 transition-colors">
+                    <i class="fa-solid fa-envelope text-base"></i>
                 </a>
-                <a href="https://github.com/HotuRam" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
-                    <i class="fa-brands fa-github"></i>
+                <a href="https://www.linkedin.com/in/hotu-ram/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="w-9 h-9 rounded-full flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">
+                    <i class="fa-brands fa-linkedin text-base"></i>
                 </a>
-                <a href="https://www.kaggle.com/hoturam" target="_blank" rel="noopener noreferrer" title="Kaggle" aria-label="Kaggle" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
-                    <i class="fa-brands fa-kaggle"></i>
+                <a href="https://github.com/HotuRam" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="w-9 h-9 rounded-full flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">
+                    <i class="fa-brands fa-github text-base"></i>
                 </a>
-                <a href="https://x.com/HotuGoyal" target="_blank" rel="noopener noreferrer" title="X (Twitter)" aria-label="X" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
-                    <i class="fa-brands fa-x-twitter"></i>
+                <a href="https://www.kaggle.com/hoturam" target="_blank" rel="noopener noreferrer" title="Kaggle Discussion Expert" aria-label="Kaggle" class="w-9 h-9 rounded-full flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">
+                    <i class="fa-brands fa-kaggle text-base"></i>
                 </a>
-                <a href="mailto:hotu_1912ph06@iitp.ac.in" title="Email" aria-label="Email" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
-                    <i class="fa-solid fa-envelope"></i>
+                <a href="https://x.com/Hotu_Ram" target="_blank" rel="noopener noreferrer" title="X (Professional — @Hotu_Ram)" aria-label="X Professional" class="inline-flex items-center gap-1 px-2.5 h-9 rounded-full text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">
+                    <i class="fa-brands fa-x-twitter text-sm"></i><span class="text-[10px] font-mono uppercase">Pro</span>
+                </a>
+                <a href="https://x.com/HotuGoyal" target="_blank" rel="noopener noreferrer" title="X (Casual — @HotuGoyal)" aria-label="X Casual" class="inline-flex items-center gap-1 px-2.5 h-9 rounded-full text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">
+                    <i class="fa-brands fa-x-twitter text-sm"></i><span class="text-[10px] font-mono uppercase">Casual</span>
                 </a>
             </div>
-            <p class="font-mono text-xs sm:text-sm text-slate-200 font-semibold">
-                &copy; 2026 Hotu Ram &middot; IIT Patna Alumnus
+
+            <!-- Clickable Email Pills -->
+            <div class="flex flex-wrap items-center justify-center gap-2.5 mb-6 font-mono text-xs">
+                <a href="mailto:hotu_1912ph06@iitp.ac.in" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-800/70 border border-slate-700/70 text-slate-300 hover:border-cyan-400/40 hover:text-cyan-400 transition-colors">
+                    <i class="fa-solid fa-envelope text-cyan-400 text-[11px]"></i> hotu_1912ph06@iitp.ac.in
+                </a>
+                <a href="mailto:theiitianict@gmail.com" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-800/70 border border-slate-700/70 text-slate-300 hover:border-cyan-400/40 hover:text-cyan-400 transition-colors">
+                    <i class="fa-solid fa-envelope text-cyan-400 text-[11px]"></i> theiitianict@gmail.com
+                </a>
+            </div>
+
+            <p class="font-mono text-xs sm:text-sm text-slate-200 font-semibold mb-3">
+                &copy; 2026 Hotu Ram &middot; IIT Alumnus
             </p>
-            <p class="font-mono text-xs sm:text-sm text-cyan-400 mt-1.5">
-                MT5/MQL5 Specialist &middot; Trader Support &amp; Community Management &middot; AI Chatbots &amp; Automation
-            </p>
+
+            <!-- Specialty Tag Pills -->
+            <div class="flex flex-wrap justify-center gap-2 font-mono text-[11px]">
+                <span class="px-3 py-1 rounded-full bg-cyan-400/10 border border-cyan-400/20 text-cyan-400">MT5/MQL5 Specialist</span>
+                <span class="px-3 py-1 rounded-full bg-navy-800/80 border border-slate-700/60 text-slate-300">Trader Support &amp; Community Management</span>
+                <span class="px-3 py-1 rounded-full bg-navy-800/80 border border-slate-700/60 text-slate-300">AI Chatbots &amp; Automation</span>
+            </div>
         </div>
     </footer>
 
