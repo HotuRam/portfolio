@@ -157,7 +157,7 @@
                 <span class="hidden sm:inline text-cyan-400 text-xs sm:text-sm uppercase tracking-wider">Portfolio</span>
             </a>
 
-            <!-- Desktop Navigation Links (Option A: Floating Glass Pill Bar) -->
+            <!-- Desktop Navigation Links (Floating Glass Pill Bar) -->
             <div class="hidden lg:flex items-center gap-4">
                 <div class="flex items-center gap-0.5 px-1.5 py-1 rounded-full bg-navy-800/80 border border-slate-700/70 shadow-inner">
                     <a href="#about" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all leading-none">About</a>
@@ -176,15 +176,17 @@
             </button>
         </div>
 
-        <!-- Mobile Dropdown Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-navy-800/95 border-t border-cyan-400/10 px-6 py-4 space-y-4 font-mono text-sm">
-            <a href="#about" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">01.</span> About</a>
-            <a href="#opportunities" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">02.</span> Opportunities</a>
-            <a href="#ai-support" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">03.</span> AI Chatbots for Trader Support</a>
-            <a href="#competencies" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">04.</span> Competencies</a>
-            <a href="#experience" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">05.</span> Experience</a>
-            <a href="#profiles" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">06.</span> Profiles</a>
-            <a href="#documents" class="mobile-link inline-block px-4 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400/10 transition-colors">Resume &amp; Cover Letter</a>
+        <!-- Mobile Dropdown Menu (Clean, Number-Free) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-navy-800/95 border-t border-cyan-400/10 px-6 py-4 space-y-2 text-sm">
+            <a href="#about" class="mobile-link block px-3.5 py-2 rounded-lg text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">About</a>
+            <a href="#opportunities" class="mobile-link block px-3.5 py-2 rounded-lg text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">Opportunities</a>
+            <a href="#ai-support" class="mobile-link block px-3.5 py-2 rounded-lg text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">AI Chatbots for Trader Support</a>
+            <a href="#competencies" class="mobile-link block px-3.5 py-2 rounded-lg text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">Competencies</a>
+            <a href="#experience" class="mobile-link block px-3.5 py-2 rounded-lg text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">Experience</a>
+            <a href="#profiles" class="mobile-link block px-3.5 py-2 rounded-lg text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">Profiles</a>
+            <div class="pt-2">
+                <a href="#documents" class="mobile-link inline-block px-4 py-2 border border-cyan-400 text-cyan-400 font-mono text-xs rounded hover:bg-cyan-400/10 transition-colors">Resume &amp; Cover Letter</a>
+            </div>
         </div>
     </nav>
 
@@ -379,14 +381,18 @@
         </div>
     </div>
 
-    <!-- 01. About Section -->
-    <section id="about" class="py-20 md:py-24 px-6">
-        <div class="max-w-5xl mx-auto">
-            <h3 class="text-2xl md:text-3xl font-bold flex items-baseline sm:items-center gap-3 mb-12">
-                <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">01.</span>
-                <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">About Me</span>
-                <span class="hidden sm:block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
-            </h3>
+    <!-- About Section -->
+    <section id="about" class="py-20 md:py-24">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="mb-12">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy-800/90 border border-cyan-400/25 text-cyan-400 font-mono text-[11px] uppercase tracking-widest mb-2.5">
+                    <i class="fa-solid fa-user text-[10px]"></i> Profile
+                </span>
+                <div class="flex items-center gap-4">
+                    <h3 class="text-2xl md:text-3xl font-bold text-white tracking-tight shrink-0">About Me</h3>
+                    <span class="hidden sm:block h-px bg-gradient-to-r from-cyan-400/35 to-transparent flex-1 max-w-sm"></span>
+                </div>
+            </div>
             
             <div class="grid md:grid-cols-5 gap-12 items-start">
                 <div class="md:col-span-3 space-y-5 text-base sm:text-lg leading-relaxed text-slate-300 text-justify">
@@ -402,7 +408,7 @@
                 </div>
                 
                 <!-- Profile Photo -->
-                <div class="md:col-span-2 relative group w-60 h-60 sm:w-64 sm:h-64 mx-auto md:w-full md:h-auto md:aspect-square mt-2 md:mt-0">
+                <div class="md:col-span-2 relative group w-60 h-60 sm:w-64 sm:h-64 mx-auto md:w-72 md:h-72 lg:w-80 lg:h-80 mt-2 md:mt-0">
                     <div class="absolute inset-0 border-2 border-cyan-400 rounded translate-x-3 translate-y-3 sm:translate-x-4 sm:translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
                     <div class="absolute inset-0 bg-navy-800 rounded z-10 overflow-hidden border border-slate-700 transition-all duration-300">
                         <img src="https://drive.google.com/thumbnail?id=1qaFJyLnvD9SnmMtsEXAat9_lPj0b5Tjg&amp;sz=w800" alt="Hotu Ram" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
@@ -461,14 +467,18 @@
         </div>
     </section>
 
-    <!-- 02. Opportunities I'm Looking For -->
-    <section id="opportunities" class="py-20 md:py-24 px-6 bg-navy-800/35 border-y border-slate-800/70">
-        <div class="max-w-5xl mx-auto">
-            <h3 class="text-2xl md:text-3xl font-bold flex items-baseline sm:items-center gap-3 mb-5">
-                <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">02.</span>
-                <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">Opportunities I'm<br class="sm:hidden"> Looking For</span>
-                <span class="hidden sm:block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
-            </h3>
+    <!-- Opportunities I'm Looking For -->
+    <section id="opportunities" class="py-20 md:py-24 bg-navy-800/35 border-y border-slate-800/70">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="mb-5">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy-900/90 border border-cyan-400/25 text-cyan-400 font-mono text-[11px] uppercase tracking-widest mb-2.5">
+                    <i class="fa-solid fa-briefcase text-[10px]"></i> Target Roles
+                </span>
+                <div class="flex items-center gap-4">
+                    <h3 class="text-2xl md:text-3xl font-bold text-white tracking-tight shrink-0">Opportunities I'm<br class="sm:hidden"> Looking For</h3>
+                    <span class="hidden sm:block h-px bg-gradient-to-r from-cyan-400/35 to-transparent flex-1 max-w-sm"></span>
+                </div>
+            </div>
 
             <!-- High-Contrast Blinking Green Status Pill -->
             <div class="mb-10">
@@ -583,19 +593,23 @@
         </div>
     </section>
 
-    <!-- 03. AI Chatbots for Trader Support (Concise Front-Page Snapshot -> Dedicated Page) -->
-    <section id="ai-support" class="py-20 md:py-24 px-6">
-        <div class="max-w-6xl mx-auto">
-            <h3 class="text-2xl md:text-3xl font-bold flex items-baseline sm:items-center gap-3 mb-4">
-                <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">03.</span>
-                <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">AI Chatbots for<br class="sm:hidden"> Trader Support</span>
-                <span class="hidden sm:block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
-            </h3>
+    <!-- AI Chatbots for Trader Support -->
+    <section id="ai-support" class="py-20 md:py-24">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="mb-4">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy-800/90 border border-cyan-400/25 text-cyan-400 font-mono text-[11px] uppercase tracking-widest mb-2.5">
+                    <i class="fa-solid fa-robot text-[10px]"></i> Live Prototypes
+                </span>
+                <div class="flex items-center gap-4">
+                    <h3 class="text-2xl md:text-3xl font-bold text-white tracking-tight shrink-0">AI Chatbots for<br class="sm:hidden"> Trader Support</h3>
+                    <span class="hidden sm:block h-px bg-gradient-to-r from-cyan-400/35 to-transparent flex-1 max-w-sm"></span>
+                </div>
+            </div>
             <p class="text-sm sm:text-base text-slate-300 max-w-4xl text-justify mb-10">
                 Live proof-of-work prototypes engineered to deflect repetitive support tickets, clarify prop firm rulebooks 24/7, and streamline trader onboarding across full case studies.
             </p>
 
-            <!-- 6 Compact Front-Page Highlight Holders (Clean Overview, No Cluttered Links) -->
+            <!-- 6 Compact Front-Page Highlight Holders -->
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
                 <!-- Holder 1 -->
                 <div class="glass-card p-5 rounded-xl border-t-2 border-t-emerald-400 flex flex-col">
@@ -669,14 +683,18 @@
         </div>
     </section>
 
-    <!-- 04. Core Competencies -->
-    <section id="competencies" class="py-20 md:py-24 px-6 bg-navy-900/40 border-y border-slate-800/70">
-        <div class="max-w-6xl mx-auto">
-            <h3 class="text-2xl md:text-3xl font-bold flex items-baseline sm:items-center gap-3 mb-12">
-                <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">04.</span>
-                <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">Core<br class="sm:hidden"> Competencies</span>
-                <span class="hidden sm:block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
-            </h3>
+    <!-- Core Competencies -->
+    <section id="competencies" class="py-20 md:py-24 bg-navy-900/40 border-y border-slate-800/70">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="mb-12">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy-800/90 border border-cyan-400/25 text-cyan-400 font-mono text-[11px] uppercase tracking-widest mb-2.5">
+                    <i class="fa-solid fa-layer-group text-[10px]"></i> Skill Matrix
+                </span>
+                <div class="flex items-center gap-4">
+                    <h3 class="text-2xl md:text-3xl font-bold text-white tracking-tight shrink-0">Core<br class="sm:hidden"> Competencies</h3>
+                    <span class="hidden sm:block h-px bg-gradient-to-r from-cyan-400/35 to-transparent flex-1 max-w-sm"></span>
+                </div>
+            </div>
             
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="glass-card p-6 rounded-lg flex flex-col">
@@ -722,14 +740,18 @@
         </div>
     </section>
 
-    <!-- 05. Experience (Synced with Updated Resume) -->
-    <section id="experience" class="py-20 md:py-24 px-6">
-        <div class="max-w-5xl mx-auto">
-            <h3 class="text-2xl md:text-3xl font-bold flex items-baseline sm:items-center gap-3 mb-12">
-                <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">05.</span>
-                <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">Experience</span>
-                <span class="hidden sm:block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
-            </h3>
+    <!-- Experience (Synced with Updated Resume) -->
+    <section id="experience" class="py-20 md:py-24">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="mb-12">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy-800/90 border border-cyan-400/25 text-cyan-400 font-mono text-[11px] uppercase tracking-widest mb-2.5">
+                    <i class="fa-solid fa-timeline text-[10px]"></i> Career Track
+                </span>
+                <div class="flex items-center gap-4">
+                    <h3 class="text-2xl md:text-3xl font-bold text-white tracking-tight shrink-0">Experience</h3>
+                    <span class="hidden sm:block h-px bg-gradient-to-r from-cyan-400/35 to-transparent flex-1 max-w-sm"></span>
+                </div>
+            </div>
             
             <div class="space-y-12">
                 <!-- Job 1: MT5/MQL5 Specialist & Systematic FX/CFD Trader -->
@@ -794,14 +816,18 @@
         </div>
     </section>
 
-    <!-- 06. Verified Technical Profiles (GitHub & Kaggle Discussion Expert) -->
-    <section id="profiles" class="py-20 md:py-24 px-6 bg-navy-800/50 border-t border-slate-800/70">
-        <div class="max-w-5xl mx-auto">
-            <h3 class="text-2xl md:text-3xl font-bold flex items-baseline sm:items-center gap-3 mb-12">
-                <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">06.</span>
-                <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">Technical<br class="sm:hidden"> Footprint</span>
-                <span class="hidden sm:block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
-            </h3>
+    <!-- Verified Technical Profiles (GitHub & Kaggle Discussion Expert) -->
+    <section id="profiles" class="py-20 md:py-24 bg-navy-800/50 border-t border-slate-800/70">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="mb-12">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy-900/90 border border-cyan-400/25 text-cyan-400 font-mono text-[11px] uppercase tracking-widest mb-2.5">
+                    <i class="fa-solid fa-code-branch text-[10px]"></i> Verified Links
+                </span>
+                <div class="flex items-center gap-4">
+                    <h3 class="text-2xl md:text-3xl font-bold text-white tracking-tight shrink-0">Technical<br class="sm:hidden"> Footprint</h3>
+                    <span class="hidden sm:block h-px bg-gradient-to-r from-cyan-400/35 to-transparent flex-1 max-w-sm"></span>
+                </div>
+            </div>
 
             <div class="grid md:grid-cols-2 gap-6">
                 <!-- GitHub Card -->
@@ -851,8 +877,8 @@
     </section>
 
     <!-- Documents Section -->
-    <section id="documents" class="py-20 md:py-24 px-6 bg-navy-800/20 border-t border-slate-800/70">
-        <div class="max-w-4xl mx-auto text-center">
+    <section id="documents" class="py-20 md:py-24 bg-navy-800/20 border-t border-slate-800/70">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 text-center">
             <h2 class="text-3xl md:text-5xl font-bold mb-6">Application Assets</h2>
             <p class="text-base sm:text-lg mb-10 max-w-2xl mx-auto text-slate-300">
                 Ready to add hands-on MT5, trader support, community management, and AI operations strength to your team? Download my Master Resume and tailored Cover Letter below.
@@ -874,47 +900,56 @@
         </div>
     </section>
 
-    <!-- Footer with Standardized Global Tagline & Dual Emails -->
-    <footer class="py-10 text-center border-t border-slate-800">
-        <div class="max-w-4xl mx-auto px-6 flex flex-col items-center">
-            <button onclick="scrollToTopSmooth()" type="button" aria-label="Go to top" class="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-navy-800 border border-cyan-400/50 text-cyan-400 font-mono text-xs sm:text-sm hover:bg-cyan-400 hover:text-navy-900 transition-colors cursor-pointer">
+    <!-- Pill-Style Footer with Email First -->
+    <footer class="py-12 text-center border-t border-slate-800/80 bg-[#020c1b]">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col items-center">
+            <button onclick="scrollToTopSmooth()" type="button" aria-label="Go to top" class="mb-7 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-navy-800 border border-cyan-400/40 text-cyan-400 font-mono text-xs hover:bg-cyan-400 hover:text-navy-900 transition-colors cursor-pointer">
                 <i class="fa-solid fa-arrow-up"></i>
                 <span>Back to Top</span>
             </button>
 
-            <div class="flex flex-wrap justify-center items-center gap-6 mb-4">
-                <a href="https://www.linkedin.com/in/hotu-ram/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
-                    <i class="fa-brands fa-linkedin"></i>
+            <!-- Social Links Floating Pill Bar (Email First) -->
+            <div class="inline-flex flex-wrap justify-center items-center gap-1.5 sm:gap-2 px-3 py-2 rounded-full bg-navy-800/80 border border-slate-700/70 shadow-inner mb-6">
+                <a href="mailto:hotu_1912ph06@iitp.ac.in" title="IITP Email" aria-label="IITP Email" class="w-9 h-9 rounded-full flex items-center justify-center text-cyan-400 bg-cyan-400/10 hover:bg-cyan-400 hover:text-navy-900 transition-colors">
+                    <i class="fa-solid fa-envelope text-base"></i>
                 </a>
-                <a href="https://github.com/HotuRam" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
-                    <i class="fa-brands fa-github"></i>
+                <a href="https://www.linkedin.com/in/hotu-ram/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="w-9 h-9 rounded-full flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">
+                    <i class="fa-brands fa-linkedin text-base"></i>
                 </a>
-                <a href="https://www.kaggle.com/hoturam" target="_blank" rel="noopener noreferrer" title="Kaggle Discussion Expert" aria-label="Kaggle" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
-                    <i class="fa-brands fa-kaggle"></i>
+                <a href="https://github.com/HotuRam" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="w-9 h-9 rounded-full flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">
+                    <i class="fa-brands fa-github text-base"></i>
                 </a>
-                <a href="https://x.com/Hotu_Ram" target="_blank" rel="noopener noreferrer" title="X (Professional — @Hotu_Ram)" aria-label="X Professional" class="inline-flex items-center gap-1 text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
-                    <i class="fa-brands fa-x-twitter"></i><span class="text-[10px] font-mono uppercase border border-slate-700 px-1.5 py-0.5 rounded">Pro</span>
+                <a href="https://www.kaggle.com/hoturam" target="_blank" rel="noopener noreferrer" title="Kaggle Discussion Expert" aria-label="Kaggle" class="w-9 h-9 rounded-full flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">
+                    <i class="fa-brands fa-kaggle text-base"></i>
                 </a>
-                <a href="https://x.com/HotuGoyal" target="_blank" rel="noopener noreferrer" title="X (Casual / Trading — @HotuGoyal)" aria-label="X Casual" class="inline-flex items-center gap-1 text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
-                    <i class="fa-brands fa-x-twitter"></i><span class="text-[10px] font-mono uppercase border border-slate-700 px-1.5 py-0.5 rounded">Casual</span>
+                <a href="https://x.com/Hotu_Ram" target="_blank" rel="noopener noreferrer" title="X (Professional — @Hotu_Ram)" aria-label="X Professional" class="inline-flex items-center gap-1 px-2.5 h-9 rounded-full text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">
+                    <i class="fa-brands fa-x-twitter text-sm"></i><span class="text-[10px] font-mono uppercase">Pro</span>
                 </a>
-                <a href="mailto:hotu_1912ph06@iitp.ac.in" title="IITP Email" aria-label="IITP Email" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
-                    <i class="fa-solid fa-envelope"></i>
+                <a href="https://x.com/HotuGoyal" target="_blank" rel="noopener noreferrer" title="X (Casual / Trading — @HotuGoyal)" aria-label="X Casual" class="inline-flex items-center gap-1 px-2.5 h-9 rounded-full text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">
+                    <i class="fa-brands fa-x-twitter text-sm"></i><span class="text-[10px] font-mono uppercase">Casual</span>
                 </a>
             </div>
 
-            <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 mb-5 font-mono text-[11px] sm:text-xs text-slate-400">
-                <a href="mailto:hotu_1912ph06@iitp.ac.in" class="hover:text-cyan-400 transition-colors">hotu_1912ph06@iitp.ac.in</a>
-                <span class="text-slate-600">&middot;</span>
-                <a href="mailto:theiitianict@gmail.com" class="hover:text-cyan-400 transition-colors">theiitianict@gmail.com</a>
+            <!-- Clickable Email Pills -->
+            <div class="flex flex-wrap items-center justify-center gap-2.5 mb-6 font-mono text-xs">
+                <a href="mailto:hotu_1912ph06@iitp.ac.in" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-800/70 border border-slate-700/70 text-slate-300 hover:border-cyan-400/40 hover:text-cyan-400 transition-colors">
+                    <i class="fa-solid fa-envelope text-cyan-400 text-[11px]"></i> hotu_1912ph06@iitp.ac.in
+                </a>
+                <a href="mailto:theiitianict@gmail.com" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-800/70 border border-slate-700/70 text-slate-300 hover:border-cyan-400/40 hover:text-cyan-400 transition-colors">
+                    <i class="fa-solid fa-envelope text-cyan-400 text-[11px]"></i> theiitianict@gmail.com
+                </a>
             </div>
 
-            <p class="font-mono text-xs sm:text-sm text-slate-200 font-semibold">
-                &copy; 2026 Hotu Ram &middot; IIT Patna Alumnus
+            <p class="font-mono text-xs sm:text-sm text-slate-200 font-semibold mb-3">
+                &copy; 2026 Hotu Ram &middot; IIT Alumnus
             </p>
-            <p class="font-mono text-xs sm:text-sm text-cyan-400 mt-1.5">
-                MT5/MQL5 Specialist &middot; Trader Support &amp; Community Management &middot; AI Chatbots &amp; Automation
-            </p>
+
+            <!-- Specialty Tag Pills -->
+            <div class="flex flex-wrap justify-center gap-2 font-mono text-[11px]">
+                <span class="px-3 py-1 rounded-full bg-cyan-400/10 border border-cyan-400/20 text-cyan-400">MT5/MQL5 Specialist</span>
+                <span class="px-3 py-1 rounded-full bg-navy-800/80 border border-slate-700/60 text-slate-300">Trader Support &amp; Community Management</span>
+                <span class="px-3 py-1 rounded-full bg-navy-800/80 border border-slate-700/60 text-slate-300">AI Chatbots &amp; Automation</span>
+            </div>
         </div>
     </footer>
 
