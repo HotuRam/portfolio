@@ -59,7 +59,7 @@
 
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 nav-glass">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex justify-between items-center">
             <!-- Back to Main Portfolio -->
             <a href="index.html" class="inline-flex items-center gap-2.5 font-mono text-sm sm:text-base font-semibold tracking-tight group leading-none">
                 <span class="w-8 h-8 rounded bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-cyan-400 group-hover:bg-cyan-400 group-hover:text-navy-900 transition-colors">
@@ -68,12 +68,14 @@
                 <span class="text-white group-hover:text-cyan-400 transition-colors">Main Portfolio</span>
             </a>
 
-            <!-- Desktop Section Links -->
-            <div class="hidden md:flex items-center space-x-7 text-xs lg:text-sm font-mono">
-                <a href="#indicators" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">01.</span> Indicators</a>
-                <a href="#scripts" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">02.</span> Scripts</a>
-                <a href="#diagnostics" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">03.</span> Diagnostics</a>
-                <a href="index.html#documents" class="px-4 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400/10 transition-colors leading-none">Resume</a>
+            <!-- Desktop Navigation Links (Floating Glass Pill Bar) -->
+            <div class="hidden md:flex items-center gap-4">
+                <div class="flex items-center gap-0.5 px-1.5 py-1 rounded-full bg-navy-800/80 border border-slate-700/70 shadow-inner">
+                    <a href="#indicators" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all leading-none">Indicators</a>
+                    <a href="#scripts" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all leading-none">Scripts</a>
+                    <a href="#diagnostics" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all leading-none">Diagnostics</a>
+                </div>
+                <a href="index.html#documents" class="px-4 py-2 border border-cyan-400 text-cyan-400 font-mono text-xs rounded hover:bg-cyan-400/10 transition-colors leading-none">Resume</a>
             </div>
 
             <!-- Mobile Menu Toggle -->
@@ -82,76 +84,84 @@
             </button>
         </div>
 
-        <!-- Mobile Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-navy-800/95 border-t border-cyan-400/10 px-6 py-4 space-y-4 font-mono text-sm">
-            <a href="#indicators" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">01.</span> Indicators</a>
-            <a href="#scripts" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">02.</span> Scripts</a>
-            <a href="#diagnostics" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">03.</span> Diagnostics</a>
-            <a href="index.html#documents" class="mobile-link inline-block px-4 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400/10 transition-colors">Resume</a>
+        <!-- Mobile Dropdown (Clean, Number-Free) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-800/95 border-t border-cyan-400/10 px-6 py-4 space-y-2 text-sm">
+            <a href="#indicators" class="mobile-link block px-3.5 py-2 rounded-lg text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">Indicators</a>
+            <a href="#scripts" class="mobile-link block px-3.5 py-2 rounded-lg text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">Scripts</a>
+            <a href="#diagnostics" class="mobile-link block px-3.5 py-2 rounded-lg text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">Diagnostics</a>
+            <div class="pt-2">
+                <a href="index.html#documents" class="mobile-link inline-block px-4 py-2 border border-cyan-400 text-cyan-400 font-mono text-xs rounded hover:bg-cyan-400/10 transition-colors">Resume</a>
+            </div>
         </div>
     </nav>
 
     <!-- Page Header -->
-    <header class="max-w-6xl mx-auto px-6 pt-32 pb-14">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 font-mono text-xs sm:text-sm mb-5">
-            <i class="fa-solid fa-code"></i>
-            <span>MT5 Specialist (5+ Years) &middot; 20+ Custom MQL5 Tools</span>
-        </div>
-        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
-            MT5 Specialist &amp; Custom MQL5 Tooling
-        </h1>
-        <p class="text-base sm:text-xl font-semibold text-cyan-400 font-mono mb-5">
-            Platform Execution, Market Mechanics &amp; MQL5 Scripting (Jan 2021 &mdash; Present)
-        </p>
-        <p class="text-base sm:text-lg text-slate-300 max-w-4xl leading-relaxed text-justify mb-6">
-            Transitioning from MT4 in 2021 to MetaTrader 5, I have built muscle-memory command of the full terminal UI, order execution mechanics, charting, and live troubleshooting across <strong class="text-white">Gold, BTC, Forex, and Nasdaq</strong>. I personally design, code, and continuously expand a suite of <strong class="text-white">20+ custom MQL5 indicators and zero-overhead scripts</strong> engineered for clean chart control and strict prop firm risk compliance.
-        </p>
-
-        <!-- On-Demand Showcase & Disclaimer Note -->
-        <div class="max-w-4xl bg-navy-800/75 border border-cyan-400/25 rounded-lg p-4 sm:p-5 mb-10 space-y-2 text-xs sm:text-sm text-slate-300 text-justify">
-            <p>
-                <span class="text-cyan-400 font-mono font-semibold underline decoration-cyan-400/60 underline-offset-4 mr-1.5">Custom-Built &amp; On-Demand Showcase:</span>
-                All MQL5 indicators and scripts featured here are personally built from scratch; live terminal walkthroughs, source code demos, and custom-built tools are available on request.
+    <header class="pt-32 pb-14">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 font-mono text-xs sm:text-sm mb-5">
+                <i class="fa-solid fa-code"></i>
+                <span>MT5 Specialist (5+ Years) &middot; 20+ Custom MQL5 Tools</span>
+            </div>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
+                MT5 Specialist &amp; Custom MQL5 Tooling
+            </h1>
+            <p class="text-base sm:text-xl font-semibold text-cyan-400 font-mono mb-5">
+                Platform Execution, Market Mechanics &amp; MQL5 Scripting (Jan 2021 &mdash; Present)
             </p>
-            <p class="text-slate-400">
-                <span class="text-slate-200 font-mono font-semibold underline decoration-slate-500 underline-offset-4 mr-1.5">Disclaimer:</span>
-                Shared strictly for technical portfolio demonstration&mdash;nothing on this page constitutes financial advice, trade signals, or commercial promotion.
+            <p class="text-base sm:text-lg text-slate-300 max-w-4xl leading-relaxed text-justify mb-6">
+                Transitioning from MT4 in 2021 to MetaTrader 5, I have built muscle-memory command of the full terminal UI, order execution mechanics, charting, and live troubleshooting across <strong class="text-white">Gold, BTC, Forex, and Nasdaq</strong>. I personally design, code, and continuously expand a suite of <strong class="text-white">20+ custom MQL5 indicators and zero-overhead scripts</strong> engineered for clean chart control and strict prop firm risk compliance.
             </p>
-        </div>
 
-        <!-- Quick Proof Metrics -->
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="glass-card p-5 rounded-lg text-center">
-                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">5+ Yrs</div>
-                <div class="text-xs font-mono text-cyan-400 mt-1">MetaTrader Mastery</div>
-                <div class="text-[11px] text-slate-400 mt-1">MT4 (2021) &rarr; MT5</div>
+            <!-- On-Demand Showcase & Disclaimer Note -->
+            <div class="max-w-4xl bg-navy-800/75 border border-cyan-400/25 rounded-lg p-4 sm:p-5 mb-10 space-y-2 text-xs sm:text-sm text-slate-300 text-justify">
+                <p>
+                    <span class="text-cyan-400 font-mono font-semibold underline decoration-cyan-400/60 underline-offset-4 mr-1.5">Custom-Built &amp; On-Demand Showcase:</span>
+                    All MQL5 indicators and scripts featured here are personally built from scratch; live terminal walkthroughs, source code demos, and custom-built tools are available on request.
+                </p>
+                <p class="text-slate-400">
+                    <span class="text-slate-200 font-mono font-semibold underline decoration-slate-500 underline-offset-4 mr-1.5">Disclaimer:</span>
+                    Shared strictly for technical portfolio demonstration&mdash;nothing on this page constitutes financial advice, trade signals, or commercial promotion.
+                </p>
             </div>
-            <div class="glass-card p-5 rounded-lg text-center">
-                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">20+</div>
-                <div class="text-xs font-mono text-cyan-400 mt-1">Custom MQL5 Tools</div>
-                <div class="text-[11px] text-slate-400 mt-1">Indicators &amp; Scripts</div>
-            </div>
-            <div class="glass-card p-5 rounded-lg text-center">
-                <div class="text-lg sm:text-2xl font-extrabold text-white font-mono">Gold &middot; BTC &middot; FX &middot; NQ</div>
-                <div class="text-xs font-mono text-cyan-400 mt-1">Core Traded Markets</div>
-                <div class="text-[11px] text-slate-400 mt-1">Execution &amp; Risk Rules</div>
-            </div>
-            <div class="glass-card p-5 rounded-lg text-center">
-                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">0-Lag</div>
-                <div class="text-xs font-mono text-cyan-400 mt-1">Sleep-Mode &amp; Scripts</div>
-                <div class="text-[11px] text-slate-400 mt-1">Clean Memory Footprint</div>
+
+            <!-- Quick Proof Metrics -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="glass-card p-5 rounded-lg text-center">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">5+ Yrs</div>
+                    <div class="text-xs font-mono text-cyan-400 mt-1">MetaTrader Mastery</div>
+                    <div class="text-[11px] text-slate-400 mt-1">MT4 (2021) &rarr; MT5</div>
+                </div>
+                <div class="glass-card p-5 rounded-lg text-center">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">20+</div>
+                    <div class="text-xs font-mono text-cyan-400 mt-1">Custom MQL5 Tools</div>
+                    <div class="text-[11px] text-slate-400 mt-1">Indicators &amp; Scripts</div>
+                </div>
+                <div class="glass-card p-5 rounded-lg text-center">
+                    <div class="text-lg sm:text-2xl font-extrabold text-white font-mono">Gold &middot; BTC &middot; FX &middot; NQ</div>
+                    <div class="text-xs font-mono text-cyan-400 mt-1">Core Traded Markets</div>
+                    <div class="text-[11px] text-slate-400 mt-1">Execution &amp; Risk Rules</div>
+                </div>
+                <div class="glass-card p-5 rounded-lg text-center">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">0-Lag</div>
+                    <div class="text-xs font-mono text-cyan-400 mt-1">Sleep-Mode &amp; Scripts</div>
+                    <div class="text-[11px] text-slate-400 mt-1">Clean Memory Footprint</div>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- 01. Custom MQL5 Indicators -->
-    <section id="indicators" class="py-16 px-6 border-t border-slate-800/70">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold flex items-baseline sm:items-center gap-3 mb-8">
-                <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">01.</span>
-                <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">Custom MQL5<br class="sm:hidden"> Indicators</span>
-                <span class="hidden sm:block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
-            </h2>
+    <!-- Custom MQL5 Indicators -->
+    <section id="indicators" class="py-16 border-t border-slate-800/70">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="mb-8">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy-800/90 border border-cyan-400/25 text-cyan-400 font-mono text-[11px] uppercase tracking-widest mb-2.5">
+                    <i class="fa-solid fa-chart-line text-[10px]"></i> MT5 Overlays &amp; HUDs
+                </span>
+                <div class="flex items-center gap-4">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight shrink-0">Custom MQL5<br class="sm:hidden"> Indicators</h2>
+                    <span class="hidden sm:block h-px bg-gradient-to-r from-cyan-400/35 to-transparent flex-1 max-w-sm"></span>
+                </div>
+            </div>
 
             <!-- Indicator 1: All-in-One Custom HUD -->
             <div class="glass-card p-6 sm:p-8 rounded-xl border border-cyan-400/25 bg-navy-800/65 mb-10">
@@ -397,16 +407,20 @@
         </div>
     </section>
 
-    <!-- 02. Custom MQL5 Scripts (Zero Ongoing Memory Overhead) -->
-    <section id="scripts" class="py-16 px-6 bg-navy-800/35 border-y border-slate-800/70">
-        <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
-                <h2 class="text-2xl md:text-3xl font-bold flex items-baseline sm:items-center gap-3">
-                    <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">02.</span>
-                    <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">Custom MQL5<br class="sm:hidden"> Scripts</span>
-                    <span class="hidden sm:block h-px bg-slate-700 w-24 ml-3"></span>
-                </h2>
-                <div class="flex flex-wrap items-center gap-2 self-start sm:self-auto">
+    <!-- Custom MQL5 Scripts (Zero Ongoing Memory Overhead) -->
+    <section id="scripts" class="py-16 bg-navy-800/35 border-y border-slate-800/70">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-4">
+                <div class="flex-1">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy-900/90 border border-cyan-400/25 text-cyan-400 font-mono text-[11px] uppercase tracking-widest mb-2.5">
+                        <i class="fa-solid fa-terminal text-[10px]"></i> On-Demand Utilities
+                    </span>
+                    <div class="flex items-center gap-4">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight shrink-0">Custom MQL5<br class="sm:hidden"> Scripts</h2>
+                        <span class="hidden sm:block h-px bg-gradient-to-r from-cyan-400/35 to-transparent flex-1 max-w-sm"></span>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center gap-2 self-start sm:self-auto shrink-0">
                     <span class="inline-flex items-center gap-1.5 text-xs font-mono text-emerald-300 bg-emerald-500/10 border border-emerald-400/30 px-3 py-1 rounded-full">
                         <i class="fa-solid fa-bolt"></i> One-Click Execution &middot; Zero Ongoing Memory
                     </span>
@@ -500,14 +514,18 @@
         </div>
     </section>
 
-    <!-- 03. Platform Mastery & Market Diagnostics -->
-    <section id="diagnostics" class="py-16 md:py-20 px-6">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold flex items-baseline sm:items-center gap-3 mb-4">
-                <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">03.</span>
-                <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">Platform Mastery &amp;<br class="sm:hidden"> Diagnostics</span>
-                <span class="hidden sm:block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
-            </h2>
+    <!-- Platform Mastery & Market Diagnostics -->
+    <section id="diagnostics" class="py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="mb-4">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy-800/90 border border-cyan-400/25 text-cyan-400 font-mono text-[11px] uppercase tracking-widest mb-2.5">
+                    <i class="fa-solid fa-microchip text-[10px]"></i> Execution &amp; Code Hygiene
+                </span>
+                <div class="flex items-center gap-4">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight shrink-0">Platform Mastery &amp;<br class="sm:hidden"> Diagnostics</h2>
+                    <span class="hidden sm:block h-px bg-gradient-to-r from-cyan-400/35 to-transparent flex-1 max-w-sm"></span>
+                </div>
+            </div>
             <p class="text-sm sm:text-base text-slate-300 mb-10 max-w-3xl text-justify">
                 Hands-on MetaTrader terminal troubleshooting paired with deep operational knowledge of <strong class="text-white">Gold, BTC, Forex, and Nasdaq</strong> execution mechanics and clean MQL5 engineering.
             </p>
@@ -548,44 +566,56 @@
         </div>
     </section>
 
-    <!-- Footer with Standardized Global Tagline & Dual Emails -->
-    <footer class="py-10 text-center border-t border-slate-800">
-        <div class="max-w-4xl mx-auto px-6 flex flex-col items-center">
-            <button onclick="scrollToTopSmooth()" type="button" aria-label="Go to top" class="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-navy-800 border border-cyan-400/50 text-cyan-400 font-mono text-xs sm:text-sm hover:bg-cyan-400 hover:text-navy-900 transition-colors cursor-pointer">
+    <!-- Pill-Style Footer with Email First -->
+    <footer class="py-12 text-center border-t border-slate-800/80 bg-[#020c1b]">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col items-center">
+            <button onclick="scrollToTopSmooth()" type="button" aria-label="Go to top" class="mb-7 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-navy-800 border border-cyan-400/40 text-cyan-400 font-mono text-xs hover:bg-cyan-400 hover:text-navy-900 transition-colors cursor-pointer">
                 <i class="fa-solid fa-arrow-up"></i>
                 <span>Back to Top</span>
             </button>
 
-            <div class="flex space-x-6 mb-4">
-                <a href="https://www.linkedin.com/in/hotu-ram/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
-                    <i class="fa-brands fa-linkedin"></i>
+            <!-- Social Links Floating Pill Bar (Email First) -->
+            <div class="inline-flex flex-wrap justify-center items-center gap-1.5 sm:gap-2 px-3 py-2 rounded-full bg-navy-800/80 border border-slate-700/70 shadow-inner mb-6">
+                <a href="mailto:hotu_1912ph06@iitp.ac.in" title="IITP Email" aria-label="IITP Email" class="w-9 h-9 rounded-full flex items-center justify-center text-cyan-400 bg-cyan-400/10 hover:bg-cyan-400 hover:text-navy-900 transition-colors">
+                    <i class="fa-solid fa-envelope text-base"></i>
                 </a>
-                <a href="https://github.com/HotuRam" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
-                    <i class="fa-brands fa-github"></i>
+                <a href="https://www.linkedin.com/in/hotu-ram/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="w-9 h-9 rounded-full flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">
+                    <i class="fa-brands fa-linkedin text-base"></i>
                 </a>
-                <a href="https://www.kaggle.com/hoturam" target="_blank" rel="noopener noreferrer" title="Kaggle" aria-label="Kaggle" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
-                    <i class="fa-brands fa-kaggle"></i>
+                <a href="https://github.com/HotuRam" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="w-9 h-9 rounded-full flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">
+                    <i class="fa-brands fa-github text-base"></i>
                 </a>
-                <a href="https://x.com/HotuGoyal" target="_blank" rel="noopener noreferrer" title="X (Twitter)" aria-label="X" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
-                    <i class="fa-brands fa-x-twitter"></i>
+                <a href="https://www.kaggle.com/hoturam" target="_blank" rel="noopener noreferrer" title="Kaggle Discussion Expert" aria-label="Kaggle" class="w-9 h-9 rounded-full flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">
+                    <i class="fa-brands fa-kaggle text-base"></i>
                 </a>
-                <a href="mailto:hotu_1912ph06@iitp.ac.in" title="IITP Email" aria-label="IITP Email" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
-                    <i class="fa-solid fa-envelope"></i>
+                <a href="https://x.com/Hotu_Ram" target="_blank" rel="noopener noreferrer" title="X (Professional — @Hotu_Ram)" aria-label="X Professional" class="inline-flex items-center gap-1 px-2.5 h-9 rounded-full text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">
+                    <i class="fa-brands fa-x-twitter text-sm"></i><span class="text-[10px] font-mono uppercase">Pro</span>
+                </a>
+                <a href="https://x.com/HotuGoyal" target="_blank" rel="noopener noreferrer" title="X (Casual — @HotuGoyal)" aria-label="X Casual" class="inline-flex items-center gap-1 px-2.5 h-9 rounded-full text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">
+                    <i class="fa-brands fa-x-twitter text-sm"></i><span class="text-[10px] font-mono uppercase">Casual</span>
                 </a>
             </div>
 
-            <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 mb-5 font-mono text-[11px] sm:text-xs text-slate-400">
-                <a href="mailto:hotu_1912ph06@iitp.ac.in" class="hover:text-cyan-400 transition-colors">hotu_1912ph06@iitp.ac.in</a>
-                <span class="text-slate-600">&middot;</span>
-                <a href="mailto:theiitianict@gmail.com" class="hover:text-cyan-400 transition-colors">theiitianict@gmail.com</a>
+            <!-- Clickable Email Pills -->
+            <div class="flex flex-wrap items-center justify-center gap-2.5 mb-6 font-mono text-xs">
+                <a href="mailto:hotu_1912ph06@iitp.ac.in" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-800/70 border border-slate-700/70 text-slate-300 hover:border-cyan-400/40 hover:text-cyan-400 transition-colors">
+                    <i class="fa-solid fa-envelope text-cyan-400 text-[11px]"></i> hotu_1912ph06@iitp.ac.in
+                </a>
+                <a href="mailto:theiitianict@gmail.com" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-800/70 border border-slate-700/70 text-slate-300 hover:border-cyan-400/40 hover:text-cyan-400 transition-colors">
+                    <i class="fa-solid fa-envelope text-cyan-400 text-[11px]"></i> theiitianict@gmail.com
+                </a>
             </div>
 
-            <p class="font-mono text-xs sm:text-sm text-slate-200 font-semibold">
-                &copy; 2026 Hotu Ram &middot; IIT Patna Alumnus
+            <p class="font-mono text-xs sm:text-sm text-slate-200 font-semibold mb-3">
+                &copy; 2026 Hotu Ram &middot; IIT Alumnus
             </p>
-            <p class="font-mono text-xs sm:text-sm text-cyan-400 mt-1.5">
-                MT5/MQL5 Specialist &middot; Trader Support &amp; Community Management &middot; AI Chatbots &amp; Automation
-            </p>
+
+            <!-- Specialty Tag Pills -->
+            <div class="flex flex-wrap justify-center gap-2 font-mono text-[11px]">
+                <span class="px-3 py-1 rounded-full bg-cyan-400/10 border border-cyan-400/20 text-cyan-400">MT5/MQL5 Specialist</span>
+                <span class="px-3 py-1 rounded-full bg-navy-800/80 border border-slate-700/60 text-slate-300">Trader Support &amp; Community Management</span>
+                <span class="px-3 py-1 rounded-full bg-navy-800/80 border border-slate-700/60 text-slate-300">AI Chatbots &amp; Automation</span>
+            </div>
         </div>
     </footer>
 
