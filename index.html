@@ -82,26 +82,16 @@
         }
         .id-badge-card {
             background: linear-gradient(155deg, rgba(16, 36, 68, 0.96) 0%, rgba(7, 19, 38, 0.98) 55%, rgba(3, 12, 26, 0.99) 100%);
-            border: 1px solid rgba(100, 255, 218, 0.28);
-            box-shadow: 0 25px 55px -15px rgba(0, 0, 0, 0.85), 0 0 35px rgba(100, 255, 218, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(100, 255, 218, 0.3);
+            box-shadow: 0 28px 60px -15px rgba(0, 0, 0, 0.9), 0 0 42px rgba(30, 58, 138, 0.45), 0 0 22px rgba(100, 255, 218, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.08);
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
         .id-badge-card:hover {
-            border-color: rgba(100, 255, 218, 0.55);
-            box-shadow: 0 28px 60px -15px rgba(0, 0, 0, 0.9), 0 0 45px rgba(100, 255, 218, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+            border-color: rgba(100, 255, 218, 0.6);
+            box-shadow: 0 30px 65px -15px rgba(0, 0, 0, 0.92), 0 0 55px rgba(30, 58, 138, 0.6), 0 0 32px rgba(100, 255, 218, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.12);
         }
         .id-badge-sheen {
             background: linear-gradient(125deg, transparent 25%, rgba(100, 255, 218, 0.07) 48%, rgba(255, 255, 255, 0.08) 52%, transparent 72%);
-        }
-
-        /* 3D Glass Prism Float */
-        @keyframes prismFloat {
-            0%, 100% { transform: translateY(0px) rotate(26deg); }
-            50% { transform: translateY(-8px) rotate(28deg); }
-        }
-        .prism-3d-float {
-            animation: prismFloat 7s ease-in-out infinite;
-            will-change: transform;
         }
 
         /* Diagonal Scrolling Ticker */
@@ -133,7 +123,7 @@
 
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 nav-glass">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex justify-between items-center">
             <a href="#hero" class="inline-flex items-center gap-2.5 font-mono text-sm sm:text-base font-semibold tracking-tight group leading-none">
                 <span class="w-8 h-8 rounded bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-cyan-400 group-hover:bg-cyan-400 group-hover:text-navy-900 transition-colors">
                     <i class="fa-solid fa-house text-sm"></i>
@@ -173,10 +163,10 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="relative px-6 lg:px-10 pt-20 pb-8 lg:pt-16 lg:pb-6 lg:min-h-[calc(100vh-5.25rem)] flex items-center overflow-x-clip">
+    <section id="hero" class="relative px-6 lg:px-10 pt-20 pb-8 lg:pt-16 lg:pb-6 lg:min-h-[calc(100vh-5.25rem)] flex items-start overflow-x-clip">
         <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-10 lg:gap-8 items-start">
             <!-- Left Column: Original Hero Content -->
-            <div class="lg:col-span-8 lg:pt-10">
+            <div class="lg:col-span-8 lg:pt-14">
                 <p class="text-cyan-400 font-mono text-sm md:text-base mb-3 pl-0.5">Hi, my name is</p>
                 
                 <!-- NAME ROW WITH IIT BADGE -->
@@ -254,40 +244,16 @@
 
             <!-- Right Column: Swinging Lanyard Identity Card (Flush with Header) -->
             <div class="lg:col-span-4 relative flex justify-center items-start">
-                <!-- Subtle Ambient Glow -->
-                <div class="pointer-events-none absolute top-28 left-1/2 -translate-x-1/2 w-72 h-72 rounded-full bg-cyan-400/12 blur-3xl"></div>
-                <div class="pointer-events-none absolute top-40 left-1/2 -translate-x-1/2 w-64 h-64 rounded-full bg-[#1e3a8a]/30 blur-3xl"></div>
-
-                <!-- 3D Glassmorphic Prism Accent Behind Card (FundedNext-Inspired Depth) -->
-                <svg class="prism-3d-float pointer-events-none absolute top-36 -right-4 sm:right-2 lg:-right-6 w-36 h-64 opacity-85 z-0" viewBox="0 0 140 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <defs>
-                        <linearGradient id="glassRodBody" x1="20" y1="10" x2="115" y2="245" gradientUnits="userSpaceOnUse">
-                            <stop offset="0%" stop-color="#64ffda" stop-opacity="0.55"/>
-                            <stop offset="35%" stop-color="#38bdf8" stop-opacity="0.22"/>
-                            <stop offset="70%" stop-color="#6366f1" stop-opacity="0.35"/>
-                            <stop offset="100%" stop-color="#020c1b" stop-opacity="0.05"/>
-                        </linearGradient>
-                        <linearGradient id="glassRodEdge" x1="35" y1="0" x2="95" y2="250" gradientUnits="userSpaceOnUse">
-                            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
-                            <stop offset="45%" stop-color="#64ffda" stop-opacity="0.65"/>
-                            <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.1"/>
-                        </linearGradient>
-                    </defs>
-                    <!-- 3D Glass Capsule / Candlestick -->
-                    <rect x="48" y="18" width="38" height="190" rx="19" fill="url(#glassRodBody)" stroke="url(#glassRodEdge)" stroke-width="1.5"/>
-                    <!-- Inner Specular Highlight -->
-                    <rect x="56" y="30" width="8" height="150" rx="4" fill="white" fill-opacity="0.22"/>
-                    <!-- Cross Ring Accent -->
-                    <ellipse cx="67" cy="148" rx="46" ry="12" stroke="#64ffda" stroke-opacity="0.45" stroke-width="1.2"/>
-                    <ellipse cx="67" cy="152" rx="34" ry="8" stroke="#818cf8" stroke-opacity="0.35" stroke-width="1"/>
-                </svg>
+                <!-- Layered Dual-Tone Spotlight Glow (FTMO-Style Backlight) -->
+                <div class="pointer-events-none absolute top-32 left-1/2 -translate-x-1/2 w-[360px] h-[360px] rounded-full bg-[#1e3a8a]/50 blur-[90px]"></div>
+                <div class="pointer-events-none absolute top-44 left-1/2 -translate-x-1/2 w-[270px] h-[320px] rounded-full bg-cyan-400/20 blur-[60px]"></div>
 
                 <!-- Pendulum Assembly -->
                 <div class="lanyard-swing flex flex-col items-center relative z-10">
-                    <!-- Lanyard Strap (Starts directly from Header) -->
-                    <div class="lanyard-strap w-10 h-16 lg:h-24 flex items-center justify-center overflow-hidden rounded-b-sm">
-                        <span class="lanyard-strap-text font-mono text-[8px] font-semibold uppercase text-cyan-400/75 whitespace-nowrap select-none">
-                            HOTU RAM &bull; IIT ALUMNUS
+                    <!-- Lanyard Strap (Flush with Header, Stretched to Center Card) -->
+                    <div class="lanyard-strap w-10 h-16 lg:h-36 flex items-center justify-center overflow-hidden rounded-b-sm">
+                        <span class="lanyard-strap-text font-mono text-[8px] font-semibold uppercase text-cyan-400/80 whitespace-nowrap select-none">
+                            HOTU RAM &bull; IIT ALUMNUS &bull; TRADER SUPPORT
                         </span>
                     </div>
 
@@ -296,7 +262,7 @@
                     <div class="w-4 h-2.5 border-2 border-slate-400/70 rounded-full -mt-1 z-10"></div>
 
                     <!-- Identity Card Body -->
-                    <div class="id-badge-card relative w-[290px] sm:w-[305px] rounded-2xl overflow-hidden -mt-1.5 pt-3.5 px-5 pb-5">
+                    <div class="id-badge-card relative w-[295px] sm:w-[310px] rounded-2xl overflow-hidden -mt-1.5 pt-3.5 px-5 pb-4">
                         <!-- Glossy Diagonal Sheen -->
                         <div class="id-badge-sheen pointer-events-none absolute inset-0"></div>
 
@@ -318,21 +284,30 @@
                         </div>
 
                         <!-- Card Identity Text -->
-                        <div class="relative z-10 text-left mb-4">
+                        <div class="relative z-10 text-left mb-3.5">
                             <h3 class="text-2xl font-extrabold tracking-tight uppercase text-white leading-tight">HOTU RAM</h3>
-                            <p class="font-mono text-[11px] text-cyan-400 mt-1 leading-snug">
-                                AI Support Hubs &bull; MT5 Specialist &bull; Discord Support
+                            <p class="font-mono text-[10.5px] text-cyan-400 mt-1 leading-snug">
+                                AI Support Hubs &amp; Automated Trader Support
+                            </p>
+                            <p class="font-mono text-[10.5px] text-slate-200 mt-0.5 leading-snug">
+                                MT5/MQL5 Specialist &bull; Discord Trader Support
                             </p>
                             <p class="font-mono text-[10px] text-slate-400 mt-1.5">
                                 <i class="fa-solid fa-globe text-cyan-400/80 mr-1"></i>Remote (Global) &middot; Immediate Joiner
                             </p>
                         </div>
 
-                        <!-- Card Bottom Half: Full Circular Portrait (Hides White Source Corners) -->
+                        <!-- Card Bottom Half: Full Circular Portrait -->
                         <div class="relative z-10 flex justify-center items-center pt-1">
-                            <div class="relative w-44 h-44 rounded-full overflow-hidden border-2 border-cyan-400/45 bg-navy-900 shadow-[0_0_25px_rgba(100,255,218,0.18)]">
+                            <div class="relative w-44 h-44 rounded-full overflow-hidden border-2 border-cyan-400/50 bg-navy-900 shadow-[0_0_25px_rgba(100,255,218,0.2)]">
                                 <img src="https://drive.google.com/thumbnail?id=1qaFJyLnvD9SnmMtsEXAat9_lPj0b5Tjg&amp;sz=w800" alt="Hotu Ram" class="w-full h-full object-cover object-center scale-105 transition-transform duration-500 hover:scale-110">
                             </div>
+                        </div>
+
+                        <!-- Bottom Proof-of-Work Micro Labels -->
+                        <div class="relative z-10 flex items-center justify-between mt-3 pt-2.5 border-t border-slate-700/60 font-mono text-[10px] uppercase tracking-wider">
+                            <span class="text-cyan-400 font-semibold">20+ MQL5 Tools</span>
+                            <span class="text-slate-300 font-semibold">Live AI Bots</span>
                         </div>
                     </div>
                 </div>
