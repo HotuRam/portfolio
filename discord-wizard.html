@@ -59,7 +59,7 @@
 
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 nav-glass">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex justify-between items-center">
             <!-- Back to Main Portfolio -->
             <a href="index.html" class="inline-flex items-center gap-2.5 font-mono text-sm sm:text-base font-semibold tracking-tight group leading-none">
                 <span class="w-8 h-8 rounded bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-cyan-400 group-hover:bg-cyan-400 group-hover:text-navy-900 transition-colors">
@@ -68,11 +68,13 @@
                 <span class="text-white group-hover:text-cyan-400 transition-colors">Main Portfolio</span>
             </a>
 
-            <!-- Desktop Section Links -->
-            <div class="hidden md:flex items-center space-x-7 text-xs lg:text-sm font-mono">
-                <a href="#discord" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">01.</span> Discord Q&amp;A</a>
-                <a href="#kaggle" class="text-slate-300 hover:text-cyan-400 transition-colors leading-none"><span class="text-cyan-400">02.</span> Kaggle</a>
-                <a href="index.html#documents" class="px-4 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400/10 transition-colors leading-none">Resume</a>
+            <!-- Desktop Navigation Links (Floating Glass Pill Bar) -->
+            <div class="hidden md:flex items-center gap-4">
+                <div class="flex items-center gap-0.5 px-1.5 py-1 rounded-full bg-navy-800/80 border border-slate-700/70 shadow-inner">
+                    <a href="#discord" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all leading-none">Discord Q&amp;A</a>
+                    <a href="#kaggle" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all leading-none">Kaggle</a>
+                </div>
+                <a href="index.html#documents" class="px-4 py-2 border border-cyan-400 text-cyan-400 font-mono text-xs rounded hover:bg-cyan-400/10 transition-colors leading-none">Resume</a>
             </div>
 
             <!-- Mobile Menu Toggle -->
@@ -81,39 +83,47 @@
             </button>
         </div>
 
-        <!-- Mobile Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-navy-800/95 border-t border-cyan-400/10 px-6 py-4 space-y-4 font-mono text-sm">
-            <a href="#discord" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">01.</span> Discord Q&amp;A</a>
-            <a href="#kaggle" class="mobile-link block text-slate-300 hover:text-cyan-400 transition-colors"><span class="text-cyan-400">02.</span> Kaggle</a>
-            <a href="index.html#documents" class="mobile-link inline-block px-4 py-2 border border-cyan-400 text-cyan-400 rounded hover:bg-cyan-400/10 transition-colors">Resume</a>
+        <!-- Mobile Dropdown (Clean, Number-Free) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-800/95 border-t border-cyan-400/10 px-6 py-4 space-y-2 text-sm">
+            <a href="#discord" class="mobile-link block px-3.5 py-2 rounded-lg text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">Discord Q&amp;A</a>
+            <a href="#kaggle" class="mobile-link block px-3.5 py-2 rounded-lg text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">Kaggle</a>
+            <div class="pt-2">
+                <a href="index.html#documents" class="mobile-link inline-block px-4 py-2 border border-cyan-400 text-cyan-400 font-mono text-xs rounded hover:bg-cyan-400/10 transition-colors">Resume</a>
+            </div>
         </div>
     </nav>
 
     <!-- Page Header -->
-    <header class="max-w-6xl mx-auto px-6 pt-32 pb-14">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 font-mono text-xs sm:text-sm mb-5">
-            <i class="fa-brands fa-discord"></i>
-            <span>Discord Community (~1 Yr) &middot; Kaggle Legacy Expert (5 Yrs)</span>
+    <header class="pt-32 pb-14">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 font-mono text-xs sm:text-sm mb-5">
+                <i class="fa-brands fa-discord"></i>
+                <span>Discord Community (~1 Yr) &middot; Kaggle Legacy Expert (5 Yrs)</span>
+            </div>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
+                Discord Community Engagement &amp; Kaggle Legacy Expert
+            </h1>
+            <p class="text-base sm:text-xl font-semibold text-cyan-400 font-mono mb-5">
+                Community Educator &amp; Active Contributor &mdash; Online Trader Support
+            </p>
+            <p class="text-base sm:text-lg text-slate-300 max-w-4xl leading-relaxed text-justify">
+                Helping retail traders navigate proprietary trading rules, account workflows, KYC verification checks, and crypto payouts in Discord communities&mdash;backed by firsthand funded trading experience and five years of verified technical community contributions on Kaggle.
+            </p>
         </div>
-        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
-            Discord Community Engagement &amp; Kaggle Legacy Expert
-        </h1>
-        <p class="text-base sm:text-xl font-semibold text-cyan-400 font-mono mb-5">
-            Community Educator &amp; Active Contributor &mdash; Online Trader Support
-        </p>
-        <p class="text-base sm:text-lg text-slate-300 max-w-4xl leading-relaxed text-justify">
-            Helping retail traders navigate proprietary trading rules, account workflows, KYC verification checks, and crypto payouts in Discord communities&mdash;backed by firsthand funded trading experience and five years of verified technical community contributions on Kaggle.
-        </p>
     </header>
 
-    <!-- 01. Discord Community Q&A & Rule Clarification -->
-    <section id="discord" class="py-16 px-6 border-t border-slate-800/70">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold flex items-baseline sm:items-center gap-3 mb-4">
-                <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">01.</span>
-                <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">Discord Community<br class="sm:hidden"> Q&amp;A</span>
-                <span class="hidden sm:block h-px bg-slate-700 flex-1 max-w-xs ml-3"></span>
-            </h2>
+    <!-- Discord Community Q&A & Rule Clarification -->
+    <section id="discord" class="py-16 border-t border-slate-800/70">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="mb-4">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy-800/90 border border-cyan-400/25 text-cyan-400 font-mono text-[11px] uppercase tracking-widest mb-2.5">
+                    <i class="fa-brands fa-discord text-[10px]"></i> Trader Support
+                </span>
+                <div class="flex items-center gap-4">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight shrink-0">Discord Community<br class="sm:hidden"> Q&amp;A</h2>
+                    <span class="hidden sm:block h-px bg-gradient-to-r from-cyan-400/35 to-transparent flex-1 max-w-sm"></span>
+                </div>
+            </div>
             <p class="text-sm sm:text-base text-slate-300 mb-8 max-w-3xl text-justify">
                 Active peer educator and contributor in the <strong class="text-white">Shark Funded Discord (~1 Year)</strong>. Grounded in personal trading across all Shark Funded account tiers and a verified Trust Wallet crypto payout, I regularly assist fellow traders in resolving real-time doubts clearly and patiently.
             </p>
@@ -139,16 +149,20 @@
         </div>
     </section>
 
-    <!-- 02. Kaggle Technical Community & Expert Recognition -->
-    <section id="kaggle" class="py-16 md:py-20 px-6 bg-navy-800/35 border-t border-slate-800/70">
-        <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
-                <h2 class="text-2xl md:text-3xl font-bold flex items-baseline sm:items-center gap-3">
-                    <span class="text-cyan-400 font-mono text-lg md:text-xl shrink-0">02.</span>
-                    <span class="leading-snug sm:whitespace-nowrap sm:shrink-0">Kaggle Community<br class="sm:hidden"> Recognition</span>
-                    <span class="hidden sm:block h-px bg-slate-700 w-24 ml-3"></span>
-                </h2>
-                <a href="https://www.kaggle.com/hoturam" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-cyan-400/10 border border-cyan-400/50 text-cyan-400 font-mono text-xs sm:text-sm rounded hover:bg-cyan-400 hover:text-navy-900 transition-colors self-start sm:self-auto">
+    <!-- Kaggle Technical Community & Expert Recognition -->
+    <section id="kaggle" class="py-16 md:py-20 bg-navy-800/35 border-t border-slate-800/70">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
+                <div class="flex-1">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy-900/90 border border-cyan-400/25 text-cyan-400 font-mono text-[11px] uppercase tracking-widest mb-2.5">
+                        <i class="fa-brands fa-kaggle text-[10px]"></i> Verified Track Record
+                    </span>
+                    <div class="flex items-center gap-4">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight shrink-0">Kaggle Community<br class="sm:hidden"> Recognition</h2>
+                        <span class="hidden sm:block h-px bg-gradient-to-r from-cyan-400/35 to-transparent flex-1 max-w-sm"></span>
+                    </div>
+                </div>
+                <a href="https://www.kaggle.com/hoturam" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-cyan-400/10 border border-cyan-400/50 text-cyan-400 font-mono text-xs sm:text-sm rounded hover:bg-cyan-400 hover:text-navy-900 transition-colors self-start sm:self-auto shrink-0">
                     <i class="fa-brands fa-kaggle"></i>
                     <span>View Profile (@hoturam)</span>
                     <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
@@ -335,44 +349,56 @@
         </div>
     </section>
 
-    <!-- Footer with Standardized Global Tagline & Dual Emails -->
-    <footer class="py-10 text-center border-t border-slate-800">
-        <div class="max-w-4xl mx-auto px-6 flex flex-col items-center">
-            <button onclick="scrollToTopSmooth()" type="button" aria-label="Go to top" class="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-navy-800 border border-cyan-400/50 text-cyan-400 font-mono text-xs sm:text-sm hover:bg-cyan-400 hover:text-navy-900 transition-colors cursor-pointer">
+    <!-- Pill-Style Footer with Email First -->
+    <footer class="py-12 text-center border-t border-slate-800/80 bg-[#020c1b]">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col items-center">
+            <button onclick="scrollToTopSmooth()" type="button" aria-label="Go to top" class="mb-7 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-navy-800 border border-cyan-400/40 text-cyan-400 font-mono text-xs hover:bg-cyan-400 hover:text-navy-900 transition-colors cursor-pointer">
                 <i class="fa-solid fa-arrow-up"></i>
                 <span>Back to Top</span>
             </button>
 
-            <div class="flex space-x-6 mb-4">
-                <a href="https://www.linkedin.com/in/hotu-ram/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
-                    <i class="fa-brands fa-linkedin"></i>
+            <!-- Social Links Floating Pill Bar (Email First) -->
+            <div class="inline-flex flex-wrap justify-center items-center gap-1.5 sm:gap-2 px-3 py-2 rounded-full bg-navy-800/80 border border-slate-700/70 shadow-inner mb-6">
+                <a href="mailto:hotu_1912ph06@iitp.ac.in" title="IITP Email" aria-label="IITP Email" class="w-9 h-9 rounded-full flex items-center justify-center text-cyan-400 bg-cyan-400/10 hover:bg-cyan-400 hover:text-navy-900 transition-colors">
+                    <i class="fa-solid fa-envelope text-base"></i>
                 </a>
-                <a href="https://github.com/HotuRam" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
-                    <i class="fa-brands fa-github"></i>
+                <a href="https://www.linkedin.com/in/hotu-ram/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="w-9 h-9 rounded-full flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">
+                    <i class="fa-brands fa-linkedin text-base"></i>
                 </a>
-                <a href="https://www.kaggle.com/hoturam" target="_blank" rel="noopener noreferrer" title="Kaggle" aria-label="Kaggle" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
-                    <i class="fa-brands fa-kaggle"></i>
+                <a href="https://github.com/HotuRam" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="w-9 h-9 rounded-full flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">
+                    <i class="fa-brands fa-github text-base"></i>
                 </a>
-                <a href="https://x.com/HotuGoyal" target="_blank" rel="noopener noreferrer" title="X (Twitter)" aria-label="X" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
-                    <i class="fa-brands fa-x-twitter"></i>
+                <a href="https://www.kaggle.com/hoturam" target="_blank" rel="noopener noreferrer" title="Kaggle Discussion Expert" aria-label="Kaggle" class="w-9 h-9 rounded-full flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">
+                    <i class="fa-brands fa-kaggle text-base"></i>
                 </a>
-                <a href="mailto:hotu_1912ph06@iitp.ac.in" title="IITP Email" aria-label="IITP Email" class="text-slate-400 hover:text-cyan-400 text-2xl transition-colors">
-                    <i class="fa-solid fa-envelope"></i>
+                <a href="https://x.com/Hotu_Ram" target="_blank" rel="noopener noreferrer" title="X (Professional — @Hotu_Ram)" aria-label="X Professional" class="inline-flex items-center gap-1 px-2.5 h-9 rounded-full text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">
+                    <i class="fa-brands fa-x-twitter text-sm"></i><span class="text-[10px] font-mono uppercase">Pro</span>
+                </a>
+                <a href="https://x.com/HotuGoyal" target="_blank" rel="noopener noreferrer" title="X (Casual — @HotuGoyal)" aria-label="X Casual" class="inline-flex items-center gap-1 px-2.5 h-9 rounded-full text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors">
+                    <i class="fa-brands fa-x-twitter text-sm"></i><span class="text-[10px] font-mono uppercase">Casual</span>
                 </a>
             </div>
 
-            <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 mb-5 font-mono text-[11px] sm:text-xs text-slate-400">
-                <a href="mailto:hotu_1912ph06@iitp.ac.in" class="hover:text-cyan-400 transition-colors">hotu_1912ph06@iitp.ac.in</a>
-                <span class="text-slate-600">&middot;</span>
-                <a href="mailto:theiitianict@gmail.com" class="hover:text-cyan-400 transition-colors">theiitianict@gmail.com</a>
+            <!-- Clickable Email Pills -->
+            <div class="flex flex-wrap items-center justify-center gap-2.5 mb-6 font-mono text-xs">
+                <a href="mailto:hotu_1912ph06@iitp.ac.in" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-800/70 border border-slate-700/70 text-slate-300 hover:border-cyan-400/40 hover:text-cyan-400 transition-colors">
+                    <i class="fa-solid fa-envelope text-cyan-400 text-[11px]"></i> hotu_1912ph06@iitp.ac.in
+                </a>
+                <a href="mailto:theiitianict@gmail.com" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-800/70 border border-slate-700/70 text-slate-300 hover:border-cyan-400/40 hover:text-cyan-400 transition-colors">
+                    <i class="fa-solid fa-envelope text-cyan-400 text-[11px]"></i> theiitianict@gmail.com
+                </a>
             </div>
 
-            <p class="font-mono text-xs sm:text-sm text-slate-200 font-semibold">
-                &copy; 2026 Hotu Ram &middot; IIT Patna Alumnus
+            <p class="font-mono text-xs sm:text-sm text-slate-200 font-semibold mb-3">
+                &copy; 2026 Hotu Ram &middot; IIT Alumnus
             </p>
-            <p class="font-mono text-xs sm:text-sm text-cyan-400 mt-1.5">
-                MT5/MQL5 Specialist &middot; Trader Support &amp; Community Management &middot; AI Chatbots &amp; Automation
-            </p>
+
+            <!-- Specialty Tag Pills -->
+            <div class="flex flex-wrap justify-center gap-2 font-mono text-[11px]">
+                <span class="px-3 py-1 rounded-full bg-cyan-400/10 border border-cyan-400/20 text-cyan-400">MT5/MQL5 Specialist</span>
+                <span class="px-3 py-1 rounded-full bg-navy-800/80 border border-slate-700/60 text-slate-300">Trader Support &amp; Community Management</span>
+                <span class="px-3 py-1 rounded-full bg-navy-800/80 border border-slate-700/60 text-slate-300">AI Chatbots &amp; Automation</span>
+            </div>
         </div>
     </footer>
 
